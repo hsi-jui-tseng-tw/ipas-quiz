@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 04 回",
+    "subject": "資訊安全防護實務",
+    "date": "115 年 08 月 22 日"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "JWT 安全設計中，下列何者正確？",
+      "options": {
+        "A": "JWT payload 預設已加密，適合直接放密碼",
+        "B": "應驗證簽章、演算法與過期時間，避免接受 alg=none",
+        "C": "只要使用 HS256 就不需保護 secret",
+        "D": "JWT 一旦簽發就不可設定有效期限"
+      }
+    },
+    {
+      "id": 2,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "SAST、DAST、SCA 的差異，下列敘述何者最適切？",
+      "options": {
+        "A": "SAST 看原始碼，DAST 測執行中系統，SCA 盤點第三方元件",
+        "B": "三者皆只能在上線後執行",
+        "C": "SCA 主要用來掃描網路埠",
+        "D": "DAST 只能檢查授權合約"
+      }
+    },
+    {
+      "id": 3,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "辛物流已部署 EDR 與 NDR，想整合跨端點、網路與雲端訊號進行關聯偵測。下列何者最符合需求？",
+      "options": {
+        "A": "EPP",
+        "B": "VPN",
+        "C": "XDR",
+        "D": "UPS"
+      }
+    },
+    {
+      "id": 4,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "SIEM 與 SOAR 的差異，下列何者最適切？",
+      "options": {
+        "A": "SIEM 只負責備份資料，SOAR 只負責加密",
+        "B": "SOAR 只能用於實體門禁",
+        "C": "SIEM 不可收集日誌",
+        "D": "SIEM 偏日誌關聯分析，SOAR 偏流程編排與自動化回應"
+      }
+    },
+    {
+      "id": 5,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "若要用 nmap 掃描目標 443 埠並偵測服務版本，下列指令何者最適切？",
+      "options": {
+        "A": "nmap -sV -p 443 target",
+        "B": "nmap -O --script smb-enum-shares target",
+        "C": "nmap -sn -p 443 target",
+        "D": "nmap --top-ports 0 target"
+      }
+    },
+    {
+      "id": 6,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "BloodHound 最主要用於下列哪一類情境？",
+      "options": {
+        "A": "分析 Web API 的 OpenAPI 文件",
+        "B": "盤點 Active Directory 權限關係與攻擊路徑",
+        "C": "進行硬碟映像檔雜湊",
+        "D": "偵測無線網路訊號干擾"
+      }
+    },
+    {
+      "id": 7,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "Kerberoasting 攻擊主要鎖定下列哪一類目標？",
+      "options": {
+        "A": "未加密的 DNS zone transfer",
+        "B": "公開 S3 bucket",
+        "C": "AD 中服務帳號的 Kerberos 服務票證",
+        "D": "瀏覽器 SameSite Cookie"
+      }
+    },
+    {
+      "id": 8,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "電子郵件安全中，SPF、DKIM、DMARC 的整合目的為何？",
+      "options": {
+        "A": "保證附件完全無惡意程式",
+        "B": "加速 SMTP 傳輸速度",
+        "C": "取代使用者資安教育訓練",
+        "D": "驗證寄件來源與簽章，並定義網域驗證失敗時的處理政策"
+      }
+    },
+    {
+      "id": 9,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "OT 遠端維運平台遭勒索軟體加密後，下列第一時間處置何者最適切？",
+      "options": {
+        "A": "隔離受感染主機、保存證據並啟動事件應變流程",
+        "B": "立即刪除所有備份以防資料外洩",
+        "C": "在未確認範圍前全面重灌所有系統",
+        "D": "先公開支付贖金再通知內部"
+      }
+    },
+    {
+      "id": 10,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "Linux 提權偵察時，下列哪一項最可能用來檢查目前使用者可用的 sudo 權限？",
+      "options": {
+        "A": "ipconfig /all",
+        "B": "net user /domain",
+        "C": "sudo -l",
+        "D": "tracert -d"
+      }
+    },
+    {
+      "id": 11,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "雲端 Access Key 外洩後，下列哪項處置最優先？",
+      "options": {
+        "A": "等待月底再檢查帳單",
+        "B": "停用或輪替金鑰，檢查異常活動並收斂權限",
+        "C": "只修改網站首頁文字",
+        "D": "將所有 bucket 改成 public read"
+      }
+    },
+    {
+      "id": 12,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "辛物流遭遇 Deepfake 社交工程 後，調查人員依 MITRE ATT&CK 分析攻擊鏈。下列何者最能描述 TTP？",
+      "options": {
+        "A": "工具、傳輸、通訊協定",
+        "B": "戰術、技術、程序",
+        "C": "威脅、趨勢、政策",
+        "D": "測試、追蹤、修補"
+      }
+    },
+    {
+      "id": 13,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "OWASP Top 10:2025 中，Broken Access Control 仍是重要風險。下列何者最可能屬於此類？",
+      "options": {
+        "A": "修改 URL 中的 userId 即可讀取他人訂單",
+        "B": "網站圖片未壓縮造成下載較慢",
+        "C": "使用者忘記登出瀏覽器",
+        "D": "伺服器使用 NTP 同步時間"
+      }
+    },
+    {
+      "id": 14,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "防範 SQL Injection 最核心且通用的開發控制措施為何？",
+      "options": {
+        "A": "只在前端限制輸入長度",
+        "B": "將錯誤訊息全部隱藏即可",
+        "C": "使用參數化查詢或預處理敘述",
+        "D": "把資料庫搬到內網即可"
+      }
+    },
+    {
+      "id": 15,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "關於 SSRF 防護，下列何者最不適切？",
+      "options": {
+        "A": "限制可連線目的地與協定",
+        "B": "阻擋 metadata service 等敏感內部端點",
+        "C": "以 allowlist 驗證外部請求目標",
+        "D": "僅用字串黑名單過濾 127.0.0.1 即可完全防護"
+      }
+    },
+    {
+      "id": 16,
+      "type": "複選題",
+      "answer": "BCD",
+      "question_text": "滲透測試報告應包含哪些內容？（複選）",
+      "options": {
+        "A": "只列出成功入侵截圖，不需修補建議",
+        "B": "弱點風險等級與影響說明",
+        "C": "可重現步驟與證據",
+        "D": "修補建議與管理摘要"
+      }
+    },
+    {
+      "id": 17,
+      "type": "複選題",
+      "answer": "AD",
+      "question_text": "下列哪些 nmap 指令可用於偵測指定 MySQL 服務版本或資訊？（複選）",
+      "options": {
+        "A": "nmap -sV -p 3306 target",
+        "B": "nmap -sn target",
+        "C": "nmap -O -p 1 target",
+        "D": "nmap -sV -p 3306 --script mysql-info target"
+      }
+    },
+    {
+      "id": 18,
+      "type": "複選題",
+      "answer": "ABC",
+      "question_text": "下列哪些措施可降低常見 Web Injection 與 XSS 風險？（複選）",
+      "options": {
+        "A": "參數化查詢",
+        "B": "輸出編碼",
+        "C": "白名單輸入驗證",
+        "D": "只依賴前端 JavaScript 檢查"
+      }
+    },
+    {
+      "id": 19,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "下列哪些有助於電子郵件釣魚防護？（複選）",
+      "options": {
+        "A": "設定 SPF、DKIM、DMARC",
+        "B": "附件沙箱與惡意 URL 檢測",
+        "C": "允許所有巨集自動執行",
+        "D": "使用者回報與演練機制"
+      }
+    },
+    {
+      "id": 20,
+      "type": "複選題",
+      "answer": "ACD",
+      "question_text": "數位鑑識中，下列哪些作法較適切？（複選）",
+      "options": {
+        "A": "保存證據鏈與雜湊值",
+        "B": "直接在原始硬碟上任意修改檔案",
+        "C": "優先蒐集高揮發性資料",
+        "D": "記錄採證時間、工具與人員"
+      }
+    },
+    {
+      "id": 21,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 1】攻擊者利用公開服務漏洞首次取得 Shell，最接近 MITRE ATT&CK 哪個戰術？",
+      "options": {
+        "A": "Collection",
+        "B": "Initial Access",
+        "C": "Impact",
+        "D": "Exfiltration"
+      },
+      "case_group": {
+        "id": "題組 1",
+        "description": "癸能源的核心交易系統使用開源 Web 框架與第三方套件。紅隊發現其中一個元件存在 RCE 弱點，攻擊者可取得 Shell 並嘗試向內網橫向移動。"
+      }
+    },
+    {
+      "id": 22,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 1】若要降低開源元件已知漏洞風險，最直接的流程控制為何？",
+      "options": {
+        "A": "停用所有日誌",
+        "B": "只在前端壓縮 JavaScript",
+        "C": "建立 SCA 盤點、版本追蹤與修補 SLA",
+        "D": "把錯誤訊息改成英文"
+      },
+      "case_group": {
+        "id": "題組 1",
+        "description": "癸能源的核心交易系統使用開源 Web 框架與第三方套件。紅隊發現其中一個元件存在 RCE 弱點，攻擊者可取得 Shell 並嘗試向內網橫向移動。"
+      }
+    },
+    {
+      "id": 23,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 1】攻擊者取得 Shell 後使用 `whoami`, `ipconfig`, `net view` 類指令，主要目的為何？",
+      "options": {
+        "A": "環境偵察與權限盤點",
+        "B": "加密備份",
+        "C": "驗證數位簽章",
+        "D": "產生 SBOM"
+      },
+      "case_group": {
+        "id": "題組 1",
+        "description": "癸能源的核心交易系統使用開源 Web 框架與第三方套件。紅隊發現其中一個元件存在 RCE 弱點，攻擊者可取得 Shell 並嘗試向內網橫向移動。"
+      }
+    },
+    {
+      "id": 24,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 1】對 RCE 弱點最根本的修補方式為何？",
+      "options": {
+        "A": "只封鎖單一來源 IP",
+        "B": "只要求使用者改密碼",
+        "C": "關閉所有監控",
+        "D": "更新受影響元件並驗證修補有效性"
+      },
+      "case_group": {
+        "id": "題組 1",
+        "description": "癸能源的核心交易系統使用開源 Web 框架與第三方套件。紅隊發現其中一個元件存在 RCE 弱點，攻擊者可取得 Shell 並嘗試向內網橫向移動。"
+      }
+    },
+    {
+      "id": 25,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 1】若要在入侵初期偵測異常程序與命令列行為，端點側最適合部署何者？",
+      "options": {
+        "A": "UPS",
+        "B": "EDR",
+        "C": "DLP 印表機浮水印",
+        "D": "DNS 註冊商"
+      },
+      "case_group": {
+        "id": "題組 1",
+        "description": "癸能源的核心交易系統使用開源 Web 框架與第三方套件。紅隊發現其中一個元件存在 RCE 弱點，攻擊者可取得 Shell 並嘗試向內網橫向移動。"
+      }
+    },
+    {
+      "id": 26,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 2】最能降低被竊密碼單獨造成登入成功的控制措施為何？",
+      "options": {
+        "A": "抗釣魚 MFA，例如 FIDO2/WebAuthn",
+        "B": "把密碼貼在螢幕旁避免忘記",
+        "C": "關閉登入失敗紀錄",
+        "D": "所有帳號共用同一密碼"
+      },
+      "case_group": {
+        "id": "題組 2",
+        "description": "癸能源員工收到偽造高階主管郵件並輸入帳密。攻擊者使用該帳號登入 VPN，進入 AD 網域後嘗試提升權限。"
+      }
+    },
+    {
+      "id": 27,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 2】若要分析 AD 權限關係與攻擊路徑，最適合使用哪個工具？",
+      "options": {
+        "A": "Wireshark 只看封包內容",
+        "B": "Nikto",
+        "C": "BloodHound",
+        "D": "John the Ripper 只做壓縮檔破解"
+      },
+      "case_group": {
+        "id": "題組 2",
+        "description": "癸能源員工收到偽造高階主管郵件並輸入帳密。攻擊者使用該帳號登入 VPN，進入 AD 網域後嘗試提升權限。"
+      }
+    },
+    {
+      "id": 28,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 2】下列何者最可能降低 Kerberoasting 成功率？",
+      "options": {
+        "A": "讓服務帳號使用弱密碼且永不輪替",
+        "B": "讓所有使用者具備 Domain Admin",
+        "C": "停用所有稽核紀錄",
+        "D": "服務帳號使用長且隨機密碼，並定期審查 SPN 與權限"
+      },
+      "case_group": {
+        "id": "題組 2",
+        "description": "癸能源員工收到偽造高階主管郵件並輸入帳密。攻擊者使用該帳號登入 VPN，進入 AD 網域後嘗試提升權限。"
+      }
+    },
+    {
+      "id": 29,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 2】攻擊者由一台主機移動到其他伺服器，最接近哪個行為？",
+      "options": {
+        "A": "Backup Rotation",
+        "B": "Lateral Movement",
+        "C": "Data Masking",
+        "D": "Certificate Pinning"
+      },
+      "case_group": {
+        "id": "題組 2",
+        "description": "癸能源員工收到偽造高階主管郵件並輸入帳密。攻擊者使用該帳號登入 VPN，進入 AD 網域後嘗試提升權限。"
+      }
+    },
+    {
+      "id": 30,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 2】若 VPN 異常登入來自不尋常國家且裝置未受管，最適切的零信任決策為何？",
+      "options": {
+        "A": "提高風險分數並拒絕或要求更強驗證",
+        "B": "直接授予永久管理員權限",
+        "C": "刪除所有登入紀錄",
+        "D": "改用共享帳號通過驗證"
+      },
+      "case_group": {
+        "id": "題組 2",
+        "description": "癸能源員工收到偽造高階主管郵件並輸入帳密。攻擊者使用該帳號登入 VPN，進入 AD 網域後嘗試提升權限。"
+      }
+    },
+    {
+      "id": 31,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 3】持續偵測公開儲存桶、過寬 IAM 與不合規設定，最適合導入何者？",
+      "options": {
+        "A": "傳統螢幕保護程式",
+        "B": "單機磁碟重組工具",
+        "C": "CSPM",
+        "D": "條碼掃描器"
+      },
+      "case_group": {
+        "id": "題組 3",
+        "description": "癸能源在多雲環境中部署容器與物件儲存。近期發現儲存桶公開、CI/CD 金鑰外洩與容器映像含高風險漏洞。"
+      }
+    },
+    {
+      "id": 32,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 3】CI/CD 金鑰外洩後最優先的處置為何？",
+      "options": {
+        "A": "等待下次版本發布",
+        "B": "撤銷或輪替金鑰並檢查濫用紀錄",
+        "C": "將金鑰寫入程式碼方便追蹤",
+        "D": "只修改 README"
+      },
+      "case_group": {
+        "id": "題組 3",
+        "description": "癸能源在多雲環境中部署容器與物件儲存。近期發現儲存桶公開、CI/CD 金鑰外洩與容器映像含高風險漏洞。"
+      }
+    },
+    {
+      "id": 33,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 3】容器映像安全掃描最主要可發現哪類問題？",
+      "options": {
+        "A": "使用者是否準時上下班",
+        "B": "機房是否漏水",
+        "C": "DNS 網域是否好記",
+        "D": "映像內套件弱點、惡意檔案或高風險設定"
+      },
+      "case_group": {
+        "id": "題組 3",
+        "description": "癸能源在多雲環境中部署容器與物件儲存。近期發現儲存桶公開、CI/CD 金鑰外洩與容器映像含高風險漏洞。"
+      }
+    },
+    {
+      "id": 34,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 3】Kubernetes 中避免 Pod 使用過高權限，最相關的控制方向為何？",
+      "options": {
+        "A": "最小權限、Pod 安全設定與 RBAC",
+        "B": "關閉所有 Namespace",
+        "C": "讓每個 Pod 使用 hostPath 掛載整台主機",
+        "D": "把 kubeconfig 放在公開儲存桶"
+      },
+      "case_group": {
+        "id": "題組 3",
+        "description": "癸能源在多雲環境中部署容器與物件儲存。近期發現儲存桶公開、CI/CD 金鑰外洩與容器映像含高風險漏洞。"
+      }
+    },
+    {
+      "id": 35,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 3】若要追查雲端控制平面誰修改了 IAM Policy，最應先查哪類紀錄？",
+      "options": {
+        "A": "螢幕亮度設定",
+        "B": "網頁 CSS",
+        "C": "雲端稽核日誌，例如 CloudTrail 或 Activity Log",
+        "D": "印表機碳粉存量"
+      },
+      "case_group": {
+        "id": "題組 3",
+        "description": "癸能源在多雲環境中部署容器與物件儲存。近期發現儲存桶公開、CI/CD 金鑰外洩與容器映像含高風險漏洞。"
+      }
+    },
+    {
+      "id": 36,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "【題組 4】下列哪些是 LLM 應用常見安全風險？（複選）",
+      "options": {
+        "A": "Prompt Injection",
+        "B": "UPS 電池老化",
+        "C": "敏感資訊洩露",
+        "D": "不安全的外掛或代理工具操作"
+      },
+      "case_group": {
+        "id": "題組 4",
+        "description": "癸能源同時營運 OT 產線、生成式 AI 助理與供應鏈平台。近期演練情境包含 Deepfake 詐騙、Prompt Injection、SBOM 漏洞通知與 OT 區域隔離失效。"
+      }
+    },
+    {
+      "id": 37,
+      "type": "題組（複選）",
+      "answer": "ABC",
+      "question_text": "【題組 4】下列哪些措施可降低 Deepfake 高階主管詐騙風險？（複選）",
+      "options": {
+        "A": "高風險付款採雙人覆核",
+        "B": "使用已知聯絡管道回撥確認",
+        "C": "建立異常指令通報與演練",
+        "D": "聽起來像主管即可直接匯款"
+      },
+      "case_group": {
+        "id": "題組 4",
+        "description": "癸能源同時營運 OT 產線、生成式 AI 助理與供應鏈平台。近期演練情境包含 Deepfake 詐騙、Prompt Injection、SBOM 漏洞通知與 OT 區域隔離失效。"
+      }
+    },
+    {
+      "id": 38,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "【題組 4】IEC 62443 Zone/Conduit 概念可支持哪些 OT 安全目標？（複選）",
+      "options": {
+        "A": "依風險將資產分區分域",
+        "B": "限制不同產線區域間非必要連線",
+        "C": "允許 IT 與 OT 任意互通",
+        "D": "在 Conduit 上定義允許的通訊與監控"
+      },
+      "case_group": {
+        "id": "題組 4",
+        "description": "癸能源同時營運 OT 產線、生成式 AI 助理與供應鏈平台。近期演練情境包含 Deepfake 詐騙、Prompt Injection、SBOM 漏洞通知與 OT 區域隔離失效。"
+      }
+    },
+    {
+      "id": 39,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "【題組 4】收到供應商 VEX 通知某 CVE 不受影響時，組織仍應確認哪些事項？（複選）",
+      "options": {
+        "A": "產品是否使用受影響元件與版本",
+        "B": "是否能刪除所有 SBOM",
+        "C": "VEX 狀態與理由是否可追溯",
+        "D": "自身部署情境是否使漏洞可被利用"
+      },
+      "case_group": {
+        "id": "題組 4",
+        "description": "癸能源同時營運 OT 產線、生成式 AI 助理與供應鏈平台。近期演練情境包含 Deepfake 詐騙、Prompt Injection、SBOM 漏洞通知與 OT 區域隔離失效。"
+      }
+    },
+    {
+      "id": 40,
+      "type": "題組（複選）",
+      "answer": "BCD",
+      "question_text": "【題組 4】下列哪些偵測或回應措施可支援跨域攻擊調查？（複選）",
+      "options": {
+        "A": "只保存單一端點的截圖",
+        "B": "集中端點、網路、雲端與身分日誌",
+        "C": "以 XDR/SIEM 關聯異常行為",
+        "D": "建立 SOAR playbook 加速封鎖帳號與隔離主機"
+      },
+      "case_group": {
+        "id": "題組 4",
+        "description": "癸能源同時營運 OT 產線、生成式 AI 助理與供應鏈平台。近期演練情境包含 Deepfake 詐騙、Prompt Injection、SBOM 漏洞通知與 OT 區域隔離失效。"
+      }
+    }
+  ]
+}
