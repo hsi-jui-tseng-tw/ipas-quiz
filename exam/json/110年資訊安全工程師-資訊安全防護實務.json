@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "exam_name": "110 年度中級資訊安全工程師能力鑑定試題",
+    "subject": "資訊安全防護實務",
+    "date": "110 年 9 月 25 日"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "某公司正在研究網路型防火牆（Layer 4 Firewall）如何有效防止網站應用程式（Web application）攻擊的方法，下列敘述何者正確？",
+      "options": {
+        "A": "網路型防火牆可以偵測惡意的網站訪問攻擊",
+        "B": "網路型防火牆無法阻擋此類型攻擊，因為連接埠 80, 443 必須開啟",
+        "C": "如果正確設定，網路型防火牆可阻擋此類型攻擊",
+        "D": "無須進行設定，網路型防火牆預設能阻擋此類型攻擊"
+      }
+    },
+    {
+      "id": 2,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "關於跨站請求偽造（CSRF or XSRF）與跨站腳本攻擊（XSS）的比較，下列敘述何者較正確？",
+      "options": {
+        "A": "兩者都是利用瀏覽器（Browser）對伺服器端（Server site）的信任",
+        "B": "兩者都是利用伺服器端（Server site）對瀏覽器（Browser）的信任",
+        "C": "XSS 是利用伺服器端對瀏覽器的信任，CSRF 是利用瀏覽器對伺服器端的信任",
+        "D": "CSRF 是利用伺服器端對瀏覽器的信任，XSS 是利用瀏覽器對伺服器端的信任"
+      }
+    },
+    {
+      "id": 3,
+      "type": "複選題",
+      "answer": "BD",
+      "question_text": "使用公眾網路上網時應該注意下列哪些事項以防範公眾網路的中間人攻擊（MITM）？\n1.使用 WPA3 最新一代 Wi-Fi 安全技術\n2.避免瀏覽未加密的網站\n3.使用虛擬專用網路（VPN）連接公司網路或專屬系統\n4.網路驗證採用雙因子認證",
+      "options": {
+        "A": "1、2",
+        "B": "1、3",
+        "C": "2、3",
+        "D": "3、4"
+      }
+    },
+    {
+      "id": 4,
+      "type": "複選題",
+      "answer": "AC",
+      "question_text": "關於 SQL 資料庫中常見的攻擊，下列敘述何者「不」正確？（複選）",
+      "options": {
+        "A": "OOB 注入攻擊（Out of Band），屬於 inband 的注入模式",
+        "B": "SQL 注入類型區分成 Boolean-based blind、Error-based、UNION query、Stacked queries、Time-based blind",
+        "C": "Error-based SQL injection 屬於 inband 的注入模式，被戲稱盲注入",
+        "D": "OOB 透過其他傳輸方式來獲得資料，如：利用 DNS 解析協定和電子郵件"
+      }
+    },
+    {
+      "id": 5,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "在規劃建置異地的連網系統時，為了達到大量資料傳輸與通訊的安全，下列何者通訊安全之防護與應變實務規劃較佳？",
+      "options": {
+        "A": "採用數位簽章提升訊息交換安全，並使用對稱式加密進行金鑰交換",
+        "B": "採用非對稱式加密處理大量訊息，並使用對稱式加密進行金鑰交換",
+        "C": "採用對稱式加密處理大量訊息，並使用數位簽章進行金鑰交換",
+        "D": "採用對稱式加密處理大量訊息，並使用非對稱式加密進行金鑰交換"
+      }
+    },
+    {
+      "id": 6,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "入侵檢測系統（IDS）與入侵防禦系統（IPS）具監測及防禦的雙重功能，下列敘述何者較「不」正確？",
+      "options": {
+        "A": "IDS 防禦方式為被動監聽（Passive sniffer mode）",
+        "B": "IDS 防禦動作可透過 TCP reset 來中斷連線",
+        "C": "IPS 防禦方式為主動防禦（Active in-line mode）",
+        "D": "IPS 防禦動作為通知防火牆丟棄惡意封包、中斷連線"
+      }
+    },
+    {
+      "id": 7,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "關於資料隱碼攻擊，可透過下列何種方式防範以避免類似事件再發生？",
+      "options": {
+        "A": "執行輸入檢查",
+        "B": "使用 SSL 加密",
+        "C": "加入圖形驗證碼",
+        "D": "加裝防毒軟體"
+      }
+    },
+    {
+      "id": 8,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "關於零信任安全架構（Zero Trust Architecture），下列敘述何者「不」正確？",
+      "options": {
+        "A": "零信任基礎認知，也就是假設不信任任何人為前提的安全架構",
+        "B": "從網路到裝置都是零信任控制點",
+        "C": "零信任包含：網路、設備、使用者、資料，不包含 Workloads",
+        "D": "零信任安全架構四大支柱：身分可信、架構可信、存取可信、服務可信"
+      }
+    },
+    {
+      "id": 9,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "RAID 0, RAID 1, RAID 5, RAID 10 最小需要的實體硬碟數量依序為下列何者？",
+      "options": {
+        "A": "1, 1, 2, 2",
+        "B": "2, 2, 3, 3",
+        "C": "2, 2, 3, 4",
+        "D": "2, 2, 5, 10"
+      }
+    },
+    {
+      "id": 10,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "下列何者機制的目的是用來確保資料的完整性（Integrity）？",
+      "options": {
+        "A": "RC4（Rivest Cipher 4）",
+        "B": "RSA（Rivest, Shamir, Adleman）",
+        "C": "Diffie-Hellman",
+        "D": "MD5（Message Digest Algorithm 5）"
+      }
+    },
+    {
+      "id": 11,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "某公司的資料容錯策略是使用遠端日誌抄寫（Remote Journaling），關於遠端日誌抄寫，下列敘述何者正確？",
+      "options": {
+        "A": "即時複製資料庫或檔案到遠端存放，並進行即時同步",
+        "B": "傳送資料副本至備份磁帶，拿到遠端存放",
+        "C": "使用備份軟體備份資料至遠端，有更新時透過備份軟體同步",
+        "D": "傳送交易紀錄至遠端，當原始資料遺失時，在遠端透過交易紀錄重建"
+      }
+    },
+    {
+      "id": 12,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "關於網站應用程式之資料安全性，下列敘述何者正確？",
+      "options": {
+        "A": "HTTPS 目前最新版加密層協議為透過 SSL 3.0 實作",
+        "B": "HTTPS 協議需透過金鑰交換機制取得用於加密資料之密鑰（如：AES）以確保傳輸效能",
+        "C": "HTTPS 協議僅可保護應用程式傳送之資料內容，攻擊者仍可透過竊聽獲取未加密之 HTTP Header",
+        "D": "使用者密碼若透過 HTTPS 協議傳送，即可保護其不受竊聽，因此可明文儲存於資料庫中"
+      }
+    },
+    {
+      "id": 13,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "關於一段 Java 程式碼（使用 prepareStatement 與 setString），下列敘述何者「不」正確？",
+      "options": {
+        "A": "Hard-coded Password 為 FIXME",
+        "B": "此程式碼語言為 Java",
+        "C": "prepareStatement 為預存式查詢",
+        "D": "setString 為參數化查詢"
+      }
+    },
+    {
+      "id": 14,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "某 MIS 人員欲對公司一重要伺服器使用 Nmap 來執行進行滲透測試，請問該 MIS 使用此工具最主要之目的為何？",
+      "options": {
+        "A": "利用該伺服器已知對外開放之服務埠進行情蒐",
+        "B": "利用該伺服器已知之漏洞提升權限",
+        "C": "利用該伺服器已知之漏洞竊取檔案",
+        "D": "利用該伺服器已知之漏洞下載資料庫"
+      }
+    },
+    {
+      "id": 15,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "下列何種檢測方式較「不」能證明網站防禦機制跟企業認知的資安防護程度一樣好？",
+      "options": {
+        "A": "網站弱點掃描",
+        "B": "主機弱點掃描",
+        "C": "滲透測試",
+        "D": "網頁源碼檢測"
+      }
+    },
+    {
+      "id": 16,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "下列哪些作法能有效避免暴力破密（Brute-Force）攻擊？（複選）",
+      "options": {
+        "A": "密鑰延伸（Key stretching）",
+        "B": "密碼複雜度要求",
+        "C": "雜湊演算（Hashing）",
+        "D": "加鹽（Salting）"
+      }
+    },
+    {
+      "id": 17,
+      "type": "複選題",
+      "answer": "BC",
+      "question_text": "下列哪些 HTTP Header 標頭之安全性設定，「不」能讓網站與使用者瀏覽器之間有更多的安全防護功能？（複選）",
+      "options": {
+        "A": "HTTP Strict Transport Security",
+        "B": "Access-Control-Max-Age",
+        "C": "Accept-Encoding",
+        "D": "X-Frame-Options"
+      }
+    },
+    {
+      "id": 18,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "關於勒索病毒傳遞媒介、與常用技術手法，下列敘述哪些正確？（複選）",
+      "options": {
+        "A": "勒索病毒會透過郵件、網頁的網址連結、USB 裝置來傳遞",
+        "B": "勒索病毒會利用 DLL Hijacking 技術取得高權限",
+        "C": "勒索病毒會利用 OS 黑名單程式，迴避防毒系統檢查",
+        "D": "勒索病毒會利用 Power Shell 無檔案式（File-less），取得高權限"
+      }
+    },
+    {
+      "id": 19,
+      "type": "複選題",
+      "answer": "ACD",
+      "question_text": "下列哪些措施可以增加「系統維護」的安全性？（複選）",
+      "options": {
+        "A": "在公司政策允許下建立 VPN 機制，提供作業人員可以進行遠端安全連線",
+        "B": "建立單一登入（SSO）作業，統一連線帳密管理",
+        "C": "設定網路防火牆遠端連線機制及限制存取的主機位置",
+        "D": "使用雙因子認證，確保連線使用者"
+      }
+    },
+    {
+      "id": 20,
+      "type": "複選題",
+      "answer": "ABC",
+      "question_text": "關於搜尋引擎進階指令（Google Hacking）發展、應用與技術分析，下列敘述哪些正確？（複選）",
+      "options": {
+        "A": "駭客利用 google 進階搜尋技巧搜索網際網路中特定的文本字，作為滲透入侵 Web 應用程序",
+        "B": "site:tw 此指令是限制搜尋標的為台灣網站",
+        "C": "intitle:index.of site:tw 描述是列出該網站 index.of 網站目錄清單",
+        "D": "在另一個知名搜尋引擎 Bing，並沒有類似的應用"
+      }
+    },
+    {
+      "id": 21,
+      "type": "題組",
+      "answer": "C",
+      "case_group": {
+        "id": "題組 1",
+        "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
+      },
+      "question_text": "【題組 1-1】Host C 反應無法存取 Host B 分享的資源的原因為下列何者？",
+      "options": {
+        "A": "Host C 與 Host B 在不同 VLAN",
+        "B": "SW1 未設定 Gateway IP 192.168.10.1",
+        "C": "R1 未設定 Gateway IP 192.168.10.1",
+        "D": "Host C 未設定 Gateway IP 192.168.0.1"
+      }
+    },
+    {
+      "id": 22,
+      "type": "題組",
+      "answer": "B",
+      "case_group": {
+        "id": "題組 1",
+        "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
+      },
+      "question_text": "【題組 1-2】請問 R1 < ---- > SW1 之間所建立的架構稱為下列何者？",
+      "options": {
+        "A": "Multiple VLAN Routing",
+        "B": "Router on a stick",
+        "C": "Routing cross switch",
+        "D": "One-armed routing"
+      }
+    },
+    {
+      "id": 23,
+      "type": "題組",
+      "answer": "D",
+      "case_group": {
+        "id": "題組 1",
+        "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
+      },
+      "question_text": "【題組 1-3】計畫導入動態路由協定，下列何者「不」是避免路由迴圈的技術？",
+      "options": {
+        "A": "Route Poisoning",
+        "B": "Split Horizon",
+        "C": "Hold-down timers",
+        "D": "Route Convergence"
+      }
+    },
+    {
+      "id": 24,
+      "type": "題組",
+      "answer": "D",
+      "case_group": {
+        "id": "題組 1",
+        "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
+      },
+      "question_text": "【題組 1-4】R1 進行路由匯總，請問 R1 應如何宣告 SW1 匯總後的路由（包含 192.168.8.0/24, 192.168.9.0/24 等）？",
+      "options": {
+        "A": "192.168.8.0/19",
+        "B": "192.168.8.0/20",
+        "C": "192.168.8.0/21",
+        "D": "192.168.8.0/22"
+      }
+    },
+    {
+      "id": 25,
+      "type": "題組",
+      "answer": "B",
+      "case_group": {
+        "id": "題組 2",
+        "description": "某企業使用第三方 ERP 系統已經 15 年，該系統安裝於實體主機中，其作業系統為 Windows Server 2003，資料庫為 MS-SQL 2008 版本，其 ERP 資料庫相容層級為 100。該 ERP 只購買維護及三次新增客製功能，未購買升級更新版本。 後端使用 Single Fiber Controller 連結 EMC storage，發現硬碟使用率已達 90%，資料庫檔 erp.mdf 900 GB，資料庫 erp.ldf 檔 1.5TB。該公司 ISMS 制度中 ERP 服務級別協定（Service-Level Agreement, SLA）要求妥善率"
+      },
+      "question_text": "【題組 2-1】在面臨系統老舊且要求高妥善率的情況下，找來主機保固公司進行更換 RAID 卡電池組，下列敘述何者正確？",
+      "options": {
+        "A": "RAID 資訊遺失不會造成系統毀損",
+        "B": "在硬碟也保留一份 RAID 資訊，可當作 RAID 的資料備份",
+        "C": "這是正常故障更換，不需要進行 ISMS 資安通報",
+        "D": "檢修前不需要再取主機故障資訊及進行分析"
+      }
+    },
+    {
+      "id": 26,
+      "type": "題組",
+      "answer": "D",
+      "case_group": {
+        "id": "題組 2",
+        "description": "某企業使用第三方 ERP 系統已經 15 年，該系統安裝於實體主機中，其作業系統為 Windows Server 2003，資料庫為 MS-SQL 2008 版本，其 ERP 資料庫相容層級為 100。該 ERP 只購買維護及三次新增客製功能，未購買升級更新版本。 後端使用 Single Fiber Controller 連結 EMC storage，發現硬碟使用率已達 90%，資料庫檔 erp.mdf 900 GB，資料庫 erp.ldf 檔 1.5TB。該公司 ISMS 制度中 ERP 服務級別協定（Service-Level Agreement, SLA）要求妥善率"
+      },
+      "question_text": "【題組 2-2】在掌握相關資訊後應注意的資料庫安全性評估事項，下列敘述何者正確？",
+      "options": {
+        "A": "MS-SQL 2008 已終止服務，應在新主機抵達時更換成 MS-SQL 2019 並直接升級至 150 模式",
+        "B": "MS-SQL 2008 ldf 檔已達 1.5TB 時，應 transaction log，指令為 dump transaction erp with no_log",
+        "C": "ldf 檔過大時，直接刪除 ldf 檔後，而後再掛回 ERP 資料庫",
+        "D": "ERP 資料庫更換前，應先檢查連線方式及帳號密碼，且需要查核資料庫所屬安全性使用者群組"
+      }
+    },
+    {
+      "id": 27,
+      "type": "題組",
+      "answer": "A",
+      "case_group": {
+        "id": "題組 2",
+        "description": "某企業使用第三方 ERP 系統已經 15 年，該系統安裝於實體主機中，其作業系統為 Windows Server 2003，資料庫為 MS-SQL 2008 版本，其 ERP 資料庫相容層級為 100。該 ERP 只購買維護及三次新增客製功能，未購買升級更新版本。 後端使用 Single Fiber Controller 連結 EMC storage，發現硬碟使用率已達 90%，資料庫檔 erp.mdf 900 GB，資料庫 erp.ldf 檔 1.5TB。該公司 ISMS 制度中 ERP 服務級別協定（Service-Level Agreement, SLA）要求妥善率"
+      },
+      "question_text": "【題組 2-3】關於新主機虛擬化（採用 Esxi）之安全規劃應注意的事項，下列敘述何者較正確？",
+      "options": {
+        "A": "若決定採用 ESXi 6.7 U.3 版本，必須合法下載支援該硬體之版本，否則會有不相容問題",
+        "B": "新主機採用 ESXi 為求更大硬碟使用需要，決定採用 RAID 0 模式",
+        "C": "ESXi 可採用永久免費的版本，且可滿足新主機硬體更新需要",
+        "D": "網路上可以找到 ESXi 序號，可直接使用在公司正式環境上"
+      }
+    },
+    {
+      "id": 28,
+      "type": "題組",
+      "answer": "B",
+      "case_group": {
+        "id": "題組 2",
+        "description": "某企業使用第三方 ERP 系統已經 15 年，該系統安裝於實體主機中，其作業系統為 Windows Server 2003，資料庫為 MS-SQL 2008 版本，其 ERP 資料庫相容層級為 100。該 ERP 只購買維護及三次新增客製功能，未購買升級更新版本。 後端使用 Single Fiber Controller 連結 EMC storage，發現硬碟使用率已達 90%，資料庫檔 erp.mdf 900 GB，資料庫 erp.ldf 檔 1.5TB。該公司 ISMS 制度中 ERP 服務級別協定（Service-Level Agreement, SLA）要求妥善率"
+      },
+      "question_text": "【題組 2-4】若 SLA 要求妥善率 99.9%，請問一年最大可容許停機時間約為多久？",
+      "options": {
+        "A": "7 天 15 小時 36 分",
+        "B": "8 小時 45 分 36 秒",
+        "C": "15 分 33.6 秒",
+        "D": "55.36 秒"
+      }
+    },
+    {
+      "id": 29,
+      "type": "題組",
+      "answer": "B",
+      "case_group": {
+        "id": "題組 3",
+        "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 3-1】若小明想使用常見的封包側錄工具來錄製封包，可以使用下列何種工具？",
+      "options": {
+        "A": "jpgdump",
+        "B": "wireshark",
+        "C": "ipconfig",
+        "D": "atpx"
+      }
+    },
+    {
+      "id": 30,
+      "type": "題組",
+      "answer": "A",
+      "case_group": {
+        "id": "題組 3",
+        "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 3-2】請問附圖（顯示 DNS 查詢訊息）是小明下了什麼 Wireshark 過濾指令？",
+      "options": {
+        "A": "udp.port == 53",
+        "B": "tcp.port eq 80",
+        "C": "ip.addr==192.168.23.9",
+        "D": "arp eq DNS"
+      }
+    },
+    {
+      "id": 31,
+      "type": "題組（複選）",
+      "answer": "AB",
+      "case_group": {
+        "id": "題組 3",
+        "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 3-3】小明從附圖中可找出封包中何者是惡意網站，請問同仁電腦連上什麼中繼站，以及下載了什麼可疑檔案？（複選）",
+      "options": {
+        "A": "nrtjo.eu 下載 sdfg.jar",
+        "B": "nrtjo.eu 下載 q.jar",
+        "C": "nrtjo.eu 下載 favicon.ico",
+        "D": "freeways.in 下載 gates.php"
+      }
+    },
+    {
+      "id": 32,
+      "type": "題組",
+      "answer": "A",
+      "case_group": {
+        "id": "題組 3",
+        "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 3-4】小明在附圖封包中可以判斷出受害者連線下載惡意程式的網站 IP 位置為下列何者？",
+      "options": {
+        "A": "59.53.91.102",
+        "B": "192.168.23.129",
+        "C": "65.55.195.250",
+        "D": "127.0.0.1"
+      }
+    },
+    {
+      "id": 33,
+      "type": "題組",
+      "answer": "C",
+      "case_group": {
+        "id": "題組 4",
+        "description": "滲透測試（Penetration Test）是通過模擬惡意黑客的攻擊方法，來評估計算機網路系統安全的一種測試，目的是發掘系統漏洞，並提出改善方法， 且通常來說是善意的，小李身為 A 公司的資安工程師，請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 4-1】下列何者較「不」可能是滲透測試會使用到的工具？",
+      "options": {
+        "A": "Wireshark",
+        "B": "Burp Suit",
+        "C": "Nagios",
+        "D": "Nmap"
+      }
+    },
+    {
+      "id": 34,
+      "type": "題組",
+      "answer": "B",
+      "case_group": {
+        "id": "題組 4",
+        "description": "滲透測試（Penetration Test）是通過模擬惡意黑客的攻擊方法，來評估計算機網路系統安全的一種測試，目的是發掘系統漏洞，並提出改善方法， 且通常來說是善意的，小李身為 A 公司的資安工程師，請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 4-2】當完成滲透測試後於報告中發現 GET http://172.16.112.216:8080/ 資訊，判斷公司可能出現下列何種風險漏洞？",
+      "options": {
+        "A": "敏感目錄暴露",
+        "B": "未強制使用 HTTPS",
+        "C": "Session Cookie 未設定為 Secure 模式",
+        "D": "啟用 SSH 較弱 MAC 加密算法"
+      }
+    },
+    {
+      "id": 35,
+      "type": "題組",
+      "answer": "D",
+      "case_group": {
+        "id": "題組 4",
+        "description": "滲透測試（Penetration Test）是通過模擬惡意黑客的攻擊方法，來評估計算機網路系統安全的一種測試，目的是發掘系統漏洞，並提出改善方法， 且通常來說是善意的，小李身為 A 公司的資安工程師，請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 4-3】關於滲透測試與弱點掃描的差異，下列敘述何者正確？",
+      "options": {
+        "A": "滲透測試主要為自動化掃描軟體檢測，只檢測既有安全漏洞",
+        "B": "弱點掃描針對客戶的目標系統模擬、發掘安全漏洞並提出改善",
+        "C": "弱點掃描能檢測出最新的資安漏洞",
+        "D": "滲透測試為資安專家仿駭客思維、發掘安全漏洞，以實戰方式找出任何可能突破的檢測"
+      }
+    },
+    {
+      "id": 36,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "case_group": {
+        "id": "題組 4",
+        "description": "滲透測試（Penetration Test）是通過模擬惡意黑客的攻擊方法，來評估計算機網路系統安全的一種測試，目的是發掘系統漏洞，並提出改善方法， 且通常來說是善意的，小李身為 A 公司的資安工程師，請就上述情境回答下列問題。"
+      },
+      "question_text": "【題組 4-4】請問下列哪些是目前業界共同的資訊安全測試參考的（方法論）文件範本？（複選）",
+      "options": {
+        "A": "Open Web Application Security Project Testing Guide（OWASP）",
+        "B": "Common Weakness Enumeration（CWE）",
+        "C": "Open Shortest Path First（OSPF）",
+        "D": "Information Systems Security Assessment Framework（ISSAF）"
+      }
+    },
+    {
+      "id": 37,
+      "type": "題組",
+      "answer": "D",
+      "case_group": {
+        "id": "題組 5",
+        "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
+      },
+      "question_text": "【題組 5-1】請問小張使用此工具（nc）的主要目的為下列何者？",
+      "options": {
+        "A": "NetChannel 工具通常使用於網路管理，主要目的為建立網路通道",
+        "B": "NoCommand 工具通常使用於將 DOS Command 轉換為 GUI 介面",
+        "C": "NoCommunication 工具通常使用於建立雙方之通訊連線",
+        "D": "NetCat 工具通常使用於網路管理情境之下，亦為滲透測試常用工具之一"
+      }
+    },
+    {
+      "id": 38,
+      "type": "題組",
+      "answer": "C",
+      "case_group": {
+        "id": "題組 5",
+        "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
+      },
+      "question_text": "【題組 5-2】關於 nc -vzw5 192.168.0.1 1-2048 指令的執行結果，何者正確？",
+      "options": {
+        "A": "對主機進行 vpn 連線，且連線時間設定 2048 秒",
+        "B": "對主機進行監聽，且監聽時間設定 2048 秒",
+        "C": "對主機之 TCP port 1-2048 進行掃描，且連線逾時設定 5 秒",
+        "D": "對主機之 UCP port 1-2048 進行掃描，且連線逾時設定 5 秒"
+      }
+    },
+    {
+      "id": 39,
+      "type": "題組（複選）",
+      "answer": "BD",
+      "case_group": {
+        "id": "題組 5",
+        "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
+      },
+      "question_text": "【題組 5-3】請問題目中指令 nc -ltp 80 的執行結果為下列何者？（複選）",
+      "options": {
+        "A": "關閉 telnet 模式",
+        "B": "啟動 telnet 模式",
+        "C": "阻斷 80 port",
+        "D": "指定 80 port 為監聽 port"
+      }
+    },
+    {
+      "id": 40,
+      "type": "題組",
+      "answer": "A",
+      "case_group": {
+        "id": "題組 5",
+        "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
+      },
+      "question_text": "【題組 5-4】請問操控端下達何種指令時，等待接聽 TCP 80 port，若接收到連線，就可以將 test.txt 傳送給對方？",
+      "options": {
+        "A": "nc -l -p 80 < type test.txt",
+        "B": "nc -t -p 80 < type test.txt",
+        "C": "nc -g -p 80 > type test.txt",
+        "D": "nc -g -p 80 < type test.txt"
+      }
+    }
+  ]
+}
