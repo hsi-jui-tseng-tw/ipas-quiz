@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iPAS 資安測驗練習</title>
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="title-block">
+        <h1>iPAS 資安測驗練習</h1>
+        <p class="subtitle">資訊安全工程師中級題庫練習</p>
+      </div>
+      <div class="status-pills" aria-live="polite">
+        <span class="pill" id="bankStatus">題庫載入中</span>
+        <span class="pill" id="sessionStatus">尚未開始</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <details class="panel setup" id="settingsPanel">
+        <summary class="settings-summary">
+          <span>測驗設定</span>
+          <span class="summary-meta" id="settingsSummaryText">載入題庫中</span>
+        </summary>
+
+        <div class="settings-body">
+          <div class="field">
+            <label for="examSelect">考卷 / 題庫</label>
+            <select id="examSelect" disabled>
+              <option>載入中</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="categorySelect">單元 / 類別</label>
+            <select id="categorySelect" disabled>
+              <option>全部</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="limitSelect">題數</label>
+            <select id="limitSelect" disabled>
+              <option value="rule" selected>依考試規則</option>
+              <option value="10">10 題練習</option>
+              <option value="25">25 題練習</option>
+              <option value="40">40 題模擬</option>
+              <option value="50">50 題模擬</option>
+              <option value="all">全部</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <span class="field-label">排序方式</span>
+            <label class="toggle-row" for="shuffleInput">
+              <span>隨機排序</span>
+              <input id="shuffleInput" type="checkbox" checked disabled>
+            </label>
+          </div>
+
+          <p class="rule-note" id="ruleText">題庫載入後會自動開始模擬測驗。</p>
+
+          <div class="actions">
+            <button class="btn full" id="startButton" disabled>套用並開始</button>
+          </div>
+        </div>
+      </details>
+
+      <section class="quiz-shell">
+        <div class="panel loading" id="loadingView">正在讀取 exam/json 題庫</div>
+        <div class="panel error hidden" id="errorView"></div>
+
+        <div class="panel empty-state hidden" id="emptyView">
+          <p>選擇單元後開始測驗</p>
+        </div>
+
+        <section class="panel quiz hidden" id="quizView" aria-live="polite">
+          <div class="quiz-head">
+            <div class="meta">
+              <span class="tag" id="sourceTag"></span>
+              <span class="tag" id="typeTag"></span>
+            </div>
+            <div class="progress-text" id="progressText"></div>
+          </div>
+
+          <div class="progress-bar" aria-hidden="true">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="case-box hidden" id="caseBox">
+            <p class="case-title" id="caseTitle"></p>
+            <p id="caseDescription"></p>
+          </div>
+
+          <article class="question">
+            <h2 id="questionText"></h2>
+          </article>
+
+          <div class="options" id="optionsList"></div>
+
+          <div class="quiz-actions">
+            <button class="btn secondary hidden" id="checkButton">確認答案</button>
+            <button class="btn hidden" id="nextButton">下一題</button>
+          </div>
+
+          <div class="feedback hidden" id="feedbackBox">
+            <p class="feedback-title" id="feedbackTitle"></p>
+            <p id="feedbackText"></p>
+          </div>
+        </section>
+
+        <section class="panel result hidden" id="resultView">
+          <h2>測驗結果</h2>
+          <p class="subtitle" id="resultSummary"></p>
+          <div class="score-grid">
+            <div class="score-card">
+              <div class="score-value" id="scoreValue">0 / 0</div>
+              <div class="score-label">總得分</div>
+            </div>
+            <div class="score-card">
+              <div class="score-value" id="rateValue">0%</div>
+              <div class="score-label">答對率</div>
+            </div>
+            <div class="score-card">
+              <div class="score-value" id="wrongValue">0</div>
+              <div class="score-label">錯題數</div>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="btn" id="restartButton">重新測驗</button>
+            <button class="btn secondary" id="changeButton">更換單元</button>
+          </div>
+          <div class="review-list" id="reviewList"></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
