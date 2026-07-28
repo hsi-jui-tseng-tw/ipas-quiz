@@ -28,7 +28,6 @@ const els = {
   startButton: document.getElementById("startButton"),
   loadingView: document.getElementById("loadingView"),
   errorView: document.getElementById("errorView"),
-  emptyView: document.getElementById("emptyView"),
   quizView: document.getElementById("quizView"),
   resultView: document.getElementById("resultView"),
   sourceTag: document.getElementById("sourceTag"),
@@ -423,7 +422,6 @@ function renderReviewList() {
 function showView(viewName) {
   els.loadingView.classList.toggle("hidden", viewName !== "loading");
   els.errorView.classList.toggle("hidden", viewName !== "error");
-  els.emptyView.classList.toggle("hidden", viewName !== "empty");
   els.quizView.classList.toggle("hidden", viewName !== "quiz");
   els.resultView.classList.toggle("hidden", viewName !== "result");
 }

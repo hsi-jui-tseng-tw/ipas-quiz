@@ -280,7 +280,6 @@ button:focus-visible {
   min-height: 520px;
 }
 
-.empty-state,
 .loading,
 .error {
   display: grid;
