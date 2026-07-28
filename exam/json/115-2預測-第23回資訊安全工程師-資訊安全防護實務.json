@@ -1,0 +1,709 @@
+{
+  "metadata": {
+    "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 23 回",
+    "subject": "資訊安全防護實務",
+    "date": "115 年 08 月 22 日"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "企業發現已停用專案的子網域仍指向可被他人重新註冊的 SaaS tenant。哪一項最能持續發現此類 subdomain takeover 暴露？",
+      "options": {
+        "A": "只盤點內部桌上型電腦，不檢查 DNS",
+        "B": "將舊 CNAME 保留，期待外部人員不會注意",
+        "C": "持續收集 DNS、certificate transparency 與雲端資產，驗證 dangling record 並由所有人移除",
+        "D": "只縮短網域名稱，未確認其實際指向"
+      },
+      "explanation": "A：不正確；端點清單無法涵蓋外部 DNS 依賴。B：不正確；dangling record 正是 takeover 的必要條件。C：正確；多來源外部探索與指向驗證可找出無主服務。D：不正確；名稱長度不影響 CNAME 目標是否可被接管。",
+      "chapter": "3.1",
+      "competency": "能持續發現並處置外部攻擊面的 dangling DNS"
+    },
+    {
+      "id": 2,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "對外舊系統出現已被利用的 Web 弱點，但正式修補需兩週相容性測試。短期最適當的 virtual patch 作法為何？",
+      "options": {
+        "A": "依攻擊 payload 建立 WAF 規則、先在偵測模式驗證，再阻擋並監看繞過，同時保留正式修補期限",
+        "B": "永久以 WAF 取代程式修補，不再分析根因",
+        "C": "關閉所有 Web 日誌，降低規則誤報量",
+        "D": "只修改弱點名稱，服務仍接受相同惡意輸入"
+      },
+      "explanation": "A：正確；受測試的 WAF 緩解可縮短暴露窗口，但需監看及後續根治。B：不正確；virtual patch 可能被繞過，不能永久取代程式修補。C：不正確；關閉日誌會失去成效與繞過監控。D：不正確；文件變更不影響攻擊面。",
+      "chapter": "3.1",
+      "competency": "能以受監控的 virtual patch 降低緊急 Web 曝險"
+    },
+    {
+      "id": 3,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "公司導入 passkey 後，攻擊者改以社交工程服務台申請帳號復原。哪一項 recovery 流程較安全？",
+      "options": {
+        "A": "只要來電者說出員工姓名就重設所有驗證器",
+        "B": "由單一服務台人員直接新增任意裝置，且不通知帳號持有人",
+        "C": "使用安全問題，例如生日與母親姓名，作為唯一證明",
+        "D": "採多項獨立身分證明與高風險核准，設定等待期並通知既有可信管道"
+      },
+      "explanation": "A：不正確；姓名是公開資訊。B：不正確；單點決定與無通知容易遭社交工程。C：不正確；安全問題資訊常可蒐集或猜測。D：正確；多重證明、核准、延遲與帶外通知可保護 recovery 這個替代入口。",
+      "chapter": "3.1",
+      "competency": "能保護 passwordless 帳號的高風險復原流程"
+    },
+    {
+      "id": 4,
+      "type": "複選題",
+      "answer": "AC",
+      "question_text": "為降低 Windows 端點憑證被竊後用於橫向移動，下列哪些措施適當？（複選）",
+      "options": {
+        "A": "在支援設備啟用 Credential Guard，隔離部分衍生憑證秘密",
+        "B": "讓所有管理工作使用同一個 Domain Admin 帳號登入一般端點",
+        "C": "分離管理層級，限制舊式 NTLM 使用，並使用專用受管管理工作站",
+        "D": "允許瀏覽器與郵件程式以最高權限執行"
+      },
+      "explanation": "A：正確；虛擬化式隔離可增加擷取 LSA 秘密的難度。B：不正確；高權限登入一般端點會留下可被竊取的憑證材料。C：正確；tiering、協定限制與 PAW 可縮小高權限憑證暴露。D：不正確；高權限使用者應避免執行高風險日常應用。",
+      "chapter": "3.1",
+      "competency": "能以憑證隔離與管理層級降低 Windows 橫向移動"
+    },
+    {
+      "id": 5,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "各工作站使用相同本機 Administrator 密碼，任一端點外洩後可登入其他主機。最合適的改善為何？",
+      "options": {
+        "A": "每年把共用密碼末尾加一個數字",
+        "B": "使用 Windows LAPS 為各裝置產生不同且自動輪替的本機管理密碼，限制讀取權限並稽核",
+        "C": "將共用密碼貼在每台主機背面",
+        "D": "把所有使用者加入本機 Administrators"
+      },
+      "explanation": "A：不正確；可預測的共用變化仍會造成 pass-the-password。B：正確；每機唯一、受控揭露與輪替可限制單機外洩的橫向衝擊。C：不正確；實體張貼會直接洩漏憑證。D：不正確；擴大管理權會增加攻擊機會。",
+      "chapter": "3.1",
+      "competency": "能以 LAPS 管理每台端點唯一的本機管理憑證"
+    },
+    {
+      "id": 6,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "容器部署標籤 `app:latest`，同一標籤日後被替換成不同映像。如何確保正式環境部署的是已審查版本？",
+      "options": {
+        "A": "以 immutable digest 鎖定映像，驗證簽章與 provenance，並在 admission 階段拒絕未核准內容",
+        "B": "只相信 latest 標籤不會被改寫",
+        "C": "允許節點從任意公開 registry 下載映像",
+        "D": "將映像名稱寫入試算表，但部署仍使用可變標籤"
+      },
+      "explanation": "A：正確；digest 指向確定內容，簽章與來源證據再確認可信交付鏈。B：不正確；標籤通常可重新指向。C：不正確；任意 registry 增加未知與惡意映像。D：不正確；文件紀錄不能強制 runtime 拉取內容。",
+      "chapter": "3.1",
+      "competency": "能以 digest、簽章與 admission 保護容器映像完整性"
+    },
+    {
+      "id": 7,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "訪客將未登錄筆電接上辦公區網路孔後取得內部 IP。最適合的接取控制為何？",
+      "options": {
+        "A": "只在牆上張貼禁止接線告示",
+        "B": "任何裝置取得 DHCP 位址後自動進入伺服器管理網",
+        "C": "使用 802.1X/NAC 驗證使用者與裝置，未知或不合規設備進入隔離網段",
+        "D": "依電腦外殼顏色判斷是否為公司資產"
+      },
+      "explanation": "A：不正確；告示不能阻止未授權連線。B：不正確；自動信任會把實體接取轉為內網權限。C：正確；連接埠驗證、裝置狀態與 quarantine 可在接取點形成邊界。D：不正確；外觀不是可信資產身分。",
+      "chapter": "3.1",
+      "competency": "能以 802.1X 與 NAC 控制有線網路裝置接取"
+    },
+    {
+      "id": 8,
+      "type": "複選題",
+      "answer": "BD",
+      "question_text": "公司要防止機密設計圖經 SaaS 與端點外傳。下列哪些 DLP 實作較合理？（複選）",
+      "options": {
+        "A": "只依副檔名 `.secret` 判斷，所有改名檔案均放行",
+        "B": "結合資料標籤、內容辨識、使用者情境與目的地風險決定阻擋或核准",
+        "C": "將所有誤報直接忽略，不保留調整與例外程序",
+        "D": "在端點、郵件與 CASB 建立一致政策，記錄事件並由資料所有人管理例外"
+      },
+      "explanation": "A：不正確；副檔名易變更且無法辨識實際內容。B：正確；多重訊號可提高判斷精度並支援情境式處置。C：不正確；誤報需調整與受控例外，不能使政策失效。D：正確；跨通道一致性及資料所有人治理可降低繞道外傳。",
+      "chapter": "3.1",
+      "competency": "能以資料情境與跨通道政策實施 DLP"
+    },
+    {
+      "id": 9,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "網站把使用者輸入直接插入 `<script>` 內的 JavaScript 字串，HTML encoding 仍被繞過。根本修正為何？",
+      "options": {
+        "A": "只刪除輸入中的 `<`，其餘內容直接串接",
+        "B": "要求使用者承諾不輸入惡意內容",
+        "C": "將 CSP 設為允許 `unsafe-inline` 與所有來源",
+        "D": "避免把不可信資料放入可執行 context；必要時使用該 context 專用 encoding 並搭配嚴格 CSP"
+      },
+      "explanation": "A：不正確；JavaScript context 有多種跳脫方式，單字元黑名單不足。B：不正確；輸入驗證必須由系統強制。C：不正確；寬鬆 CSP 無法限制 inline script。D：正確；安全資料流與 context-sensitive encoding 才能處理 DOM/JavaScript XSS。",
+      "chapter": "3.1",
+      "competency": "能依輸出 context 防止 Web XSS"
+    },
+    {
+      "id": 10,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "登入 API 遭分散式密碼噴灑，攻擊者每個 IP 只嘗試少量密碼。哪一項防護較有效？",
+      "options": {
+        "A": "依帳號、IP/ASN、裝置與時間窗關聯速率，對高風險行為 step-up 並避免永久鎖死帳號",
+        "B": "只限制每個 IP 每秒一千次登入",
+        "C": "遇到失敗就回傳帳號是否存在與密碼哪個字元錯誤",
+        "D": "取消 MFA，縮短登入處理時間"
+      },
+      "explanation": "A：正確；多維度關聯可偵測 low-and-slow 與代理池，同時避免被利用造成拒絕服務。B：不正確；寬鬆單 IP 門檻容易被分散來源繞過。C：不正確；詳細差異會協助帳號列舉。D：不正確；取消 MFA 會放大密碼外洩衝擊。",
+      "chapter": "3.1",
+      "competency": "能以多維度行為限制分散式密碼噴灑"
+    },
+    {
+      "id": 11,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "Java 服務反序列化來自網路的原生物件，攻擊者可觸發 gadget chain。最適當的處置為何？",
+      "options": {
+        "A": "只加密網路通道，繼續反序列化任意類別",
+        "B": "將錯誤訊息隱藏，但保留相同物件格式",
+        "C": "改用具明確 schema 的資料格式、限制可接受型別並驗證欄位，移除危險 gadget 相依元件",
+        "D": "以 Base64 包裝 serialized object 後直接信任"
+      },
+      "explanation": "A：不正確；TLS 不會讓已驗證使用者提供的惡意物件安全。B：不正確；錯誤隱藏不改變執行路徑。C：正確；縮小型別與資料結構、驗證內容及移除 gadget 可處理根因。D：不正確；Base64 是編碼，不是安全驗證。",
+      "chapter": "3.1",
+      "competency": "能防止不安全反序列化與 gadget chain"
+    },
+    {
+      "id": 12,
+      "type": "複選題",
+      "answer": "BC",
+      "question_text": "雲端 KMS 的 production key 需要降低單人濫用與誤刪風險。下列哪些設定合理？（複選）",
+      "options": {
+        "A": "同一位開發者可建立、使用、停用並立即永久刪除所有 key",
+        "B": "分離 key administration 與 cryptographic use，依工作負載及 encryption context 限縮權限",
+        "C": "啟用刪除等待期、變更告警與 key usage audit，對高風險操作採額外核准",
+        "D": "將 key material 匯出到公開 repository，方便災難復原"
+      },
+      "explanation": "A：不正確；權限集中增加濫用與單點誤操作。B：正確；職務分離及情境式授權限制誰能管理與使用金鑰。C：正確；等待期、告警與核准可降低不可逆刪除風險。D：不正確；公開 key material 會破壞所有受保護資料。",
+      "chapter": "3.1",
+      "competency": "能以職務分離與生命週期保護管理雲端 KMS"
+    },
+    {
+      "id": 13,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "備份工作每天顯示成功，但最近一次復原時資料庫無法啟動。要最直接改善哪一項控制？",
+      "options": {
+        "A": "只保留 backup job 的綠色圖示截圖",
+        "B": "定期在隔離環境執行 restore，驗證資料一致性、應用啟動與 RTO/RPO，並追蹤失敗",
+        "C": "增加備份檔名稱長度，不開啟檔案",
+        "D": "停止復原演練，避免暴露備份問題"
+      },
+      "explanation": "A：不正確；工作成功只代表寫入流程，不能證明內容可用。B：正確；端到端 restore 與應用驗證才能證明復原能力。C：不正確；命名不會修復一致性。D：不正確；停止測試只會讓問題延後到真實災難。",
+      "chapter": "3.1",
+      "competency": "能以隔離還原與應用驗證確認備份可用性"
+    },
+    {
+      "id": 14,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "微服務之間需要自動驗證彼此工作負載身分，且 Pod 會頻繁重建。哪一種做法最適合？",
+      "options": {
+        "A": "所有服務共用永久 TLS private key",
+        "B": "只依動態 Pod IP 建立永久信任",
+        "C": "停用服務間 TLS，避免憑證輪替",
+        "D": "以 SPIFFE-like workload identity 自動簽發短期憑證，透過 mTLS 驗證並依服務身分授權"
+      },
+      "explanation": "A：不正確；共用私鑰使單一服務外洩影響整體且無法追責。B：不正確；動態 IP 不是穩定可信身分。C：不正確；停用 TLS 失去服務驗證及通道保護。D：正確；短期工作負載憑證適合動態環境並支援服務級政策。",
+      "chapter": "3.1",
+      "competency": "能以短期工作負載憑證保護微服務通訊"
+    },
+    {
+      "id": 15,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "日誌收集器格式更新後，大量事件因解析失敗被靜默丟棄。應如何強化 ingestion pipeline？",
+      "options": {
+        "A": "監控接收量與解析失敗，將失敗事件送入 dead-letter queue，版本化 parser 並以樣本回歸測試",
+        "B": "只監控 SIEM CPU，不記錄來源事件數",
+        "C": "遇到解析錯誤就永久刪除原始事件",
+        "D": "讓每個 parser 直接在正式環境修改，未經測試"
+      },
+      "explanation": "A：正確；端到端健康指標、失敗保留與版本測試可防止無聲可視性缺口。B：不正確；系統資源正常不代表事件完整。C：不正確；刪除原始資料會失去重處理能力。D：不正確；未測試變更容易造成全域遙測中斷。",
+      "chapter": "3.2",
+      "competency": "能維護具失敗保留與回歸測試的日誌收集管線"
+    },
+    {
+      "id": 16,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "SOC 要評估偵測覆蓋而非只計算規則數。下列哪些作法合理？（複選）",
+      "options": {
+        "A": "把關鍵攻擊路徑對應到 ATT&CK technique、所需資料與現有規則",
+        "B": "以 attack simulation 驗證規則、遙測與分析流程的端到端結果",
+        "C": "只要規則存在就視為已覆蓋，不檢查資料是否到達",
+        "D": "追蹤未覆蓋、高誤報、資料品質與平均偵測時間，依風險改善"
+      },
+      "explanation": "A：正確；路徑、資料與規則對應可找出實質缺口。B：正確；模擬能驗證從事件產生到人員處置的整條鏈。C：不正確；無資料或錯誤 parser 會使規則名存實亡。D：正確；品質與時間指標比單純規則量更能反映能力。",
+      "chapter": "3.2",
+      "competency": "能以攻擊路徑、資料與實測結果評估偵測覆蓋"
+    },
+    {
+      "id": 17,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "多數網路流量已使用 TLS，NDR 無法看見 payload。仍可運用哪些資訊建立異常偵測？",
+      "options": {
+        "A": "完全停用 TLS，讓所有密碼明文傳輸",
+        "B": "只依封包顏色判斷惡意程度",
+        "C": "分析 flow、DNS、SNI/憑證、JA4-like fingerprint、連線週期與資產角色，必要處使用受控解密",
+        "D": "宣告加密流量不可能偵測，停止收集網路 metadata"
+      },
+      "explanation": "A：不正確；為可視性犧牲通道安全會造成更大風險。B：不正確；封包沒有可作此判斷的顏色屬性。C：正確；metadata 與行為基線可在不普遍解密下辨識異常。D：不正確；加密仍保留大量可分析的連線特徵。",
+      "chapter": "3.2",
+      "competency": "能利用加密流量 metadata 與行為基線進行 NDR"
+    },
+    {
+      "id": 18,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "威脅獵捕團隊懷疑端點透過 DNS tunneling 外傳資料。哪一組特徵最值得查詢？",
+      "options": {
+        "A": "只統計內部 DNS 伺服器磁碟容量",
+        "B": "高熵且過長子網域、異常 TXT 查詢、固定 beacon 間隔、低常見度網域及高 NXDOMAIN 比例",
+        "C": "所有正常企業網域的 A record 均視為外傳",
+        "D": "只查看 HTTP response code，不分析 DNS"
+      },
+      "explanation": "A：不正確；儲存容量不呈現查詢內容與行為。B：正確；編碼資料、查詢型態、週期與稀有度是 tunneling 的常見可觀察特徵。C：不正確；無差別判定會產生大量誤報。D：不正確；DNS 外傳可能不產生 HTTP 事件。",
+      "chapter": "3.2",
+      "competency": "能以 DNS 內容與時序特徵獵捕隱蔽通道"
+    },
+    {
+      "id": 19,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "SOAR playbook 接到「疑似惡意管理員登入」就自動停用整個財務團隊帳號，曾造成營運中斷。如何改善？",
+      "options": {
+        "A": "取消所有事件記錄，使中斷不會被稽核發現",
+        "B": "將 playbook 擴大為停用全公司帳號",
+        "C": "任何低信心訊號都立即執行不可逆動作",
+        "D": "依信心與衝擊分級；低風險自動蒐證，高衝擊遏止需核准並提供 scope、回復與 kill switch"
+      },
+      "explanation": "A：不正確；隱藏紀錄不會改善自動化安全。B：不正確；擴大範圍會增加營運傷害。C：不正確；低信心與不可逆動作不相稱。D：正確；分級自動化、human approval、可回復與停止機制可控制 blast radius。",
+      "chapter": "3.2",
+      "competency": "能設計具信心門檻、核准與回復能力的 SOAR"
+    },
+    {
+      "id": 20,
+      "type": "複選題",
+      "answer": "ACD",
+      "question_text": "疑似 fileless malware 正在伺服器記憶體執行。下列哪些蒐證作法較適當？（複選）",
+      "options": {
+        "A": "先依授權取得記憶體、程序、網路連線與登入 session 等 volatile evidence",
+        "B": "先重開機三次，再決定是否需要記憶體資訊",
+        "C": "記錄採集工具、操作者、時間與 hash，並保護原始證據",
+        "D": "完成必要 volatile acquisition 後，再依事件目標取得磁碟與集中日誌進行關聯"
+      },
+      "explanation": "A：正確；記憶體與即時程序會因關機或時間流逝消失。B：不正確；重開機會破壞 fileless activity 的主要證據。C：正確；程序與完整性紀錄支持證據可信度。D：正確；揮發性優先後再擴充持久資料可建立完整時間線。",
+      "chapter": "3.2",
+      "competency": "能依揮發性順序保全 fileless malware 證據"
+    },
+    {
+      "id": 21,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "要判斷是密碼遭竊、session theft 或惡意 OAuth app，應優先關聯哪些證據？",
+      "options": {
+        "A": "郵件 header、IdP 登入與 MFA、session/token、OAuth consent、郵箱稽核及收件規則",
+        "B": "只查看財務主管的螢幕尺寸",
+        "C": "只詢問詐騙郵件收件人是否覺得內容可疑",
+        "D": "刪除所有寄件備份後再開始調查"
+      },
+      "explanation": "A：正確；郵件、身分、token、應用同意與郵箱活動可區分多種接管途徑。B：不正確；硬體尺寸與攻擊路徑無關。C：不正確；主觀感受不能取代技術時間線。D：不正確；刪除郵件會破壞內容與傳遞證據。",
+      "chapter": "3.2",
+      "competency": "能關聯郵件、身分與 OAuth 證據調查 BEC"
+      ,
+      "case_group": {
+        "id": "D23-1",
+        "description": "【情境】財務主管信箱向供應商寄出變更收款帳戶的郵件；IdP 無明顯新密碼登入，但租戶出現陌生 OAuth app consent 與隱藏轉寄規則。"
+      }
+    },
+    {
+      "id": 22,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "確認惡意 OAuth app 可讀寫郵件後，最完整的遏止為何？",
+      "options": {
+        "A": "只重設密碼，保留 app grant、refresh token 與郵箱規則",
+        "B": "只把詐騙郵件移到垃圾桶",
+        "C": "撤銷 app consent 與 token、停用或隔離應用、清除惡意規則，重新驗證帳號並搜尋其他使用者授權",
+        "D": "關閉所有身分日誌以降低儲存量"
+      },
+      "explanation": "A：不正確；OAuth token 可能在密碼變更後仍可用。B：不正確；刪除單一訊息不會移除持久存取。C：正確；需處理 app、token、郵箱 persistence 與 tenant-wide scope。D：不正確；關閉日誌會失去擴大調查能力。",
+      "chapter": "3.2",
+      "competency": "能撤銷 BEC 中的 OAuth 持久存取與郵箱規則"
+      ,
+      "case_group": {
+        "id": "D23-1",
+        "description": "【情境】財務主管信箱向供應商寄出變更收款帳戶的郵件；IdP 無明顯新密碼登入，但租戶出現陌生 OAuth app consent 與隱藏轉寄規則。"
+      }
+    },
+    {
+      "id": 23,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "財務團隊要降低詐騙款項實際匯出的機會。哪一項業務控制最直接？",
+      "options": {
+        "A": "任何收款帳戶變更只憑同一封電子郵件核准",
+        "B": "使用既有可信電話或供應商入口帶外確認帳戶變更，並要求職務分離與雙人核准",
+        "C": "將單人匯款上限提高且取消覆核",
+        "D": "只檢查郵件顯示名稱，不驗證實際寄件與交易資料"
+      },
+      "explanation": "A：不正確；遭接管郵箱可同時偽造請求與回覆。B：正確；獨立可信通道與雙人核准可在身分控制失敗後阻止付款。C：不正確；提高單人權限會放大 BEC 損失。D：不正確；顯示名稱容易仿冒。",
+      "chapter": "3.2",
+      "competency": "能以帶外確認與職務分離降低 BEC 財務損失"
+      ,
+      "case_group": {
+        "id": "D23-1",
+        "description": "【情境】財務主管信箱向供應商寄出變更收款帳戶的郵件；IdP 無明顯新密碼登入，但租戶出現陌生 OAuth app consent 與隱藏轉寄規則。"
+      }
+    },
+    {
+      "id": 24,
+      "type": "題組（複選）",
+      "answer": "BCD",
+      "question_text": "事件後哪些技術改善直接對應此次 OAuth consent 路徑？（複選）",
+      "options": {
+        "A": "允許所有使用者不經限制授權任意 multi-tenant app",
+        "B": "限制 user consent，高風險 permission 需管理員審查並驗證 publisher",
+        "C": "告警新 app grant、異常 mailbox rule、外部 forwarding 與大量郵件存取",
+        "D": "定期盤點 service principal、permission 與不活躍 grant，移除無業務需求項目"
+      },
+      "explanation": "A：不正確；無限制同意是此次攻擊入口。B：正確；permission 與 publisher 審查可降低惡意 app 取得權限。C：正確；關鍵行為告警可縮短 BEC dwell time。D：正確；持續清查可移除被遺忘或不必要的 OAuth 信任。",
+      "chapter": "3.2",
+      "competency": "能以 consent 治理與行為偵測防護惡意 OAuth app"
+      ,
+      "case_group": {
+        "id": "D23-1",
+        "description": "【情境】財務主管信箱向供應商寄出變更收款帳戶的郵件；IdP 無明顯新密碼登入，但租戶出現陌生 OAuth app consent 與隱藏轉寄規則。"
+      }
+    },
+    {
+      "id": 25,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "哪一組遙測最能確認攻擊者由公開 Pod 取得 service account token 後呼叫 API server？",
+      "options": {
+        "A": "只看應用首頁的 HTTP 200 次數",
+        "B": "只檢查節點硬碟品牌",
+        "C": "只查看 container image 大小",
+        "D": "關聯 ingress request、container runtime、Kubernetes audit 的 user identity、verb、resource 與來源"
+      },
+      "explanation": "A：不正確；首頁狀態無法呈現叢集控制面動作。B：不正確；硬碟品牌與 token 使用無關。C：不正確；映像大小不能證明 API 呼叫。D：正確；入口、runtime 與 audit identity 可連結被利用 Pod 到 RBAC 操作。",
+      "chapter": "4.1",
+      "competency": "能關聯應用、runtime 與 Kubernetes audit 調查叢集入侵"
+      ,
+      "case_group": {
+        "id": "D23-2",
+        "description": "【情境】公開 Kubernetes Pod 出現 RCE；其 service account 可列出 secrets，之後叢集內新增一個綁定 cluster-admin 的陌生 service account。"
+      }
+    },
+    {
+      "id": 26,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "確認攻擊仍在進行時，哪一項遏止順序較適當？",
+      "options": {
+        "A": "隔離易受害 workload、撤銷相關 token、移除惡意 binding，限制 API 與 egress，同時保全 audit/runtime 證據",
+        "B": "只刪除 Pod，保留已新增的 cluster-admin 與長效 token",
+        "C": "停止 audit logging，避免產生更多事件",
+        "D": "將受害 service account 直接升為 cluster-admin 方便除錯"
+      },
+      "explanation": "A：正確；需同步阻斷入口、憑證、持久化權限與外傳路徑，並保留調查資料。B：不正確；刪除最初 Pod 未移除已建立的 persistence。C：不正確；停用 audit 會失去叢集活動可視性。D：不正確；擴權會增加攻擊者能力。",
+      "chapter": "4.1",
+      "competency": "能協調 workload、token、RBAC 與網路面的 Kubernetes 遏止"
+      ,
+      "case_group": {
+        "id": "D23-2",
+        "description": "【情境】公開 Kubernetes Pod 出現 RCE；其 service account 可列出 secrets，之後叢集內新增一個綁定 cluster-admin 的陌生 service account。"
+      }
+    },
+    {
+      "id": 27,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "要判斷哪些 secrets 已可能暴露，應採哪一種方法？",
+      "options": {
+        "A": "假設只有 Pod 所在 namespace 受影響，不查 RBAC 權限",
+        "B": "只查看目前仍存在的 Pod，忽略已刪除 audit 事件",
+        "C": "還原 service account 在事件期間的有效 RBAC，查詢 list/get secrets audit，再追蹤秘密對應的外部系統使用",
+        "D": "只輪替最短的 secret 名稱"
+      },
+      "explanation": "A：不正確；跨 namespace 權限取決於實際 role binding。B：不正確；攻擊 workload 可能已刪除，但 audit 仍可呈現操作。C：正確；歷史授權、存取動作與外部使用能界定 credential impact。D：不正確；名稱長度與是否被讀取無關。",
+      "chapter": "4.1",
+      "competency": "能以歷史 RBAC 與秘密使用界定 Kubernetes 事件範圍"
+      ,
+      "case_group": {
+        "id": "D23-2",
+        "description": "【情境】公開 Kubernetes Pod 出現 RCE；其 service account 可列出 secrets，之後叢集內新增一個綁定 cluster-admin 的陌生 service account。"
+      }
+    },
+    {
+      "id": 28,
+      "type": "題組（複選）",
+      "answer": "ABC",
+      "question_text": "根除後，哪些改善可直接阻斷相同攻擊鏈？（複選）",
+      "options": {
+        "A": "修補 RCE，使用 read-only filesystem、non-root 與受限 capabilities 強化 workload",
+        "B": "預設不自動掛載 service account token，依服務建立最小 RBAC 與短期 projected token",
+        "C": "以 admission policy 禁止 cluster-admin 非核准綁定，並告警敏感 RBAC 變更與 secret 列舉",
+        "D": "讓所有 Pod 都能讀取所有 namespace secrets，降低部署複雜度"
+      },
+      "explanation": "A：正確；修補入口與 runtime hardening 限制 RCE 後能力。B：正確；減少 token 暴露及權限可縮小控制面衝擊。C：正確；預防與偵測高權限 persistence 直接對應事件。D：不正確；全域秘密讀取會放大任何 Pod 入侵。",
+      "chapter": "4.1",
+      "competency": "能以 workload、service account 與 RBAC 控制修補叢集攻擊鏈"
+      ,
+      "case_group": {
+        "id": "D23-2",
+        "description": "【情境】公開 Kubernetes Pod 出現 RCE；其 service account 可列出 secrets，之後叢集內新增一個綁定 cluster-admin 的陌生 service account。"
+      }
+    },
+    {
+      "id": 29,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "要區分 volumetric flood 與應用層 search abuse，應查看哪些差異？",
+      "options": {
+        "A": "只看公司員工總人數",
+        "B": "比較 bps/pps、連線狀態、來源分布、HTTP 路徑、回應時間與後端查詢成本",
+        "C": "只看首頁畫面是否為藍色",
+        "D": "將所有流量視為同一攻擊，不保留層級資訊"
+      },
+      "explanation": "A：不正確；員工數與外部流量型態無直接關係。B：正確；網路容量、連線、HTTP 與應用成本可區分 L3/4 與 L7 壓力。C：不正確；介面顏色不是 DDoS 訊號。D：不正確；不同層攻擊需要不同緩解位置與規則。",
+      "chapter": "4.1",
+      "competency": "能以網路與應用指標區分多層 DDoS"
+      ,
+      "case_group": {
+        "id": "D23-3",
+        "description": "【情境】售票網站開賣時同時遭遇大流量 SYN flood 與大量高成本 search API 請求；CDN 尚可用，但原站資料庫 CPU 飆高。"
+      }
+    },
+    {
+      "id": 30,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "最適當的分層緩解方案為何？",
+      "options": {
+        "A": "只增加資料庫 CPU，不處理 SYN flood 或惡意查詢",
+        "B": "將原站 IP 公開，讓更多用戶繞過 CDN",
+        "C": "封鎖所有使用者，且不保留購票核心功能",
+        "D": "由 upstream/CDN 清洗網路洪水，隱藏原站；對 search 採 cache、成本感知 rate limit、驗證與 degraded mode"
+      },
+      "explanation": "A：不正確；單點擴容不能處理多層攻擊且可能快速耗盡。B：不正確；公開原站會協助繞過邊緣防護。C：不正確；全面封鎖未兼顧關鍵業務可用性。D：正確；網路層由上游吸收，應用層以成本與服務降級控制資源。",
+      "chapter": "4.1",
+      "competency": "能協調上游清洗與應用降級處理多層 DDoS"
+      ,
+      "case_group": {
+        "id": "D23-3",
+        "description": "【情境】售票網站開賣時同時遭遇大流量 SYN flood 與大量高成本 search API 請求；CDN 尚可用，但原站資料庫 CPU 飆高。"
+      }
+    },
+    {
+      "id": 31,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "攻擊流量下降後，服務恢復時應先做什麼？",
+      "options": {
+        "A": "分階段解除限制，監控 queue、錯誤率與資料庫，驗證訂單一致性並保留快速回復緩解的條件",
+        "B": "一次移除所有規則與監控，直接開放無限制 search",
+        "C": "刪除事件期間所有流量資料後才恢復",
+        "D": "假設流量降低即代表後端沒有積壓或資料錯誤"
+      },
+      "explanation": "A：正確；漸進恢復與後端一致性檢查可避免二次過載及交易錯誤。B：不正確；全面解除可能立即重現壓力。C：不正確；流量資料需用於調查與調整。D：不正確；queue 與部分失敗可能在攻擊後持續。",
+      "chapter": "4.1",
+      "competency": "能在 DDoS 後分階段恢復並驗證交易一致性"
+      ,
+      "case_group": {
+        "id": "D23-3",
+        "description": "【情境】售票網站開賣時同時遭遇大流量 SYN flood 與大量高成本 search API 請求；CDN 尚可用，但原站資料庫 CPU 飆高。"
+      }
+    },
+    {
+      "id": 32,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "事後哪些測試能驗證 DDoS 改善成效？（複選）",
+      "options": {
+        "A": "在核准環境重放不同 bps/pps 與來源分布，確認上游路由及清洗啟動時間",
+        "B": "以高成本 API 負載測試 cache、rate limit、queue 與 degraded mode 的資源上限",
+        "C": "只閱讀 CDN 行銷簡報，不注入流量或量測原站",
+        "D": "量測正常用戶成功率、誤封率、資料庫飽和點與規則回復時間"
+      },
+      "explanation": "A：正確；多型態網路測試可確認上游緩解路徑。B：正確；應用成本測試能驗證原站保護與降級。C：不正確；產品聲明不能證明公司架構與規則。D：正確；業務成功、誤封與技術容量共同呈現實際成效。",
+      "chapter": "4.2",
+      "competency": "能以網路、應用與業務量測驗證 DDoS 韌性"
+      ,
+      "case_group": {
+        "id": "D23-3",
+        "description": "【情境】售票網站開賣時同時遭遇大流量 SYN flood 與大量高成本 search API 請求；CDN 尚可用，但原站資料庫 CPU 飆高。"
+      }
+    },
+    {
+      "id": 33,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "要快速確認陌生 MAC 所在位置與接取方式，最有效的查詢順序為何？",
+      "options": {
+        "A": "只在全公司群組詢問誰看過黑色設備",
+        "B": "將 MAC 位址長度當成機櫃編號",
+        "C": "由 NAC/switch CAM table 找到 switch port，再對照配線、機櫃與門禁紀錄",
+        "D": "等待裝置自行寄信說明位置"
+      },
+      "explanation": "A：不正確；外觀與人工回憶不足以精準定位。B：不正確；MAC 長度與實體位置無關。C：正確；網路接取資料可定位埠，再由實體紀錄確認機櫃與人員。D：不正確；未受管裝置不會可信地自我申報。",
+      "chapter": "4.2",
+      "competency": "能關聯 NAC、交換器與配線資料定位 rogue device"
+      ,
+      "case_group": {
+        "id": "D23-4",
+        "description": "【情境】資料中心監控發現機櫃內出現未登錄小型設備，使用陌生 MAC 掃描管理網段；該區採門禁卡與訪客陪同制度。"
+      }
+    },
+    {
+      "id": 34,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "在不破壞可能證據的前提下，第一個隔離動作為何？",
+      "options": {
+        "A": "立刻拆解設備並格式化其儲存媒體",
+        "B": "由交換器或 NAC 隔離該埠、保留封包與網路狀態，再由授權人員依蒐證程序處理設備",
+        "C": "允許設備繼續掃描數週，不增加監控",
+        "D": "把設備接到更敏感的核心交換器測試"
+      },
+      "explanation": "A：不正確；未記錄即拆解與格式化會破壞證據。B：正確；網路隔離可先停止掃描，並保留狀態等待受控實體處理。C：不正確；持續活動可能造成入侵。D：不正確；移至核心會擴大攻擊面。",
+      "chapter": "4.2",
+      "competency": "能隔離 rogue device 並維持後續數位與實體蒐證"
+      ,
+      "case_group": {
+        "id": "D23-4",
+        "description": "【情境】資料中心監控發現機櫃內出現未登錄小型設備，使用陌生 MAC 掃描管理網段；該區採門禁卡與訪客陪同制度。"
+      }
+    },
+    {
+      "id": 35,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "要判斷誰可能放置設備，哪一組實體證據最具關聯性？",
+      "options": {
+        "A": "大樓外當天天氣與附近餐廳菜單",
+        "B": "只看員工姓名清冊，不限定時間或區域",
+        "C": "只採訪一名不在場人員，不調閱任何系統紀錄",
+        "D": "比對機櫃開門感測、門禁、訪客登記與陪同人、CCTV 時段，以及維護工單與資產異動"
+      },
+      "explanation": "A：不正確；天氣與菜單不能建立放置行為。B：不正確；無時間與空間關聯的名冊範圍過廣。C：不正確；單一間接陳述缺乏佐證。D：正確；多項時間同步的實體與作業紀錄可建立進入、開櫃及維護鏈。",
+      "chapter": "4.2",
+      "competency": "能關聯門禁、影像與維護紀錄調查實體入侵"
+      ,
+      "case_group": {
+        "id": "D23-4",
+        "description": "【情境】資料中心監控發現機櫃內出現未登錄小型設備，使用陌生 MAC 掃描管理網段；該區採門禁卡與訪客陪同制度。"
+      }
+    },
+    {
+      "id": 36,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "哪些改善可降低未授權設備再次進入機櫃並取得網路？（複選）",
+      "options": {
+        "A": "將機櫃、門禁與訪客權限依工單限時授予，逾期自動失效",
+        "B": "讓未使用交換器埠保持啟用並自動進入管理 VLAN",
+        "C": "關閉未使用埠，對新 MAC 與機櫃開門事件關聯告警",
+        "D": "定期盤點機櫃資產與配線，抽查訪客陪同及實體巡檢證據"
+      },
+      "explanation": "A：正確；工單與期限能限制無業務需求的實體接取。B：不正確；啟用閒置埠會提供現成內網入口。C：正確；埠控制及跨域告警可快速發現異常。D：正確；實物、配線與程序抽查能找出未登錄變更。",
+      "chapter": "4.2",
+      "competency": "能整合實體權限、交換器埠與資產盤點防護資料中心"
+      ,
+      "case_group": {
+        "id": "D23-4",
+        "description": "【情境】資料中心監控發現機櫃內出現未登錄小型設備，使用陌生 MAC 掃描管理網段；該區採門禁卡與訪客陪同制度。"
+      }
+    },
+    {
+      "id": 37,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "BIA 除了電子郵件本身，還應識別哪些關鍵依賴？",
+      "options": {
+        "A": "IdP、DNS、網路、裝置設定、通訊錄、郵件歸檔、供應商支援與替代溝通管道",
+        "B": "只記錄郵件介面的背景顏色",
+        "C": "假設 SaaS 沒有任何外部或內部依賴",
+        "D": "只盤點員工寄信數量，不確認業務流程"
+      },
+      "explanation": "A：正確；身分、名稱解析、端點、資料、支援與替代通道共同決定服務可恢復性。B：不正確；介面外觀不是營運依賴。C：不正確；SaaS 仍依賴客戶與供應商多個元件。D：不正確；郵件量不能呈現哪些業務必須持續。",
+      "chapter": "4.2",
+      "competency": "能以 BIA 識別 SaaS 郵件的端到端依賴"
+      ,
+      "case_group": {
+        "id": "D23-5",
+        "description": "【情境】主要 SaaS 郵件服務發生區域性故障六小時；員工也無法透過該服務取得既有通訊錄與事件通知，公司原定 RTO 為四小時。"
+      }
+    },
+    {
+      "id": 38,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "要讓重大事件期間仍能通知員工，哪一項替代設計最實用？",
+      "options": {
+        "A": "將所有備援聯絡方式只存放在故障的 SaaS 信箱內",
+        "B": "等待供應商恢復，不建立任何帶外通訊",
+        "C": "維護獨立且受保護的緊急聯絡資料，使用不同依賴的簡訊、語音或協作平台並定期測試",
+        "D": "在公開網站張貼所有員工私人電話"
+      },
+      "explanation": "A：不正確；替代資訊與主要服務共因失效。B：不正確；沒有替代通道會使事件協調中斷。C：正確；依賴多樣化、受控資料與實測可提供帶外能力。D：不正確；公開個資會產生隱私與社交工程風險。",
+      "chapter": "4.2",
+      "competency": "能建立與主要 SaaS 分離的緊急通訊能力"
+      ,
+      "case_group": {
+        "id": "D23-5",
+        "description": "【情境】主要 SaaS 郵件服務發生區域性故障六小時；員工也無法透過該服務取得既有通訊錄與事件通知，公司原定 RTO 為四小時。"
+      }
+    },
+    {
+      "id": 39,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "此次中斷六小時，已超過四小時 RTO。最適當的改善決策方式為何？",
+      "options": {
+        "A": "未經業務核准直接把 RTO 改成八小時，使報表顯示符合",
+        "B": "分析切換與人工作業瓶頸，評估替代方案成本與業務損失，由風險所有人核准目標或能力改善",
+        "C": "刪除演練與中斷時間紀錄",
+        "D": "只要求供應商保證永不故障，不設可量測措施"
+      },
+      "explanation": "A：不正確；目標應源自業務影響，不應為掩蓋缺口任意修改。B：正確；根因、選項成本與損失需由有權承擔後果者決策。C：不正確；刪除資料會妨礙改善與治理。D：不正確；絕對保證不切實際且不可驗證。",
+      "chapter": "4.2",
+      "competency": "能依 SaaS 中斷實測與業務影響決定復原改善"
+      ,
+      "case_group": {
+        "id": "D23-5",
+        "description": "【情境】主要 SaaS 郵件服務發生區域性故障六小時；員工也無法透過該服務取得既有通訊錄與事件通知，公司原定 RTO 為四小時。"
+      }
+    },
+    {
+      "id": 40,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "下一次演練需蒐集哪些資料，才能驗證替代通訊方案？（複選）",
+      "options": {
+        "A": "主要服務失效、事件宣告、替代通道啟動與員工收到通知的時間戳",
+        "B": "聯絡資料可用率、通知成功率、回覆率及失敗原因",
+        "C": "只保存演練會議室照片，不記錄通知結果",
+        "D": "測試 IdP 或 DNS 同時失效的情境，確認替代通道沒有相同單點依賴"
+      },
+      "explanation": "A：正確；時間線可量測啟動速度與 RTO 貢獻。B：正確；送達、回覆與失敗原因呈現實際覆蓋。C：不正確；照片無法證明通訊能力。D：正確；共因故障測試能確認替代方案具真正獨立性。",
+      "chapter": "4.2",
+      "competency": "能以時間、送達與共因故障證據驗證緊急通訊"
+      ,
+      "case_group": {
+        "id": "D23-5",
+        "description": "【情境】主要 SaaS 郵件服務發生區域性故障六小時；員工也無法透過該服務取得既有通訊錄與事件通知，公司原定 RTO 為四小時。"
+      }
+    }
+  ]
+}

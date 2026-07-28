@@ -15,7 +15,10 @@
         "B": "Nmap 使用-T1 參數較-T4 參數的掃描速度快",
         "C": "Nmap 使用-sO 參數可檢測標的主機的作業系統版本",
         "D": "Nmap 使用-D 參數為誘騙掃描（decoy scan）"
-      }
+      },
+      "explanation": "答案為 D。A「Nmap 的 SYN 掃描可以掃描 UDP 埠」把不同偵測、防護、自動化或測試技術的能力邊界混為一談，因此不應選；B「Nmap 使用-T1 參數較-T4 參數的掃描速度快」把不同偵測、防護、自動化或測試技術的能力邊界混為一談，因此不應選；C「Nmap 使用-sO 參數可檢測標的主機的作業系統版本」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「Nmap 使用-D 參數為誘騙掃描（decoy scan）」能直接選擇並執行適切的安全測試，符合題幹的主要控制目標，因此應選。",
+      "chapter": "4.2",
+      "competency": "能選擇並執行適切的安全測試"
     },
     {
       "id": 2,
@@ -27,7 +30,10 @@
         "B": "編碼（encoding）後再輸出（output）",
         "C": "防火牆在超文本傳輸協定（http）過濾相關 XSS 攻擊",
         "D": "使用圖型驗證碼"
-      }
+      },
+      "explanation": "答案為 D。A「對輸入欄位的字串進行檢查」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案；B「編碼（encoding）後再輸出（output）」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案；C「防火牆在超文本傳輸協定（http）過濾相關 XSS 攻擊」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案；D「使用圖型驗證碼」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項。",
+      "chapter": "3.1",
+      "competency": "能分析攻擊鏈與攻擊者行為"
     },
     {
       "id": 3,
@@ -39,7 +45,10 @@
         "B": "RSA（Rivest, Shamir, Adleman）",
         "C": "ECC（Elliptic Curve Cryptography）",
         "D": "MD5（Message Digest Algorithm 5）"
-      }
+      },
+      "explanation": "答案為 D。A「RC5（Rivest Cipher 5）」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「RSA（Rivest, Shamir, Adleman）」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「ECC（Elliptic Curve Cryptography）」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「MD5（Message Digest Algorithm 5）」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期"
     },
     {
       "id": 4,
@@ -51,7 +60,10 @@
         "B": "連線期間快取（session cookie）的 HttpOnly 旗標未設定",
         "C": "受害電腦沒有安裝端點防護軟體",
         "D": "受害電腦的瀏覽器需開啟 Active D 技術"
-      }
+      },
+      "explanation": "答案為 B。A「網站的安全旗標（secure flag）未設定」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「連線期間快取（session cookie）的 HttpOnly 旗標未設定」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選；C「受害電腦沒有安裝端點防護軟體」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「受害電腦的瀏覽器需開啟 Active D 技術」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 5,
@@ -63,7 +75,10 @@
         "B": "Azorult",
         "C": "MacSpy",
         "D": "Xtunnel"
-      }
+      },
+      "explanation": "答案為 A。A「Ebury」能直接選用適切的存取控制模型，符合題幹的主要控制目標，因此應選；B「Azorult」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「MacSpy」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「Xtunnel」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能選用適切的存取控制模型"
     },
     {
       "id": 6,
@@ -75,7 +90,10 @@
         "B": "檢查是否禁止使用 PUT、DELETE 等危險的 HTTP 模式，所以在 httpd.conf 中，增加：<LimitExcept GET POST>Allow from all </LimitExcept>",
         "C": "檢查是否禁用 CGI，在 httpd.conf 中，刪去有與 cgi 相關的 LoadModule 語句",
         "D": "禁止非超級使用者修改 Apache 伺服器根目錄，執行以下命令變更許可權：chmod -R a-w /usr/local/apache"
-      }
+      },
+      "explanation": "答案為 B。A「檢查是否有非權限用戶對 Apache 設定檔擁有存取權限，建議設定成：chmod 644 /usr/local/apache/conf/h…」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案；B「檢查是否禁止使用 PUT、DELETE 等危險的 HTTP 模式，所以在 httpd.conf 中，增加：<LimitExcept GET…」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；C「檢查是否禁用 CGI，在 httpd.conf 中，刪去有與 cgi 相關的 LoadModule 語句」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案；D「禁止非超級使用者修改 Apache 伺服器根目錄，執行以下命令變更許可權：chmod -R a-w /usr/local/apache」有助於分析攻擊鏈與攻擊者行為，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能分析攻擊鏈與攻擊者行為"
     },
     {
       "id": 7,
@@ -87,7 +105,10 @@
         "B": "支援 Office 2003 GPO 控制",
         "C": "對 Office 2016 MS-Word 禁用巨集（Macro）",
         "D": "對 Office 2016 MS-Excel 禁用巨集（Macro）"
-      }
+      },
+      "explanation": "答案為 C。A「放行 WordPad 開啟附件」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「支援 Office 2003 GPO 控制」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「對 Office 2016 MS-Word 禁用巨集（Macro）」能直接選用適切的存取控制模型，符合題幹的主要控制目標，因此應選；D「對 Office 2016 MS-Excel 禁用巨集（Macro）」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能選用適切的存取控制模型"
     },
     {
       "id": 8,
@@ -99,7 +120,10 @@
         "B": "對所有伺服器進行作業系統指紋掃描（OS fingerprinting）",
         "C": "截取並分析所有經過網頁代理伺服器（Web Proxy）的封包",
         "D": "執行整體網絡上的應用程式服務探索掃描"
-      }
+      },
+      "explanation": "答案為 B。A「手動檢視伺服器的系統記錄」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「對所有伺服器進行作業系統指紋掃描（OS fingerprinting）」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選；C「截取並分析所有經過網頁代理伺服器（Web Proxy）的封包」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；D「執行整體網絡上的應用程式服務探索掃描」把不同偵測、防護、自動化或測試技術的能力邊界混為一談，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 9,
@@ -111,7 +135,10 @@
         "B": "通報（Response）",
         "C": "嚇阻（Deter）",
         "D": "偵測（Detect）"
-      }
+      },
+      "explanation": "答案為 B。A「延遲（Delay）」有助於判讀資通安全法規與事件通報要求，在題示條件下屬合理作法，故不是本題答案；B「通報（Response）」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；C「嚇阻（Deter）」有助於判讀資通安全法規與事件通報要求，在題示條件下屬合理作法，故不是本題答案；D「偵測（Detect）」有助於判讀資通安全法規與事件通報要求，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能判讀資通安全法規與事件通報要求"
     },
     {
       "id": 10,
@@ -123,7 +150,10 @@
         "B": "以駭客或惡意使用者的角度對目標進行驗證",
         "C": "檢測程式中的商業邏輯問題",
         "D": "檢測在環境與系統上的錯誤"
-      }
+      },
+      "explanation": "答案為 D。A「驗證所知弱點的可行性」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「以駭客或惡意使用者的角度對目標進行驗證」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「檢測程式中的商業邏輯問題」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「檢測在環境與系統上的錯誤」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選。",
+      "chapter": "4.2",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 11,
@@ -135,7 +165,10 @@
         "B": "網路儲存裝置（NAS）採用 8 顆 SATA 硬碟規劃成 RAID5",
         "C": "檔案伺服器採用 4 顆 SAS 硬碟規劃成 RAID0",
         "D": "儲存區域網路（SAN）採用 16 顆 SAS 硬碟規劃成 RAID6"
-      }
+      },
+      "explanation": "答案為 C。A「AD 主機採用 2 顆 SATA 硬碟規劃成 RAID1」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「網路儲存裝置（NAS）採用 8 顆 SATA 硬碟規劃成 RAID5」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「檔案伺服器採用 4 顆 SAS 硬碟規劃成 RAID0」能直接辨識並治理人工智慧安全風險，符合題幹的主要控制目標，因此應選；D「儲存區域網路（SAN）採用 16 顆 SAS 硬碟規劃成 RAID6」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能辨識並治理人工智慧安全風險"
     },
     {
       "id": 12,
@@ -147,7 +180,10 @@
         "B": "禁止文件類型定義（Document Type Define, DTD）引用外部實體",
         "C": "使用合法憑證進行雙向（伺服器端與使用者端）之身分驗證",
         "D": "使用 SHA-3 第三代安全雜湊演算法（Secure Hash Algorithm 3）進行計算"
-      }
+      },
+      "explanation": "答案為 B。A「使用 HTTPS 安全連線」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「禁止文件類型定義（Document Type Define, DTD）引用外部實體」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；C「使用合法憑證進行雙向（伺服器端與使用者端）之身分驗證」混淆機密性、完整性、鑑別或不可否認性等密碼控制功能，因此不應選；D「使用 SHA-3 第三代安全雜湊演算法（Secure Hash Algorithm 3）進行計算」混淆機密性、完整性、鑑別或不可否認性等密碼控制功能，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期"
     },
     {
       "id": 13,
@@ -159,7 +195,10 @@
         "B": "到場網路安全備份服務",
         "C": "遠端網路弱點掃描",
         "D": "遠端滲透測試"
-      }
+      },
+      "explanation": "答案為 B。A「到場網頁應用程式弱點掃描」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；B「到場網路安全備份服務」未正確處理復原時間、資料復原點或備份隔離需求，因此是題目要求辨識的不適切或錯誤選項；C「遠端網路弱點掃描」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；D「遠端滲透測試」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "4.2",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 14,
@@ -171,7 +210,10 @@
         "B": "Open Redirect 可採用圖像式驗證根治",
         "C": "採用參數化查詢（Prepared Statement）可以解決 XSS",
         "D": "HTML.Encode 是可以解決 XSS 的一種方法"
-      }
+      },
+      "explanation": "答案為 D。A「XSS 可以透過過濾此符號“<”根治」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「Open Redirect 可採用圖像式驗證根治」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「採用參數化查詢（Prepared Statement）可以解決 XSS」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「HTML.Encode 是可以解決 XSS 的一種方法」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 15,
@@ -183,7 +225,10 @@
         "B": "「軟體組成分析」為源碼檢測其一類型，主要分析軟體是否存在開發語法缺陷",
         "C": "所分析的風險因子包括，如：元件過期、已知弱點、程式庫信任、軟體授權等",
         "D": "「軟體透明度」能提升分析準確性，可透過如 SBOM 標準來發佈與交換資訊"
-      }
+      },
+      "explanation": "答案為 B。A「可透過分析來識別所使用第三方/開源軟體，其所存在的風險或威脅」有助於規劃委外與供應鏈安全管理，在題示條件下屬合理作法，故不是本題答案；B「「軟體組成分析」為源碼檢測其一類型，主要分析軟體是否存在開發語法缺陷」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；C「所分析的風險因子包括，如：元件過期、已知弱點、程式庫信任、軟體授權等」有助於規劃委外與供應鏈安全管理，在題示條件下屬合理作法，故不是本題答案；D「「軟體透明度」能提升分析準確性，可透過如 SBOM 標準來發佈與交換資訊」有助於規劃委外與供應鏈安全管理，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "4.2",
+      "competency": "能規劃委外與供應鏈安全管理"
     },
     {
       "id": 16,
@@ -195,7 +240,10 @@
         "B": "DNS Poisoning",
         "C": "SYN Flood",
         "D": "Ping of Death"
-      }
+      },
+      "explanation": "答案為 A、B、D。A「Smurf Attack」能直接辨識並治理人工智慧安全風險，符合題幹的主要控制目標，因此應選；B「DNS Poisoning」能直接辨識並治理人工智慧安全風險，符合題幹的主要控制目標，因此應選；C「SYN Flood」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「Ping of Death」能直接辨識並治理人工智慧安全風險，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能辨識並治理人工智慧安全風險"
     },
     {
       "id": 17,
@@ -207,7 +255,10 @@
         "B": "QUIC 採用 UDP 通訊協定，目前許多 Proxy 產品會採用強迫轉回到 TCP 方式進行過濾攔阻",
         "C": "在 HTTP/3 採取更嚴格安全檢核標準，目前駭客所使用中間人攻擊（Man-In-The-Middle attack, MITM）之工具與技術很難加工處理",
         "D": "HTTP/3 仍使用 TCP 協定作為對話（Session）的傳輸層"
-      }
+      },
+      "explanation": "答案為 A、B、C。A「HTTP/3 就是 HTTP over QUIC 方式來進行資料傳送與接收，而 QUIC 是 Google 所提出的標準」能直接分析攻擊鏈與攻擊者行為，符合題幹的主要控制目標，因此應選；B「QUIC 採用 UDP 通訊協定，目前許多 Proxy 產品會採用強迫轉回到 TCP 方式進行過濾攔阻」能直接分析攻擊鏈與攻擊者行為，符合題幹的主要控制目標，因此應選；C「在 HTTP/3 採取更嚴格安全檢核標準，目前駭客所使用中間人攻擊（Man-In-The-Middle attack, MITM）之工具與…」能直接分析攻擊鏈與攻擊者行為，符合題幹的主要控制目標，因此應選；D「HTTP/3 仍使用 TCP 協定作為對話（Session）的傳輸層」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能分析攻擊鏈與攻擊者行為"
     },
     {
       "id": 18,
@@ -219,7 +270,10 @@
         "B": "虛擬修補對網路攻擊防護極為有效，可取代弱點修正與更新",
         "C": "針對已知攻擊特徵，亦可於入侵防禦系統（IPS）或網站應用程式防火牆（WAF）上設定規則阻擋",
         "D": "常於零時弱點（Zero day）、老舊系統無法修復、人力不足無法更新程式等情境應用"
-      }
+      },
+      "explanation": "答案為 A、C、D。A「透過分析與攔截惡意網路封包內容，而達成防護效果」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選；B「虛擬修補對網路攻擊防護極為有效，可取代弱點修正與更新」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「針對已知攻擊特徵，亦可於入侵防禦系統（IPS）或網站應用程式防火牆（WAF）上設定規則阻擋」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選；D「常於零時弱點（Zero day）、老舊系統無法修復、人力不足無法更新程式等情境應用」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險"
     },
     {
       "id": 19,
@@ -231,7 +285,10 @@
         "B": "某 PHP 網站採用 Linux 主機對外開通 SSH 服務，擬將一個 web shell 程式放入遠端主機，其上傳檔案連線寫法可為：scp backdoor.php root@remoteserver:/www/root/",
         "C": "MYSQL 廣泛被用在各類資訊系統，如果試圖利用 MySQL 寫 WebShell 有：union select、lines terminated by、lines starting by、fields terminated by、COLUMNS terminated by 等寫入方式",
         "D": "Trusted Service Paths 漏洞是 Windows 作業系統提權的一種手法，Windows 服務通常以 system 權限運行"
-      }
+      },
+      "explanation": "答案為 B、C、D。A「內網滲透測試，挖出網路分享（SMB）主機帳號：Administrator，密碼：Gov*\"#~）Tw[x，當您在 CMD 模式下使用 ne…」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選；B「某 PHP 網站採用 Linux 主機對外開通 SSH 服務，擬將一個 web shell 程式放入遠端主機，其上傳檔案連線寫法可為：sc…」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；C「MYSQL 廣泛被用在各類資訊系統，如果試圖利用 MySQL 寫 WebShell 有：union select、lines termin…」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；D「Trusted Service Paths 漏洞是 Windows 作業系統提權的一種手法，Windows 服務通常以 system 權限運行」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期"
     },
     {
       "id": 20,
@@ -243,326 +300,389 @@
         "B": "資安事件分享屬 ISAC 服務範圍之一",
         "C": "資通安全管理法子法規定之事件嚴重等級共分四級，第一級為最嚴重，第四級為最輕微",
         "D": "我國 ISAC 機制設計，針對跨領域之資安情資分享，建議採用 STIX 與 TAXII 之格式與機制"
-      }
+      },
+      "explanation": "答案為 A、C。A「資通安全管理法子法規定，公務機關辦理資通安全事件之通報，應於事件發生後一小時內進行通報」處置時機過晚，無法在風險形成前預防或於事件期間及時遏制，因此是題目要求辨識的不適切或錯誤選項；B「資安事件分享屬 ISAC 服務範圍之一」有助於判讀資通安全法規與事件通報要求，在題示條件下屬合理作法，故不是本題答案；C「資通安全管理法子法規定之事件嚴重等級共分四級，第一級為最嚴重，第四級為最輕微」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；D「我國 ISAC 機制設計，針對跨領域之資安情資分享，建議採用 STIX 與 TAXII 之格式與機制」有助於判讀資通安全法規與事件通報要求，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "4.1",
+      "competency": "能判讀資通安全法規與事件通報要求"
     },
     {
       "id": 21,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 1",
-        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
-      },
       "question_text": "【題組 1】針對主機的弱點偵測掃瞄結果，並且查詢過 Nessus 的改善方式，參如前述規劃資安防護事項，下列選項何者最符合提升主機的弱點防護？",
       "options": {
         "A": "AC",
         "B": "DF",
         "C": "GI",
         "D": "JL"
+      },
+      "explanation": "答案為 C。A「AC」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「DF」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「GI」能直接選用密碼技術與金鑰管理控制，符合題幹的主要控制目標，因此應選；D「JL」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能選用密碼技術與金鑰管理控制",
+      "case_group": {
+        "id": "題組 1",
+        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
     {
       "id": 22,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 1",
-        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
-      },
       "question_text": "【題組 1】製造執行系統（Manufacturing Execution System, MES）廠商回覆既有系統只能在原 Windows XP 作業系統下才能正常運行，而且不能安裝最新的防毒軟體...下列選項何者最符合提升工廠的 OT 系統與設施的防護？",
       "options": {
         "A": "ADF",
         "B": "BDF",
         "C": "ACF",
         "D": "BEF"
+      },
+      "explanation": "答案為 C。A「ADF」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「BDF」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「ACF」能直接選用密碼技術與金鑰管理控制，符合題幹的主要控制目標，因此應選；D「BEF」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能選用密碼技術與金鑰管理控制",
+      "case_group": {
+        "id": "題組 1",
+        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
     {
       "id": 23,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 1",
-        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
-      },
       "question_text": "【題組 1】針對辦公室的工作環境，為了有效減少內部安全漏洞，參如前述規劃資安防護事項，下列選項何者防禦措施為最佳？",
       "options": {
         "A": "AEK",
         "B": "BDK",
         "C": "DEL",
         "D": "ABL"
+      },
+      "explanation": "答案為 C。A「AEK」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「BDK」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「DEL」能直接選用密碼技術與金鑰管理控制，符合題幹的主要控制目標，因此應選；D「ABL」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能選用密碼技術與金鑰管理控制",
+      "case_group": {
+        "id": "題組 1",
+        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
     {
       "id": 24,
       "type": "題組（複選）",
       "answer": "ABD",
-      "case_group": {
-        "id": "題組 1",
-        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
-      },
       "question_text": "【題組 1】承附圖架構與需求，請問該公司新設的防火牆「不」應該建立以上哪些安全規則選項？（複選）",
       "options": {
         "A": "b",
         "B": "h",
         "C": "ce",
         "D": "l"
+      },
+      "explanation": "答案為 A、B、D。A「b」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；B「h」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；C「ce」有助於選用密碼技術與金鑰管理控制，在題示條件下屬合理作法，故不是本題答案；D「l」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項。",
+      "chapter": "3.1",
+      "competency": "能選用密碼技術與金鑰管理控制",
+      "case_group": {
+        "id": "題組 1",
+        "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
     {
       "id": 25,
       "type": "題組",
       "answer": "B",
-      "case_group": {
-        "id": "題組 2",
-        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
-      },
       "question_text": "【題組 2】關於對策方案之減損（減災），下列敘述何者較「不」正確？",
       "options": {
         "A": "在端點電腦應建立有效個人備份機制",
         "B": "在端點電腦或伺服器，可引進「應用程式白名單系統」，放行 Windows OS 所有應用程式與單位公版合法軟體",
         "C": "端點電腦或伺服器依據零信任安全原則，有限度開放 Office 使用巨集功能",
         "D": "端點電腦或伺服器可以管控限制 Windows OS 指令行為模式"
+      },
+      "explanation": "答案為 B。A「在端點電腦應建立有效個人備份機制」有助於運用零信任與縱深防禦設計架構，在題示條件下屬合理作法，故不是本題答案；B「在端點電腦或伺服器，可引進「應用程式白名單系統」，放行 Windows OS 所有應用程式與單位公版合法軟體」採取絕對化假設，忽略情境限制、例外與縱深控制，因此是題目要求辨識的不適切或錯誤選項；C「端點電腦或伺服器依據零信任安全原則，有限度開放 Office 使用巨集功能」有助於運用零信任與縱深防禦設計架構，在題示條件下屬合理作法，故不是本題答案；D「端點電腦或伺服器可以管控限制 Windows OS 指令行為模式」有助於運用零信任與縱深防禦設計架構，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能運用零信任與縱深防禦設計架構",
+      "case_group": {
+        "id": "題組 2",
+        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
       }
     },
     {
       "id": 26,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 2",
-        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
-      },
       "question_text": "【題組 2】關於常見之駭客釣魚方式，下列敘述何者正確？",
       "options": {
         "A": "鯨釣（Whaling）：針對特定人員、公司、組織的發送，目標為釣取特定人員機敏資料",
         "B": "魚叉式釣魚（Spear Phishing）：瞄準大型公司、重要人物發送特定釣魚郵件的攻擊",
         "C": "複製型釣魚（Clone Phishing）：攻擊者會收受害者近期電子郵件並進行複製偽造",
         "D": "語音釣魚（Voice Phishing）：只限定在電話詐騙，不會使用在電子郵件中"
+      },
+      "explanation": "答案為 C。A「鯨釣（Whaling）：針對特定人員、公司、組織的發送，目標為釣取特定人員機敏資料」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「魚叉式釣魚（Spear Phishing）：瞄準大型公司、重要人物發送特定釣魚郵件的攻擊」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「複製型釣魚（Clone Phishing）：攻擊者會收受害者近期電子郵件並進行複製偽造」能直接辨識惡意程式與勒索軟體行為，符合題幹的主要控制目標，因此應選；D「語音釣魚（Voice Phishing）：只限定在電話詐騙，不會使用在電子郵件中」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能辨識惡意程式與勒索軟體行為",
+      "case_group": {
+        "id": "題組 2",
+        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
       }
     },
     {
       "id": 27,
       "type": "題組",
       "answer": "B",
-      "case_group": {
-        "id": "題組 2",
-        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
-      },
       "question_text": "【題組 2】關於 CVE，下列敘述何者正確？",
       "options": {
         "A": "全名為 Command Vulnerabilities and Exposures",
         "B": "由 MITRE 所屬 National Cybersecurity FFRDC 營運維護",
         "C": "YYYY 為西元紀年，NNNN 為產品公司編號所組成",
         "D": "MITRE 不可直接發佈 CVE"
+      },
+      "explanation": "答案為 B。A「全名為 Command Vulnerabilities and Exposures」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「由 MITRE 所屬 National Cybersecurity FFRDC 營運維護」能直接辨識並防護常見應用程式攻擊，符合題幹的主要控制目標，因此應選；C「YYYY 為西元紀年，NNNN 為產品公司編號所組成」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；D「MITRE 不可直接發佈 CVE」與題幹指定框架的定義、構成、版本或適用範圍不符，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能辨識並防護常見應用程式攻擊",
+      "case_group": {
+        "id": "題組 2",
+        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
       }
     },
     {
       "id": 28,
       "type": "題組（複選）",
       "answer": "ACD",
-      "case_group": {
-        "id": "題組 2",
-        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
-      },
       "question_text": "【題組 2】關於白名單工具分析與敘述，下列哪些正確？（複選）",
       "options": {
         "A": "Cobalt Strike 原是對手模擬和紅隊行動是安全評估工具，被勒索集團轉換成攻擊威脅橫向移動工具",
         "B": "Mimikatz 原是進行遠端指令執行使用的好工具",
         "C": "ADFind 應用在 AD 搜尋的實用工具，被勒索集團利用在橫向移動",
         "D": "MegaSync 原是雲端儲存空間，被勒索集團利用公開不付贖金外洩資料的載點"
+      },
+      "explanation": "答案為 A、C、D。A「Cobalt Strike 原是對手模擬和紅隊行動是安全評估工具，被勒索集團轉換成攻擊威脅橫向移動工具」能直接規劃雲端與容器安全架構，符合題幹的主要控制目標，因此應選；B「Mimikatz 原是進行遠端指令執行使用的好工具」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「ADFind 應用在 AD 搜尋的實用工具，被勒索集團利用在橫向移動」能直接規劃雲端與容器安全架構，符合題幹的主要控制目標，因此應選；D「MegaSync 原是雲端儲存空間，被勒索集團利用公開不付贖金外洩資料的載點」能直接規劃雲端與容器安全架構，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能規劃雲端與容器安全架構",
+      "case_group": {
+        "id": "題組 2",
+        "description": "勒索病毒（Ransomware）成為企業政府頭疼的資安問題..."
       }
     },
     {
       "id": 29,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 3",
-        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
-      },
       "question_text": "【題組 3】請問點對點協定在建立連線時，透過下列何項協定建立和中斷連線？",
       "options": {
         "A": "只能用通行碼鑑別協定或詢問握手認證協定",
         "B": "只能用擴展認證協定",
         "C": "鏈接控制協定（Link Control Protocol, LPC）",
         "D": "通行碼鑑別協定、詢問握手認證協定、擴展認證協定三者都可"
+      },
+      "explanation": "答案為 C。A「只能用通行碼鑑別協定或詢問握手認證協定」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；B「只能用擴展認證協定」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；C「鏈接控制協定（Link Control Protocol, LPC）」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；D「通行碼鑑別協定、詢問握手認證協定、擴展認證協定三者都可」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期",
+      "case_group": {
+        "id": "題組 3",
+        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
       }
     },
     {
       "id": 30,
       "type": "題組",
       "answer": "D",
-      "case_group": {
-        "id": "題組 3",
-        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
-      },
       "question_text": "【題組 3】請問透過通行碼鑑別協定和詢問握手認證協定進行認證時，關於第一步驟的 request/challenge，下列敘述何者正確？",
       "options": {
         "A": "通行碼鑑別協定和詢問握手認證協定都由被認證方發起",
         "B": "通行碼鑑別協定和詢問握手認證協定都由認證方發起",
         "C": "通行碼鑑別協定由認證方發起，詢問握手認證協定由被認證方發起",
         "D": "通行碼鑑別協定由被認證方發啟，詢問握手認證協定由認證方發起"
+      },
+      "explanation": "答案為 D。A「通行碼鑑別協定和詢問握手認證協定都由被認證方發起」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選；B「通行碼鑑別協定和詢問握手認證協定都由認證方發起」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選；C「通行碼鑑別協定由認證方發起，詢問握手認證協定由被認證方發起」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選；D「通行碼鑑別協定由被認證方發啟，詢問握手認證協定由認證方發起」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期",
+      "case_group": {
+        "id": "題組 3",
+        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
       }
     },
     {
       "id": 31,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 3",
-        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
-      },
       "question_text": "【題組 3】請問關於通行碼鑑別協定和詢問握手認證協定認證過程中的安全性，下列敘述何者正確？",
       "options": {
         "A": "密碼都不是明碼，都很安全",
         "B": "都是明碼，都不安全",
         "C": "通行碼鑑別協定是明碼，詢問握手認證協定不是明碼，後者較安全",
         "D": "通行碼鑑別協定不是明碼，詢問握手認證協定是明碼，前者較安全"
+      },
+      "explanation": "答案為 C。A「密碼都不是明碼，都很安全」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選；B「都是明碼，都不安全」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「通行碼鑑別協定是明碼，詢問握手認證協定不是明碼，後者較安全」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；D「通行碼鑑別協定不是明碼，詢問握手認證協定是明碼，前者較安全」混淆身分驗證、授權、帳號治理或最小權限的控制目的，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期",
+      "case_group": {
+        "id": "題組 3",
+        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
       }
     },
     {
       "id": 32,
       "type": "題組（複選）",
       "answer": "ACD",
-      "case_group": {
-        "id": "題組 3",
-        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
-      },
       "question_text": "【題組 3】關於點對點協定、通行碼鑑別協定、詢問握手認證協定和擴展認證協定，下列敘述哪些正確？（複選）",
       "options": {
         "A": "通行碼鑑別協定使用雙向交握；詢問握手認證協定使用三向交握",
         "B": "點對點協定無偵錯能力",
         "C": "擴展認證協定比通行碼鑑別協定多使用了認證伺服器",
         "D": "點對點協定運行於 OSI 模型中的資料連結層"
+      },
+      "explanation": "答案為 A、C、D。A「通行碼鑑別協定使用雙向交握；詢問握手認證協定使用三向交握」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；B「點對點協定無偵錯能力」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「擴展認證協定比通行碼鑑別協定多使用了認證伺服器」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；D「點對點協定運行於 OSI 模型中的資料連結層」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選。",
+      "chapter": "3.1",
+      "competency": "能規劃身分驗證與帳號生命週期",
+      "case_group": {
+        "id": "題組 3",
+        "description": "點對點協定（Point to Point Protocol, PPP）是網際網路工程任務組 （Internet Engineering Task Force, IETF） ，推出的點對點網路協定，主要被應用在建立網路上的兩個節點之前的連線。因 PPP 本身不屬於安全協定， 因此，提供了一個可選擇認證階段，早期常被使用的認證方式為通行碼鑑別協定（Password Authentication Protocol, PAP）和詢問握手認證協定 （Challenge handshake authentication protocol, CHAP） ，後來又新增了擴展認證協定（Extensible Authentication Protocol, EAP）來增加可以支援的認證機制。"
       }
     },
     {
       "id": 33,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 4",
-        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
-      },
       "question_text": "【題組 4】請問關於這三個重大的漏洞，下列敘述何者「不」正確？",
       "options": {
         "A": "上述的漏洞也另稱為 Log4Shell",
         "B": "這些漏洞的影響範圍主要為 Log4j 2.x 版本",
         "C": "上述三個漏洞都可以使駭客進行 RCE 攻擊",
         "D": "Log4j 2.17（含）以上的版本可以有效修補上述漏洞"
+      },
+      "explanation": "答案為 C。A「上述的漏洞也另稱為 Log4Shell」有助於辨識並防護常見應用程式攻擊，在題示條件下屬合理作法，故不是本題答案；B「這些漏洞的影響範圍主要為 Log4j 2.x 版本」有助於辨識並防護常見應用程式攻擊，在題示條件下屬合理作法，故不是本題答案；C「上述三個漏洞都可以使駭客進行 RCE 攻擊」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；D「Log4j 2.17（含）以上的版本可以有效修補上述漏洞」有助於辨識並防護常見應用程式攻擊，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能辨識並防護常見應用程式攻擊",
+      "case_group": {
+        "id": "題組 4",
+        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
       }
     },
     {
       "id": 34,
       "type": "題組",
       "answer": "B",
-      "case_group": {
-        "id": "題組 4",
-        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
-      },
       "question_text": "【題組 4】關於 Log4j 的功能或應用，下列敘述何者正確？",
       "options": {
         "A": "Log4j 是基於.NET 所開發的日誌工具",
         "B": "CVE-2021-44228 此漏洞遭開發的來源功能，主要為 Log4j JNDI 功能",
         "C": "JndiLookup.class 所支援的通訊協定僅限於 LDAP",
         "D": "Log4j 工具僅能使用於 Web 伺服器"
+      },
+      "explanation": "答案為 B。A「Log4j 是基於.NET 所開發的日誌工具」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「CVE-2021-44228 此漏洞遭開發的來源功能，主要為 Log4j JNDI 功能」能直接建立日誌監控、偵測與威脅情資流程，符合題幹的主要控制目標，因此應選；C「JndiLookup.class 所支援的通訊協定僅限於 LDAP」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；D「Log4j 工具僅能使用於 Web 伺服器」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
+      "chapter": "4.1",
+      "competency": "能建立日誌監控、偵測與威脅情資流程",
+      "case_group": {
+        "id": "題組 4",
+        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
       }
     },
     {
       "id": 35,
       "type": "題組",
       "answer": "D",
-      "case_group": {
-        "id": "題組 4",
-        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
-      },
       "question_text": "【題組 4】當前述三個漏洞發生之後，資安工程師在監控這類攻擊時，下列敘述何者「不」正確？",
       "options": {
         "A": "攻擊成功的前提是受攻擊者會將此一攻擊內容，寫入日誌檔案中",
         "B": "這個攻擊者必須於遠端建立 LDAP 伺服器",
         "C": "如果受攻擊伺服器無法對外連線，此一攻擊將無法成功",
         "D": "若將 jndi:ldap，改為 jndi:rms，也會是 jndi 所能支援的通訊協定"
+      },
+      "explanation": "答案為 D。A「攻擊成功的前提是受攻擊者會將此一攻擊內容，寫入日誌檔案中」有助於建立日誌監控、偵測與威脅情資流程，在題示條件下屬合理作法，故不是本題答案；B「這個攻擊者必須於遠端建立 LDAP 伺服器」有助於建立日誌監控、偵測與威脅情資流程，在題示條件下屬合理作法，故不是本題答案；C「如果受攻擊伺服器無法對外連線，此一攻擊將無法成功」有助於建立日誌監控、偵測與威脅情資流程，在題示條件下屬合理作法，故不是本題答案；D「若將 jndi:ldap，改為 jndi:rms，也會是 jndi 所能支援的通訊協定」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項。",
+      "chapter": "3.1",
+      "competency": "能建立日誌監控、偵測與威脅情資流程",
+      "case_group": {
+        "id": "題組 4",
+        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
       }
     },
     {
       "id": 36,
       "type": "題組（複選）",
       "answer": "AC",
-      "case_group": {
-        "id": "題組 4",
-        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
-      },
       "question_text": "【題組 4】關於 CVE-2021-44228 等漏洞的修補或緩解措施，下列敘述哪些正確？（複選）",
       "options": {
         "A": "將系統屬性 log4j2.formatMsgNoLookups 設為 True 可以防止 CVE-2021-45046 之攻擊",
         "B": "將 JndiLookup.class 移除可以防止 CVE-2021-44228 之攻擊",
         "C": "對於 CVE-2021-45105，除將 Log4j 的版本升級至 2.16 版之上，無其他方式可以緩解",
         "D": "其漏洞會造成無限迴圈問題，禁止具漏洞的伺服器對外連線無法緩解"
+      },
+      "explanation": "答案為 A、C。A「將系統屬性 log4j2.formatMsgNoLookups 設為 True 可以防止 CVE-2021-45046 之攻擊」能直接辨識弱點、威脅與攻擊手法，符合題幹的主要控制目標，因此應選；B「將 JndiLookup.class 移除可以防止 CVE-2021-44228 之攻擊」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「對於 CVE-2021-45105，除將 Log4j 的版本升級至 2.16 版之上，無其他方式可以緩解」能直接辨識弱點、威脅與攻擊手法，符合題幹的主要控制目標，因此應選；D「其漏洞會造成無限迴圈問題，禁止具漏洞的伺服器對外連線無法緩解」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "3.1",
+      "competency": "能辨識弱點、威脅與攻擊手法",
+      "case_group": {
+        "id": "題組 4",
+        "description": "Apache Log4j 漏洞 CVE-2021-44228 等系列分析..."
       }
     },
     {
       "id": 37,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 5",
-        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
-      },
       "question_text": "【題組 5】分析應用程式日誌中的訊息，下列敘述何者正確？",
       "options": {
         "A": "應用程式疑似連線至外部網站，並且成功下載惡意軟體",
         "B": "應用程式疑似設定錯誤，後端 SMB 伺服器無法正常連線",
         "C": "應用程式疑似存在弱點，並嘗試連線 LDAP 伺服器",
         "D": "應用程式疑似記憶體不足"
+      },
+      "explanation": "答案為 C。A「應用程式疑似連線至外部網站，並且成功下載惡意軟體」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「應用程式疑似設定錯誤，後端 SMB 伺服器無法正常連線」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「應用程式疑似存在弱點，並嘗試連線 LDAP 伺服器」能直接識別並評估資訊安全風險，符合題幹的主要控制目標，因此應選；D「應用程式疑似記憶體不足」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "4.1",
+      "competency": "能識別並評估資訊安全風險",
+      "case_group": {
+        "id": "題組 5",
+        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
     {
       "id": 38,
       "type": "題組",
       "answer": "C",
-      "case_group": {
-        "id": "題組 5",
-        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
-      },
       "question_text": "【題組 5】若懷疑應用程式伺服器存在弱點，關於弱點評估，下列敘述何者「不」正確？",
       "options": {
         "A": "可透過 CVE 網站，查詢已公開或未公開的弱點資訊",
         "B": "可透過網站伺服器之存取紀錄分析，判斷是否遭受攻擊",
         "C": "可透過 NVD 資料庫之商業服務，進行弱點掃描偵測",
         "D": "可透過 Exploit-DB 資料庫搜尋，可能相關之攻擊代碼"
+      },
+      "explanation": "答案為 C。A「可透過 CVE 網站，查詢已公開或未公開的弱點資訊」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；B「可透過網站伺服器之存取紀錄分析，判斷是否遭受攻擊」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；C「可透過 NVD 資料庫之商業服務，進行弱點掃描偵測」把不同偵測、防護、自動化或測試技術的能力邊界混為一談，因此是題目要求辨識的不適切或錯誤選項；D「可透過 Exploit-DB 資料庫搜尋，可能相關之攻擊代碼」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險",
+      "case_group": {
+        "id": "題組 5",
+        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
     {
       "id": 39,
       "type": "題組",
       "answer": "A",
-      "case_group": {
-        "id": "題組 5",
-        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
-      },
       "question_text": "【題組 5】若有跡證顯示伺服器已受駭，下列資安事故處理流程何者較「不」正確？",
       "options": {
         "A": "疑似受駭伺服器，原系統立即重新安裝系統與應用程式",
         "B": "於應用程式防火牆或入侵偵測系統，設定阻擋規則以緩解",
         "C": "依據資產清冊盤點弱點軟體狀態，排定更新計畫並執行",
         "D": "分析系統與網路日誌，清查攻擊者未進行內部橫向移動"
+      },
+      "explanation": "答案為 A。A「疑似受駭伺服器，原系統立即重新安裝系統與應用程式」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此是題目要求辨識的不適切或錯誤選項；B「於應用程式防火牆或入侵偵測系統，設定阻擋規則以緩解」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；C「依據資產清冊盤點弱點軟體狀態，排定更新計畫並執行」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案；D「分析系統與網路日誌，清查攻擊者未進行內部橫向移動」有助於識別並評估資訊安全風險，在題示條件下屬合理作法，故不是本題答案。",
+      "chapter": "3.1",
+      "competency": "能識別並評估資訊安全風險",
+      "case_group": {
+        "id": "題組 5",
+        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
     {
       "id": 40,
       "type": "題組（複選）",
       "answer": "ABC",
-      "case_group": {
-        "id": "題組 5",
-        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
-      },
       "question_text": "【題組 5】針對此次資安事故進行根因分析，下列矯正措施敘述哪些正確？（複選）",
       "options": {
         "A": "確保帳號登錄、存取控制或輸入驗證等異常事件，皆留存於日誌中",
         "B": "日誌留存需為合理時間，以供後續電腦鑑識查閱使用",
         "C": "建立監控告警機制，確保可疑活動於接受時間內發現處置",
         "D": "確保相關攻擊皆未於日誌中留下軌跡，代表資安縱深防護已趨近完善"
+      },
+      "explanation": "答案為 A、B、C。A「確保帳號登錄、存取控制或輸入驗證等異常事件，皆留存於日誌中」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；B「日誌留存需為合理時間，以供後續電腦鑑識查閱使用」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；C「建立監控告警機制，確保可疑活動於接受時間內發現處置」能直接規劃身分驗證與帳號生命週期，符合題幹的主要控制目標，因此應選；D「確保相關攻擊皆未於日誌中留下軌跡，代表資安縱深防護已趨近完善」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選。",
+      "chapter": "4.1",
+      "competency": "能規劃身分驗證與帳號生命週期",
+      "case_group": {
+        "id": "題組 5",
+        "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     }
   ]

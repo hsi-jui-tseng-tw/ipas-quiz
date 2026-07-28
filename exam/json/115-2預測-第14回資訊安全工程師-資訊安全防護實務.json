@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 14 回",
+    "subject": "資訊安全防護實務",
+    "date": "115 年 08 月 22 日"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "攻擊者利用 Internet-facing VPN 未修補漏洞進入內網，在 MITRE ATT&CK 最符合哪個 Initial Access 技術？",
+      "options": {
+        "A": "Valid Accounts",
+        "B": "Phishing",
+        "C": "Exploit Public-Facing Application",
+        "D": "Trusted Relationship"
+      },
+      "explanation": "C 直接利用對外服務漏洞；A 是憑證登入，B 是誘騙，D 是借道信任關係。",
+      "chapter": "3.1",
+      "competency": "能辨識初始存取"
+    },
+    {
+      "id": 2,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "攻擊者取得管理憑證後透過 WinRM 執行遠端命令，主要屬哪個行為？",
+      "options": {
+        "A": "Lateral Movement",
+        "B": "Resource Development",
+        "C": "Reconnaissance",
+        "D": "Exfiltration"
+      },
+      "explanation": "A 以遠端服務移動至其他主機；B、C 在入侵前準備或偵察，D 是資料外傳。",
+      "chapter": "3.1",
+      "competency": "能辨識橫向移動"
+    },
+    {
+      "id": 3,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "大量要求使用 RC4 的服務票證後離線破解，最可能是哪種攻擊？",
+      "options": {
+        "A": "Golden Ticket",
+        "B": "DCSync",
+        "C": "AS-REP Roasting",
+        "D": "Kerberoasting"
+      },
+      "explanation": "D 取得 SPN 服務票證後破解服務帳號；A、B 涉及網域高權限，C 針對免預先驗證帳號。",
+      "chapter": "3.1",
+      "competency": "能分析 Kerberoasting"
+    },
+    {
+      "id": 4,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "一般工作站帳號突然要求目錄複寫機密，最可能企圖為何？",
+      "options": {
+        "A": "ARP Scan",
+        "B": "DCSync",
+        "C": "Clickjacking",
+        "D": "DNS Cache Poisoning"
+      },
+      "explanation": "B 濫用複寫權限取得密碼資料；A、C、D 分屬網路掃描、UI 欺騙與 DNS 攻擊。",
+      "chapter": "3.1",
+      "competency": "能辨識 DCSync"
+    },
+    {
+      "id": 5,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "雲端角色可自行修改其 trust policy 並扮演更高權限角色，核心問題為何？",
+      "options": {
+        "A": "缺少壓縮",
+        "B": "儲存容量不足",
+        "C": "IAM privilege escalation path",
+        "D": "TLS 版本過新"
+      },
+      "explanation": "C 是可組合權限形成的提升路徑；A、B、D 不解釋跨角色取得高權限。",
+      "chapter": "3.1",
+      "competency": "能分析雲端權限提升"
+    },
+    {
+      "id": 6,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "文件摘要機器人讀到外部文件內嵌指令後，偏離原任務並依該指令回應，屬於 OWASP LLM Top 10 2025 哪類風險？",
+      "options": {
+        "A": "Prompt Injection",
+        "B": "Unbounded Consumption",
+        "C": "Data and Model Poisoning",
+        "D": "Improper Output Handling"
+      },
+      "explanation": "A 正確，外部文件中的不可信指令改變模型原始任務，屬於間接 Prompt Injection；B 是資源耗用失控，C 是資料或模型污染，D 則是下游未安全處理模型輸出。",
+      "chapter": "3.1",
+      "competency": "能辨識 Prompt Injection"
+    },
+    {
+      "id": 7,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "API 將請求 JSON 全部欄位直接綁定使用者物件，使攻擊者設定 isAdmin，這是什麼？",
+      "options": {
+        "A": "SSRF",
+        "B": "XXE",
+        "C": "Path Traversal",
+        "D": "Mass Assignment"
+      },
+      "explanation": "D 因未限制可綁定屬性造成越權；A、B、C 分別是伺服端請求、XML 與路徑問題。",
+      "chapter": "3.1",
+      "competency": "能分析 API Mass Assignment"
+    },
+    {
+      "id": 8,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "前端 Proxy 與後端伺服器對 Content-Length、Transfer-Encoding 解讀不一致，可能造成何種攻擊？",
+      "options": {
+        "A": "DOM XSS",
+        "B": "HTTP Request Smuggling",
+        "C": "LDAP Injection",
+        "D": "ARP Spoofing"
+      },
+      "explanation": "B 利用解析差異夾帶請求；A、C、D 不依賴 HTTP 邊界歧義。",
+      "chapter": "3.1",
+      "competency": "能辨識 HTTP Request Smuggling"
+    },
+    {
+      "id": 9,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "工程站在非排程時段大量送出 PLC write command，最值得懷疑什麼？",
+      "options": {
+        "A": "未授權製程操控",
+        "B": "一般 DNS 更新",
+        "C": "正常備份",
+        "D": "郵件垃圾信"
+      },
+      "explanation": "A 直接影響控制邏輯與安全；B、C、D 無法解釋異常工控寫入。",
+      "chapter": "3.1",
+      "competency": "能分析 OT 指令濫用"
+    },
+    {
+      "id": 10,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "攻擊者使用系統內建 certutil 下載並解碼 payload，主要特色為何？",
+      "options": {
+        "A": "必須安裝新防毒",
+        "B": "只攻擊 Linux kernel",
+        "C": "濫用合法內建工具降低可疑度",
+        "D": "完全不產生日誌"
+      },
+      "explanation": "C 是 LOLBin 核心；A、B 不符，D 過度絕對且通常仍有遙測。",
+      "chapter": "3.1",
+      "competency": "能辨識 Living off the Land"
+    },
+    {
+      "id": 11,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "合法簽章程式從可寫目錄載入攻擊者 DLL，屬何種技巧？",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Credential Stuffing",
+        "C": "Watering Hole",
+        "D": "DLL Side-Loading"
+      },
+      "explanation": "D 利用 DLL 搜尋及信任程式載入惡意碼；A、B、C 不涉及本機載入鏈。",
+      "chapter": "3.1",
+      "competency": "能分析 DLL Side-Loading"
+    },
+    {
+      "id": 12,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "外傳前將多份文件壓縮至隱藏目錄，最符合 ATT&CK 哪類行為？",
+      "options": {
+        "A": "Execution",
+        "B": "Data Staged",
+        "C": "Defense Evasion",
+        "D": "Initial Access"
+      },
+      "explanation": "B 是為外傳集中準備資料；A、C 可能伴隨但非此動作主要目的，D 發生更早。",
+      "chapter": "3.1",
+      "competency": "能辨識資料暫存"
+    },
+    {
+      "id": 13,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "內部套件名稱被公開 registry 上較高版本套件搶先解析，稱為何種攻擊？",
+      "options": {
+        "A": "Dependency Confusion",
+        "B": "Typosquatting",
+        "C": "Buffer Overflow",
+        "D": "Race Condition"
+      },
+      "explanation": "A 利用套件來源解析優先序；B 是近似拼字，C、D 是程式缺陷。",
+      "chapter": "3.1",
+      "competency": "能分析依賴混淆"
+    },
+    {
+      "id": 14,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "下列何者正確區分 CVE 與 CWE？",
+      "options": {
+        "A": "CVE 是弱點類型清單，CWE 是單一產品事件",
+        "B": "兩者都是修補程式",
+        "C": "CVE 識別具體公開漏洞，CWE 描述弱點類型",
+        "D": "CWE 只記錄惡意 IP"
+      },
+      "explanation": "C 正確，CVE 識別特定公開漏洞，CWE 則分類常見弱點型態；A 將兩者用途顛倒，B 誤稱都是修補程式，D 又把 CWE 誤當惡意 IP 清單。",
+      "chapter": "3.1",
+      "competency": "能運用 CVE 與 CWE"
+    },
+    {
+      "id": 15,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "多來源時間戳相差數分鐘，建立事件時間線前優先確認什麼？",
+      "options": {
+        "A": "各來源的事件筆數",
+        "B": "各日誌的儲存格式",
+        "C": "分析工具中的顯示順序",
+        "D": "時區、NTP 偏移與各來源時間基準"
+      },
+      "explanation": "D 正確，先確認時區、NTP 偏移與來源時間基準才能避免事件誤排序；A 的事件筆數、B 的儲存格式、C 的畫面順序，都不能校正時間差。",
+      "chapter": "3.2",
+      "competency": "能建立事件時間線"
+    },
+    {
+      "id": 16,
+      "type": "複選題",
+      "answer": "ABC",
+      "question_text": "面對遭竊 OAuth token，哪些圍堵動作適切？",
+      "options": {
+        "A": "撤銷 token 與 session",
+        "B": "停用惡意 app consent",
+        "C": "檢視並移除異常 mailbox rule",
+        "D": "只重設帳號密碼，不撤銷既有 token"
+      },
+      "explanation": "A、B、C 正確，分別撤銷既有授權、移除惡意 consent 與 mailbox persistence；D 只重設密碼而不撤銷 token，仍可能讓攻擊者持續存取。",
+      "chapter": "3.2",
+      "competency": "能選擇圍堵層級"
+    },
+    {
+      "id": 17,
+      "type": "複選題",
+      "answer": "AC",
+      "question_text": "分析未知執行檔時，哪些作法可降低分析環境風險？",
+      "options": {
+        "A": "使用隔離 sandbox",
+        "B": "直接在正式伺服器執行",
+        "C": "擷取網路與程序行為",
+        "D": "事件發生後先刪除告警與日誌，再決定是否遏制或蒐證"
+      },
+      "explanation": "答案為 A、C。A「使用隔離 sandbox」能直接執行惡意程式分析，符合題幹的主要控制目標，因此應選；B「直接在正式伺服器執行」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「擷取網路與程序行為」能直接執行惡意程式分析，符合題幹的主要控制目標，因此應選；D「事件發生後先刪除告警與日誌，再決定是否遏制或蒐證」會移除必要控制或稽核證據，擴大偵測、追蹤或復原缺口，因此不應選。",
+      "chapter": "3.2",
+      "competency": "能執行惡意程式分析"
+    },
+    {
+      "id": 18,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "重大中斷後決定系統復原順序，哪些依據重要？",
+      "options": {
+        "A": "BIA 的業務優先序",
+        "B": "RTO/RPO",
+        "C": "管理者個人喜好",
+        "D": "技術相依關係"
+      },
+      "explanation": "A、B、D 正確，BIA 優先序、RTO/RPO 與技術相依共同決定復原先後；C 只依管理者個人喜好，既不可重現也不是正式治理依據。",
+      "chapter": "3.2",
+      "competency": "能設計復原順序"
+    },
+    {
+      "id": 19,
+      "type": "複選題",
+      "answer": "BCD",
+      "question_text": "帳號入侵事件在恢復前，哪些證據支持根除完成？",
+      "options": {
+        "A": "保留攻擊者新增帳號",
+        "B": "移除 persistence",
+        "C": "輪替受影響秘密",
+        "D": "確認相同 IOC 未再出現"
+      },
+      "explanation": "B、C、D 正確，移除 persistence、輪替秘密及確認 IOC 不再出現可支持根除；A 保留攻擊者帳號會留下可再次利用的後門。",
+      "chapter": "3.2",
+      "competency": "能驗證根除完成"
+    },
+    {
+      "id": 20,
+      "type": "複選題",
+      "answer": "AC",
+      "question_text": "初始事件資訊尚不完整時，通報內容應如何處理？",
+      "options": {
+        "A": "清楚標示已知事實與待確認假設",
+        "B": "延遲至所有細節確定",
+        "C": "持續更新影響範圍與處置狀態",
+        "D": "虛構精確受害數"
+      },
+      "explanation": "A、C 正確，標示事實與假設並持續更新可兼顧通報時效與可信度；B 等待所有細節可能逾時，D 虛構精確數字則會誤導決策。",
+      "chapter": "3.2",
+      "competency": "能改善通報內容"
+    },
+    {
+      "id": 21,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 1】財務主管帳號在異地新增 MFA 方法並建立轉寄規則，第一步為何？",
+      "options": {
+        "A": "只刪除一封郵件",
+        "B": "封鎖工作階段、保全稽核並確認本人",
+        "C": "等待下月複核",
+        "D": "關閉全公司郵件"
+      },
+      "explanation": "B 快速限制帳號接管並保存證據；A、C 不足，D 過度擴大營運影響。",
+      "chapter": "3.2",
+      "competency": "能應變身分攻擊",
+      "case_group": {
+        "id": "題組 1",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括應變身分攻擊、調查雲端稽核、處理可疑轉寄、恢復帳號信任；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 22,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 1】要確認攻擊者取得權限後的活動，最重要資料來源為何？",
+      "options": {
+        "A": "單一 VPN 登入紀錄",
+        "B": "僅使用者端瀏覽器歷程",
+        "C": "單一主機的程序清單",
+        "D": "身分、OAuth consent、mailbox 與 cloud audit log"
+      },
+      "explanation": "D 正確，身分、OAuth consent、mailbox 與 cloud audit log 可串起授權及資料操作；A 只有 VPN 登入、B 只有本機瀏覽歷程、C 只有單機程序，都無法涵蓋完整雲端活動。",
+      "chapter": "3.2",
+      "competency": "能調查雲端稽核",
+      "case_group": {
+        "id": "題組 1",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括應變身分攻擊、調查雲端稽核、處理可疑轉寄、恢復帳號信任；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 23,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 1】發現隱藏 inbox rule 將發票寄往外部，最適切為何？",
+      "options": {
+        "A": "移除規則並搜尋相同條件及歷史外寄",
+        "B": "保留規則供攻擊者使用",
+        "C": "只修改郵件主旨",
+        "D": "停用稽核"
+      },
+      "explanation": "A 同時根除並界定範圍；B、D 維持盲點，C 不會停止外傳。",
+      "chapter": "3.2",
+      "competency": "能處理可疑轉寄",
+      "case_group": {
+        "id": "題組 1",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括應變身分攻擊、調查雲端稽核、處理可疑轉寄、恢復帳號信任；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 24,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 1】帳號恢復前，哪項組合最完整？",
+      "options": {
+        "A": "只改顯示名稱",
+        "B": "僅重設密碼",
+        "C": "撤銷 session、重設認證、重新註冊 MFA 並複核授權",
+        "D": "沿用舊 token"
+      },
+      "explanation": "C 清除多種認證與授權殘留；A、B 不完整，D 保留失陷通道。",
+      "chapter": "3.2",
+      "competency": "能恢復帳號信任",
+      "case_group": {
+        "id": "題組 1",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括應變身分攻擊、調查雲端稽核、處理可疑轉寄、恢復帳號信任；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 25,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "【題組 2】哪些偵測可由此次事件衍生？",
+      "options": {
+        "A": "高風險登入後新增 MFA",
+        "B": "新增外部轉寄規則",
+        "C": "所有正常寄信一律告警",
+        "D": "新 OAuth consent 後大量郵件讀取"
+      },
+      "explanation": "A、B、D 是高訊號攻擊序列；C 缺乏風險條件且會造成大量誤報。",
+      "chapter": "4.1",
+      "competency": "能將事件轉為偵測",
+      "case_group": {
+        "id": "題組 2",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括將事件轉為偵測、管理 SOC 分層、衡量 SOC 效能、降低告警疲勞；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 26,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 2】L1 無法判斷罕見 OT 告警時，最適切流程為何？",
+      "options": {
+        "A": "直接關閉工廠",
+        "B": "忽略告警",
+        "C": "依升級準則交由具 OT 能力的 L2/L3 並保留調查內容",
+        "D": "刪除原始事件"
+      },
+      "explanation": "C 正確，依準則升級至具 OT 能力的 L2/L3 並保留內容，可兼顧專業判斷與追蹤；A 直接停廠過度，B 忽略告警、D 刪除事件都會造成盲點。",
+      "chapter": "4.1",
+      "competency": "能管理 SOC 分層",
+      "case_group": {
+        "id": "題組 2",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括將事件轉為偵測、管理 SOC 分層、衡量 SOC 效能、降低告警疲勞；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 27,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 2】哪個指標最能反映告警至開始調查的速度？",
+      "options": {
+        "A": "MTTA",
+        "B": "RPO",
+        "C": "CVSS",
+        "D": "ALE"
+      },
+      "explanation": "A 是 Mean Time to Acknowledge；B 是資料復原點，C 是漏洞嚴重度，D 是年度損失。",
+      "chapter": "4.1",
+      "competency": "能衡量 SOC 效能",
+      "case_group": {
+        "id": "題組 2",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括將事件轉為偵測、管理 SOC 分層、衡量 SOC 效能、降低告警疲勞；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 28,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 2】規則因備份作業每天誤報，最佳調整為何？",
+      "options": {
+        "A": "永久停用整類偵測",
+        "B": "要求分析師忽略",
+        "C": "刪除備份日誌",
+        "D": "以已核准工作、資產及時段做受控抑制並監測例外"
+      },
+      "explanation": "D 保留偵測且降低已知雜訊；A、B、C 都會形成無監控缺口。",
+      "chapter": "4.1",
+      "competency": "能降低告警疲勞",
+      "case_group": {
+        "id": "題組 2",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括將事件轉為偵測、管理 SOC 分層、衡量 SOC 效能、降低告警疲勞；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 29,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 3】自動隔離端點的 playbook 上線前，最重要測試為何？",
+      "options": {
+        "A": "直接在全公司執行",
+        "B": "在模擬環境驗證條件、權限、回復與人工核准",
+        "C": "只檢查名稱",
+        "D": "取消審計紀錄"
+      },
+      "explanation": "B 驗證自動化的正確性與可回復性；A 風險過高，C、D 無法確保控制安全。",
+      "chapter": "4.1",
+      "competency": "能驗證 SOAR Playbook",
+      "case_group": {
+        "id": "題組 3",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括驗證 SOAR Playbook、管理偵測內容、保護日誌完整性、執行架構風險分析；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 30,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "【題組 3】成熟 detection lifecycle 包含哪些？",
+      "options": {
+        "A": "定義威脅假設與資料需求",
+        "B": "規則發布後永久不改",
+        "C": "以 attack simulation 測試",
+        "D": "依誤報、漏報與威脅變化調整"
+      },
+      "explanation": "A、C、D 正確，威脅假設、攻擊模擬及依誤漏報持續調整涵蓋偵測生命週期；B 規則發布後永久不改，會隨環境與威脅變化失效。",
+      "chapter": "4.1",
+      "competency": "能管理偵測內容",
+      "case_group": {
+        "id": "題組 3",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括驗證 SOAR Playbook、管理偵測內容、保護日誌完整性、執行架構風險分析；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 31,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 3】攻擊者取得伺服器管理權後仍不應能刪除中央紀錄，最佳設計為何？",
+      "options": {
+        "A": "只存本機文字檔",
+        "B": "允許管理者清除所有副本",
+        "C": "即時轉送至權限隔離且具不可變保存的日誌平台",
+        "D": "停止時間同步"
+      },
+      "explanation": "C 分離管理邊界並防竄改；A、B 易被清除，D 破壞關聯分析。",
+      "chapter": "4.1",
+      "competency": "能保護日誌完整性",
+      "case_group": {
+        "id": "題組 3",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括驗證 SOAR Playbook、管理偵測內容、保護日誌完整性、執行架構風險分析；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 32,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 3】新支付服務設計審查最早應進行何種活動？",
+      "options": {
+        "A": "上線後才掃描",
+        "B": "資料流圖與 threat modeling",
+        "C": "只做效能測試",
+        "D": "購買 WAF 即結案"
+      },
+      "explanation": "B 能在設計階段識別信任邊界；A 太晚，C 不含資安，D 不能取代設計控制。",
+      "chapter": "4.2",
+      "competency": "能執行架構風險分析",
+      "case_group": {
+        "id": "題組 3",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括驗證 SOAR Playbook、管理偵測內容、保護日誌完整性、執行架構風險分析；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 33,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 4】要降低 API 接受未預期欄位的風險，何者最佳？",
+      "options": {
+        "A": "接受所有 JSON",
+        "B": "關閉驗證錯誤",
+        "C": "只檢查 Content-Type",
+        "D": "以明確 schema allowlist 驗證欄位、型別與界限"
+      },
+      "explanation": "D 正確，明確 schema allowlist 可限制欄位、型別與界限；A 接受任意 JSON、B 關閉驗證錯誤、C 只看 Content-Type，都無法阻擋未預期欄位。",
+      "chapter": "4.2",
+      "competency": "能保護 API Schema",
+      "case_group": {
+        "id": "題組 4",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括保護 API Schema、管理程式機密、整合發布證明、比較 SAST 與 DAST；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 34,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 4】CI 發現 repository 中提交有效 cloud key，第一步為何？",
+      "options": {
+        "A": "撤銷並輪替金鑰，再清理歷史與調查使用",
+        "B": "只刪最新一行",
+        "C": "將 repository 改名",
+        "D": "忽略因為是 private repo"
+      },
+      "explanation": "A 處理已曝露秘密及影響；B 未使舊金鑰失效，C、D 不降低風險。",
+      "chapter": "4.2",
+      "competency": "能管理程式機密",
+      "case_group": {
+        "id": "題組 4",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括保護 API Schema、管理程式機密、整合發布證明、比較 SAST 與 DAST；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 35,
+      "type": "題組（複選）",
+      "answer": "BC",
+      "question_text": "【題組 4】哪些資料可提升軟體產物 provenance？",
+      "options": {
+        "A": "允許人工替換產物不留紀錄",
+        "B": "建置來源與 commit",
+        "C": "建置環境及依賴摘要",
+        "D": "上線前通過一次掃描後，所有後續變更均可免除安全測試"
+      },
+      "explanation": "答案為 B、C。A「允許人工替換產物不留紀錄」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「建置來源與 commit」能直接整合發布證明，符合題幹的主要控制目標，因此應選；C「建置環境及依賴摘要」能直接整合發布證明，符合題幹的主要控制目標，因此應選；D「上線前通過一次掃描後，所有後續變更均可免除安全測試」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
+      "chapter": "4.2",
+      "competency": "能整合發布證明",
+      "case_group": {
+        "id": "題組 4",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括保護 API Schema、管理程式機密、整合發布證明、比較 SAST 與 DAST；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 36,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 4】哪項敘述正確？",
+      "options": {
+        "A": "SAST 只能測正式網站",
+        "B": "DAST 可完整看到所有未執行分支",
+        "C": "兩者都不需調校",
+        "D": "SAST 分析程式結構，DAST 從執行中的介面觀察行為"
+      },
+      "explanation": "D 正確區分白箱靜態與黑箱動態；A、B、C 都過度限制或誇大能力。",
+      "chapter": "4.2",
+      "competency": "能比較 SAST 與 DAST",
+      "case_group": {
+        "id": "題組 4",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括保護 API Schema、管理程式機密、整合發布證明、比較 SAST 與 DAST；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 37,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 5】Terraform 將 security group 開放 0.0.0.0/0，最適合在哪裡提早阻擋？",
+      "options": {
+        "A": "事件發生後才處理",
+        "B": "Pull request 的 IaC policy scan",
+        "C": "使用者瀏覽器",
+        "D": "紙本稽核一年一次"
+      },
+      "explanation": "B 可在部署前以政策即程式碼攔截；A、C、D 過晚或不相關。",
+      "chapter": "4.2",
+      "competency": "能執行 IaC 掃描",
+      "case_group": {
+        "id": "題組 5",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括執行 IaC 掃描、測試業務邏輯、治理開源修補、驗證 SSDLC 成熟度；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 38,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 5】折價券可重複並行兌換，哪種測試最能發現？",
+      "options": {
+        "A": "只掃描 CVE",
+        "B": "只檢查 TLS cipher",
+        "C": "針對狀態與 race condition 的業務邏輯測試",
+        "D": "只跑拼字檢查"
+      },
+      "explanation": "C 驗證流程狀態與競態；A、B、D 無法涵蓋折價券交易邏輯。",
+      "chapter": "4.2",
+      "competency": "能測試業務邏輯",
+      "case_group": {
+        "id": "題組 5",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括執行 IaC 掃描、測試業務邏輯、治理開源修補、驗證 SSDLC 成熟度；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 39,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "【題組 5】關鍵套件出現 CVE 時，哪些作法合理？",
+      "options": {
+        "A": "確認實際使用版本與可利用路徑",
+        "B": "依風險設定修補 SLA",
+        "C": "只看套件下載數便忽略",
+        "D": "更新後執行回歸及安全重測"
+      },
+      "explanation": "A、B、D 正確，確認實際版本及利用路徑、設定 SLA 並重測可形成風險導向修補；C 只看下載數便忽略漏洞，不能判斷組織實際受影響程度。",
+      "chapter": "4.2",
+      "competency": "能治理開源修補",
+      "case_group": {
+        "id": "題組 5",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括執行 IaC 掃描、測試業務邏輯、治理開源修補、驗證 SSDLC 成熟度；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 40,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "【題組 5】哪些證據顯示 SSDLC 已落地？",
+      "options": {
+        "A": "安全需求可追溯至測試",
+        "B": "只有年度口號",
+        "C": "高風險發現有 owner 與期限",
+        "D": "發布例外經風險核准並到期複核"
+      },
+      "explanation": "A、C、D 提供需求、缺陷及例外治理證據；B 不能證明流程執行。",
+      "chapter": "4.2",
+      "competency": "能驗證 SSDLC 成熟度",
+      "case_group": {
+        "id": "題組 5",
+        "description": "區域醫療中心針對臨床與遠距醫療平台展開跨部門資安演練，範圍包括執行 IaC 掃描、測試業務邏輯、治理開源修補、驗證 SSDLC 成熟度；團隊須在病患照護不得因安全處置而中斷下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    }
+  ]
+}

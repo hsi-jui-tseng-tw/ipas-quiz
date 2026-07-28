@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 18 回",
+    "subject": "資訊安全防護實務",
+    "date": "115 年 08 月 22 日"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "API 允許一般使用者呼叫管理功能但未檢查 function-level 權限，屬何種弱點？",
+      "options": {
+        "A": "BOLA",
+        "B": "SSRF",
+        "C": "Injection",
+        "D": "Broken Function Level Authorization"
+      },
+      "explanation": "D 是功能層授權失效；A 是物件層，B 是伺服端請求，C 是輸入執行。",
+      "chapter": "3.1",
+      "competency": "能辨識功能授權弱點"
+    },
+    {
+      "id": 2,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "行動 App 內嵌永久 API secret，主要風險為何？",
+      "options": {
+        "A": "使用者忘記密碼",
+        "B": "攻擊者可逆向取得並重用秘密",
+        "C": "TLS 自動失效",
+        "D": "資料庫容量變小"
+      },
+      "explanation": "B 因客戶端不可視為可信秘密儲存；A、C、D 無直接關係。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能分析 API 秘密曝露"
+    },
+    {
+      "id": 3,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "API 未限制可上傳檔案類型，且 Web server 可執行上傳內容，最嚴重結果為何？",
+      "options": {
+        "A": "Remote Code Execution",
+        "B": "Clickjacking",
+        "C": "DNS Spoofing",
+        "D": "Password Spraying"
+      },
+      "explanation": "A 可上傳 web shell 執行；B、C、D 不依賴檔案執行。",
+      "chapter": "3.1",
+      "competency": "能分析檔案上傳"
+    },
+    {
+      "id": 4,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "gRPC 服務只在 gateway 驗證身分，但內部服務可被直接呼叫，核心問題為何？",
+      "options": {
+        "A": "壓縮率不足",
+        "B": "序列化太快",
+        "C": "信任邊界內缺少端到端認證授權",
+        "D": "使用 HTTP/2"
+      },
+      "explanation": "C 讓繞過 gateway 的請求未受控；A、B、D 不是安全根因。",
+      "chapter": "3.1",
+      "competency": "能保護服務間 API"
+    },
+    {
+      "id": 5,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "Kubernetes RBAC 綁定 system:authenticated 至 cluster-admin，代表什麼？",
+      "options": {
+        "A": "只有匿名者有權限",
+        "B": "僅 node 可管理",
+        "C": "所有請求都會拒絕",
+        "D": "所有已驗證身分可能取得叢集最高權限"
+      },
+      "explanation": "D 是極度寬鬆綁定；A、B、C 都與該 subject 不符。",
+      "chapter": "3.1",
+      "competency": "能分析 Kubernetes RBAC"
+    },
+    {
+      "id": 6,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "Pod 可寫入 hostPath /etc，攻擊者最可能達成什麼？",
+      "options": {
+        "A": "修改宿主設定並建立持久化",
+        "B": "只影響 Pod 標籤",
+        "C": "提升 API 延遲",
+        "D": "自動輪替憑證"
+      },
+      "explanation": "A 跨越檔案系統隔離；B、C、D 低估或無關。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能評估 HostPath 風險"
+    },
+    {
+      "id": 7,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "Mesh sidecar 接受任何來源的未驗證流量，最需要啟用何者？",
+      "options": {
+        "A": "匿名 ingress",
+        "B": "共享 root key",
+        "C": "strict mTLS 與 service authorization",
+        "D": "停用 telemetry"
+      },
+      "explanation": "C 驗證服務身分並授權；A、B、D 使東西向流量更不可信。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能保護 Service Mesh"
+    },
+    {
+      "id": 8,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "攻擊者在公有 registry 發布近似名稱的惡意 image，屬何種供應鏈手法？",
+      "options": {
+        "A": "Golden Ticket",
+        "B": "Typosquatting",
+        "C": "SQL Injection",
+        "D": "Kerberoasting"
+      },
+      "explanation": "B 利用近似名稱誘導拉取；A、C、D 與映像命名無關。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能辨識映像混淆"
+    },
+    {
+      "id": 9,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "Serverless event payload 未驗證便傳入資料庫查詢，仍可能造成什麼？",
+      "options": {
+        "A": "因 serverless 而不可能攻擊",
+        "B": "只有冷啟動",
+        "C": "實體尾隨",
+        "D": "Injection"
+      },
+      "explanation": "D 執行模型不會消除輸入注入；A、B、C 都誤判風險。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能分析事件注入"
+    },
+    {
+      "id": 10,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "API 回應包含其他租戶資料，最優先檢查何處？",
+      "options": {
+        "A": "tenant context 的 server-side authorization 與資料查詢條件",
+        "B": "只檢查前端欄位驗證",
+        "C": "只檢查 API response schema",
+        "D": "只檢查資料庫連線池"
+      },
+      "explanation": "A 正確，tenant context 的伺服器端授權與查詢條件直接控制跨租戶隔離；B 只看前端驗證、C 只看回應 schema、D 只看連線池，都不能證明物件與資料授權。",
+      "chapter": "3.1",
+      "competency": "能驗證多租戶隔離"
+    },
+    {
+      "id": 11,
+      "type": "單選題",
+      "answer": "C",
+      "question_text": "Pod 內發現 curl 連線至 metadata service，應優先懷疑什麼？",
+      "options": {
+        "A": "一般應用程式健康檢查",
+        "B": "服務存取公開 API",
+        "C": "雲端 credential 探索或竊取",
+        "D": "資料庫重建索引"
+      },
+      "explanation": "C 正確，Pod 連向 metadata service 常用於探索或竊取 instance credential；A 的健康檢查、B 的公開 API 存取、D 的索引重建，都不能解釋此敏感端點連線。",
+      "chapter": "3.1",
+      "competency": "能辨識雲端憑證竊取"
+    },
+    {
+      "id": 12,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "Ingress controller 漏洞遭利用後被用來修改路由，主要影響何者？",
+      "options": {
+        "A": "只影響單一靜態頁面",
+        "B": "流量導向與信任邊界",
+        "C": "只影響備份",
+        "D": "只影響使用者端認證畫面"
+      },
+      "explanation": "B 正確，控制 Ingress 路由可攔截或重導服務流量並改變信任邊界；A 只看靜態頁面、C 只看備份、D 只看使用者端畫面，都過度侷限實際影響。",
+      "chapter": "3.1",
+      "competency": "能分析 Ingress 失陷"
+    },
+    {
+      "id": 13,
+      "type": "單選題",
+      "answer": "D",
+      "question_text": "API 支援舊版但停止修補且仍公開，最符合哪項風險？",
+      "options": {
+        "A": "資料壓縮",
+        "B": "實體入侵",
+        "C": "容量規劃",
+        "D": "Improper Inventory Management"
+      },
+      "explanation": "D 是未盤點或未退役 API；A、B、C 無關版本曝露。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能管理 API 資產"
+    },
+    {
+      "id": 14,
+      "type": "單選題",
+      "answer": "A",
+      "question_text": "Container image 使用浮動 latest tag，鑑識上最大的困難為何？",
+      "options": {
+        "A": "無法可靠重建事件時實際執行版本",
+        "B": "日誌一定消失",
+        "C": "網路一定中斷",
+        "D": "憑證一定過期"
+      },
+      "explanation": "A 破壞版本可追溯；B、C、D 並非必然。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.1",
+      "competency": "能維持映像可追溯"
+    },
+    {
+      "id": 15,
+      "type": "單選題",
+      "answer": "B",
+      "question_text": "鑑識人員取得磁碟映像後，應先用什麼確認後續分析未改變原始內容？",
+      "options": {
+        "A": "檔名",
+        "B": "Cryptographic hash",
+        "C": "檔案大小單一值",
+        "D": "截圖"
+      },
+      "explanation": "B 提供完整性驗證；A、C 可碰撞或改名，D 不能驗證整體映像。",
+      "chapter": "3.2",
+      "competency": "能驗證證據完整性"
+    },
+    {
+      "id": 16,
+      "type": "複選題",
+      "answer": "ABD",
+      "question_text": "雲端 object storage 疑遭外洩，哪些證據應優先保全？",
+      "options": {
+        "A": "data access log",
+        "B": "IAM policy history",
+        "C": "只保存公開首頁",
+        "D": "object version 與相關 flow log"
+      },
+      "explanation": "A、B、D 可重建存取、授權及資料狀態；C 資訊不足。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.2",
+      "competency": "能調查雲端資料外洩"
+    },
+    {
+      "id": 17,
+      "type": "複選題",
+      "answer": "AC",
+      "question_text": "記憶體鑑識可能取得哪些重要資訊？",
+      "options": {
+        "A": "執行程序與 injected code",
+        "B": "已斷電後自動永久保留 RAM",
+        "C": "網路連線與部分 credential artifact",
+        "D": "事件發生後先刪除告警與日誌，再決定是否遏制或蒐證"
+      },
+      "explanation": "答案為 A、C。A「執行程序與 injected code」能直接執行記憶體鑑識，符合題幹的主要控制目標，因此應選；B「已斷電後自動永久保留 RAM」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；C「網路連線與部分 credential artifact」能直接執行記憶體鑑識，符合題幹的主要控制目標，因此應選；D「事件發生後先刪除告警與日誌，再決定是否遏制或蒐證」會移除必要控制或稽核證據，擴大偵測、追蹤或復原缺口，因此不應選。",
+      "chapter": "3.2",
+      "competency": "能執行記憶體鑑識"
+    },
+    {
+      "id": 18,
+      "type": "複選題",
+      "answer": "BCD",
+      "question_text": "收集遠端主機證據時，哪些作法有助於降低污染？",
+      "options": {
+        "A": "直接執行大量未知工具",
+        "B": "使用已驗證工具",
+        "C": "記錄命令與時間",
+        "D": "優先擷取揮發性高的資料"
+      },
+      "explanation": "B、C、D 支持可重現及 volatility order；A 可能大幅改變系統。",
+      "chapter": "3.2",
+      "competency": "能執行現場鑑識"
+    },
+    {
+      "id": 19,
+      "type": "複選題",
+      "answer": "ABC",
+      "question_text": "惡意程式 sandbox 分析可觀察哪些行為？",
+      "options": {
+        "A": "程序與檔案變更",
+        "B": "網路連線",
+        "C": "Registry 或 persistence",
+        "D": "保證識別所有休眠 payload"
+      },
+      "explanation": "A、B、C 是動態行為；D 錯，惡意程式可能偵測 sandbox 或延遲。",
+      "chapter": "3.2",
+      "competency": "能分析惡意程式"
+    },
+    {
+      "id": 20,
+      "type": "複選題",
+      "answer": "BC",
+      "question_text": "事件證據交付外部鑑識商時，哪些控制必要？",
+      "options": {
+        "A": "無需清冊",
+        "B": "chain of custody",
+        "C": "加密傳輸與存放",
+        "D": "事件發生後先刪除告警與日誌，再決定是否遏制或蒐證"
+      },
+      "explanation": "答案為 B、C。A「無需清冊」未直接處理題幹的核心風險，或與所需控制目標及處置順序不一致，因此不應選；B「chain of custody」能直接管理鑑識委外，符合題幹的主要控制目標，因此應選；C「加密傳輸與存放」能直接管理鑑識委外，符合題幹的主要控制目標，因此應選；D「事件發生後先刪除告警與日誌，再決定是否遏制或蒐證」會移除必要控制或稽核證據，擴大偵測、追蹤或復原缺口，因此不應選。",
+      "chapter": "3.2",
+      "competency": "能管理鑑識委外"
+    },
+    {
+      "id": 21,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 1】容器節點出現可疑 privileged Pod，第一個保全動作為何？",
+      "options": {
+        "A": "立即清空 cluster",
+        "B": "刪除所有 namespace",
+        "C": "快照相關節點並匯出 audit、runtime 與 Pod 定義",
+        "D": "只通知開發者"
+      },
+      "explanation": "C 保留跨層證據；A、B 破壞狀態，D 未保全證據。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.2",
+      "competency": "能保全容器事件",
+      "case_group": {
+        "id": "題組 1",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保全容器事件、追查 Kubernetes 身分、圍堵容器入侵、界定映像影響；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 22,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 1】如何判斷 Pod 是否由遭竊 service account 建立？",
+      "options": {
+        "A": "關聯 audit log 的 user、token subject、source 與 create request",
+        "B": "只看 Pod 名稱",
+        "C": "只比對 Pod 建立時間",
+        "D": "只檢查目前容器程序"
+      },
+      "explanation": "A 正確，audit log 的 user、token subject、source 與 create request 可追溯建立者；B 只看 Pod 名稱、C 只比建立時間、D 只看目前程序，都缺乏呼叫主體證據。",
+      "chapter": "3.2",
+      "competency": "能追查 Kubernetes 身分",
+      "case_group": {
+        "id": "題組 1",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保全容器事件、追查 Kubernetes 身分、圍堵容器入侵、界定映像影響；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 23,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 1】隔離工作負載又要避免刪除證據，最佳作法為何？",
+      "options": {
+        "A": "立刻刪 Pod",
+        "B": "開放所有 egress",
+        "C": "移除 audit log",
+        "D": "套用網路隔離並保存現況快照與定義"
+      },
+      "explanation": "D 限制通訊且保留證據；A、C 破壞調查，B 擴大威脅。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "3.2",
+      "competency": "能圍堵容器入侵",
+      "case_group": {
+        "id": "題組 1",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保全容器事件、追查 Kubernetes 身分、圍堵容器入侵、界定映像影響；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 24,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 1】發現惡意 image digest 後，如何界定範圍？",
+      "options": {
+        "A": "只查 image tag",
+        "B": "跨 registry、cluster 與部署紀錄搜尋相同 digest",
+        "C": "只依 Pod 名稱",
+        "D": "只檢查目前運行 Pod"
+      },
+      "explanation": "B 正確，相同 image digest 可跨 registry、cluster 與部署紀錄精確關聯範圍；A 的 tag 與 C 的 Pod 名稱可變，D 只查目前運行 Pod 會漏掉已終止工作負載。",
+      "chapter": "3.2",
+      "competency": "能界定映像影響",
+      "case_group": {
+        "id": "題組 1",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保全容器事件、追查 Kubernetes 身分、圍堵容器入侵、界定映像影響；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 25,
+      "type": "題組（複選）",
+      "answer": "ACD",
+      "question_text": "【題組 2】復原前哪些項目應完成？",
+      "options": {
+        "A": "修補 admission policy",
+        "B": "沿用被竊 token",
+        "C": "輪替 service account credential",
+        "D": "以可信 image 重建並強化 runtime 監控"
+      },
+      "explanation": "A、C、D 處理根因、身分與重建；B 保留失陷憑證。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.1",
+      "competency": "能恢復容器環境",
+      "case_group": {
+        "id": "題組 2",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括恢復容器環境、運用 STIX/TAXII、建立耐久偵測、遵守 TLP；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 26,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 2】收到 STIX 2.1 格式情資，TAXII 2.1 的主要用途為何？",
+      "options": {
+        "A": "漏洞評分",
+        "B": "交換與傳輸結構化威脅情資",
+        "C": "加密硬碟",
+        "D": "掃描程式碼"
+      },
+      "explanation": "B 提供情資交換 API；A 是 CVSS 等，C、D 不屬 TAXII。",
+      "chapter": "4.1",
+      "competency": "能運用 STIX/TAXII",
+      "case_group": {
+        "id": "題組 2",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括恢復容器環境、運用 STIX/TAXII、建立耐久偵測、遵守 TLP；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 27,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 2】情資只有 file hash，但惡意程式頻繁變種，應補充什麼？",
+      "options": {
+        "A": "更多相同 hash",
+        "B": "單一檔案名稱",
+        "C": "單一惡意來源 IP",
+        "D": "行為、基礎設施與 ATT&CK technique 等較耐久指標"
+      },
+      "explanation": "D 正確，行為、基礎設施與 ATT&CK technique 比單一指標更能涵蓋變種；A 仍侷限相同 hash，B 的單一檔名、C 的單一來源 IP 都容易變更或誤判。",
+      "chapter": "4.1",
+      "competency": "能建立耐久偵測",
+      "case_group": {
+        "id": "題組 2",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括恢復容器環境、運用 STIX/TAXII、建立耐久偵測、遵守 TLP；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 28,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 2】分析師將 TLP:AMBER 情資公開貼文，主要問題為何？",
+      "options": {
+        "A": "違反分享限制",
+        "B": "CVSS 計算錯誤",
+        "C": "DNS TTL 太短",
+        "D": "備份失敗"
+      },
+      "explanation": "A 未遵守 TLP 分享範圍；B、C、D 與情資處理標示無關。",
+      "chapter": "4.1",
+      "competency": "能遵守 TLP",
+      "case_group": {
+        "id": "題組 2",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括恢復容器環境、運用 STIX/TAXII、建立耐久偵測、遵守 TLP；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 29,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 3】情資報告未說明來源與信心水準，使用上最大問題為何？",
+      "options": {
+        "A": "檔案太小",
+        "B": "無法開啟 PDF",
+        "C": "難以評估可靠性及採取適當行動",
+        "D": "網路必然中斷"
+      },
+      "explanation": "C 缺少 provenance 與 confidence；A、B、D 非核心風險。",
+      "chapter": "4.1",
+      "competency": "能評估情資可信度",
+      "case_group": {
+        "id": "題組 3",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括評估情資可信度、驗證情資規則、綜合漏洞排序、部署補償控制；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 30,
+      "type": "題組（複選）",
+      "answer": "ABD",
+      "question_text": "【題組 3】哪些方式可驗證情資驅動規則？",
+      "options": {
+        "A": "以歷史 telemetry backtest",
+        "B": "執行受控 attack simulation",
+        "C": "只確認規則已啟用",
+        "D": "監測 precision、recall 或誤漏報"
+      },
+      "explanation": "A、B、D 正確，歷史 backtest、受控攻擊模擬及 precision/recall 能提供偵測實證；C 只確認規則已啟用，不能證明會命中攻擊或控制誤漏報。",
+      "chapter": "4.1",
+      "competency": "能驗證情資規則",
+      "case_group": {
+        "id": "題組 3",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括評估情資可信度、驗證情資規則、綜合漏洞排序、部署補償控制；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 31,
+      "type": "題組",
+      "answer": "C",
+      "question_text": "【題組 3】弱點同時有 CVSS 8.0、EPSS 高分且列入 KEV，最佳判斷為何？",
+      "options": {
+        "A": "只因未達 9 分延後",
+        "B": "直接刪除服務",
+        "C": "視曝露與資產重要性提高優先度",
+        "D": "只看公布年份"
+      },
+      "explanation": "C 綜合實際利用與資產情境；A、D 單一判斷，B 缺乏變更治理。",
+      "chapter": "4.1",
+      "competency": "能綜合漏洞排序",
+      "case_group": {
+        "id": "題組 3",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括評估情資可信度、驗證情資規則、綜合漏洞排序、部署補償控制；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 32,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 3】Internet-facing VPN 存在 KEV 漏洞但無法立即修補，首要補償控制為何？",
+      "options": {
+        "A": "限制來源、加強監控並準備緊急變更",
+        "B": "公開管理介面",
+        "C": "停用所有日誌",
+        "D": "降低漏洞標籤"
+      },
+      "explanation": "A 先縮小攻擊面並偵測；B、C、D 會擴大或掩蓋風險。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能部署補償控制",
+      "case_group": {
+        "id": "題組 3",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括評估情資可信度、驗證情資規則、綜合漏洞排序、部署補償控制；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 33,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 4】VEX 表示某元件漏洞 not affected，組織仍應確認什麼？",
+      "options": {
+        "A": "不需任何證據",
+        "B": "只看產品名稱",
+        "C": "刪除 SBOM",
+        "D": "產品版本、不可利用理由與 VEX 發行者可信度"
+      },
+      "explanation": "D 驗證聲明適用性；A、B、C 無法支持排除。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能解讀 VEX",
+      "case_group": {
+        "id": "題組 4",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括解讀 VEX、治理修補逾期、分析攻擊路徑、前移 IaC 安全；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 34,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 4】修補 SLA 到期但 owner 未處理，最佳治理動作為何？",
+      "options": {
+        "A": "自動結案",
+        "B": "升級通報、記錄例外或要求立即處理",
+        "C": "刪除掃描器",
+        "D": "降低 CVSS"
+      },
+      "explanation": "B 維持責任及風險核准；A、C、D 都是在掩蓋逾期。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能治理修補逾期",
+      "case_group": {
+        "id": "題組 4",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括解讀 VEX、治理修補逾期、分析攻擊路徑、前移 IaC 安全；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 35,
+      "type": "題組（複選）",
+      "answer": "AC",
+      "question_text": "【題組 4】哪些因素可能讓中等 CVSS 漏洞優先於高分漏洞？",
+      "options": {
+        "A": "關鍵資產且已曝露",
+        "B": "僅因另一漏洞的 CVSS Base 分數較高",
+        "C": "已有 exploitation evidence",
+        "D": "上線前通過一次掃描後，所有後續變更均可免除安全測試"
+      },
+      "explanation": "答案為 A、C。A「關鍵資產且已曝露」能直接分析攻擊路徑，符合題幹的主要控制目標，因此應選；B「僅因另一漏洞的 CVSS Base 分數較高」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；C「已有 exploitation evidence」能直接分析攻擊路徑，符合題幹的主要控制目標，因此應選；D「上線前通過一次掃描後，所有後續變更均可免除安全測試」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
+      "chapter": "4.2",
+      "competency": "能分析攻擊路徑",
+      "case_group": {
+        "id": "題組 4",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括解讀 VEX、治理修補逾期、分析攻擊路徑、前移 IaC 安全；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 36,
+      "type": "題組",
+      "answer": "B",
+      "question_text": "【題組 4】IaC 模板含公開資料庫，何時修正成本最低？",
+      "options": {
+        "A": "正式事件後",
+        "B": "設計與 pull request 階段的 policy check",
+        "C": "年度稽核後",
+        "D": "客戶投訴後"
+      },
+      "explanation": "B 在部署前回饋開發者；A、C、D 都較晚且曝露已形成。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能前移 IaC 安全",
+      "case_group": {
+        "id": "題組 4",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括解讀 VEX、治理修補逾期、分析攻擊路徑、前移 IaC 安全；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 37,
+      "type": "題組",
+      "answer": "D",
+      "question_text": "【題組 5】Dependency lockfile 被未授權修改，pipeline 應如何處理？",
+      "options": {
+        "A": "自動放行",
+        "B": "忽略 code review",
+        "C": "改名後發布",
+        "D": "驗證變更核准、hash 與來源，異常即阻擋"
+      },
+      "explanation": "D 保護依賴完整性；A、B、C 不能建立可信建置。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能保護相依套件",
+      "case_group": {
+        "id": "題組 5",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保護相依套件、驗證發布產物、執行安全程式審查、衡量 DevSecOps；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 38,
+      "type": "題組",
+      "answer": "A",
+      "question_text": "【題組 5】要確認 production artifact 正是經測試版本，應使用何者？",
+      "options": {
+        "A": "不可變 digest、簽章及部署驗證",
+        "B": "只比對檔名",
+        "C": "人工記憶版本",
+        "D": "允許部署後修改"
+      },
+      "explanation": "A 建立端到端完整性；B、C 可誤認，D 破壞不可變性。判斷須以可驗證的攻擊機制與防護目標為準。",
+      "chapter": "4.2",
+      "competency": "能驗證發布產物",
+      "case_group": {
+        "id": "題組 5",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保護相依套件、驗證發布產物、執行安全程式審查、衡量 DevSecOps；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 39,
+      "type": "題組（複選）",
+      "answer": "BCD",
+      "question_text": "【題組 5】哪些是良好的 secure code review 作法？",
+      "options": {
+        "A": "只看格式",
+        "B": "依威脅模型檢視高風險變更",
+        "C": "由具能力且非原作者者複核敏感邏輯",
+        "D": "記錄發現與修正證據"
+      },
+      "explanation": "B、C、D 提升審查深度與可追蹤；A 不足以找出安全邏輯問題。",
+      "chapter": "4.2",
+      "competency": "能執行安全程式審查",
+      "case_group": {
+        "id": "題組 5",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保護相依套件、驗證發布產物、執行安全程式審查、衡量 DevSecOps；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    },
+    {
+      "id": 40,
+      "type": "題組（複選）",
+      "answer": "ABC",
+      "question_text": "【題組 5】DevSecOps 指標應避免只追求發現數量，還可量測哪些？",
+      "options": {
+        "A": "修復 lead time",
+        "B": "重複發生率",
+        "C": "發布例外逾期率",
+        "D": "只統計掃描發現總數"
+      },
+      "explanation": "A、B、C 正確，修復 lead time、重複發生率與例外逾期率能反映處理效率與治理；D 仍只統計掃描發現數量，不能證明風險降低或流程改善。",
+      "chapter": "4.2",
+      "competency": "能衡量 DevSecOps",
+      "case_group": {
+        "id": "題組 5",
+        "description": "精密製造企業針對工控與供應鏈協作平台展開跨部門資安演練，範圍包括保護相依套件、驗證發布產物、執行安全程式審查、衡量 DevSecOps；團隊須在安全措施須符合產線可用性限制下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
+      }
+    }
+  ]
+}
