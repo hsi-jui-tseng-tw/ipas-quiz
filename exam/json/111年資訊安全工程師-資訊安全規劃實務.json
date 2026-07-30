@@ -397,6 +397,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q25-28-dh-steps-table.png",
+          "alt": "Diffie-Hellman 金鑰交換步驟與公開通道表",
+          "caption": "題組 2 的 Diffie-Hellman 金鑰建立流程",
+          "source_page": 6
+        },
         "description": "迪菲-赫爾曼密鑰交換（Diffie-Hellman Key Exchange, D -H）是一種金鑰交換方法，其能夠讓通訊雙方在公開通道上建立金鑰，並且使用該金鑰在後續的通訊中作為共同金鑰來加密訊息內容。若小美和小明想要使用這個演算法來建立一個共同金鑰以利後續的訊息交換，則他們所使用的計算過程及參數如下所示： (ga mod p)b mod p = (gb mod p)a mod p ．g：根數（base） ．p：任意質數 ．a、b：分別為通訊兩端所各自選定的私鑰（秘密正整數值） ．mod：取餘數（modulus） 根據此式，小美和小明可以先各自選定私鑰 a 和 b，並搭配公開資訊 g 與 p 來計算得到共同金鑰 K。假設小美為金鑰交換的發起端，則金鑰建立流程如下所示： 步驟小美公開通道小明"
       }
     },
@@ -416,6 +422,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q25-28-dh-steps-table.png",
+          "alt": "Diffie-Hellman 金鑰交換步驟與公開通道表",
+          "caption": "題組 2 的 Diffie-Hellman 金鑰建立流程",
+          "source_page": 6
+        },
         "description": "迪菲-赫爾曼密鑰交換（Diffie-Hellman Key Exchange, D -H）是一種金鑰交換方法，其能夠讓通訊雙方在公開通道上建立金鑰，並且使用該金鑰在後續的通訊中作為共同金鑰來加密訊息內容。若小美和小明想要使用這個演算法來建立一個共同金鑰以利後續的訊息交換，則他們所使用的計算過程及參數如下所示： (ga mod p)b mod p = (gb mod p)a mod p ．g：根數（base） ．p：任意質數 ．a、b：分別為通訊兩端所各自選定的私鑰（秘密正整數值） ．mod：取餘數（modulus） 根據此式，小美和小明可以先各自選定私鑰 a 和 b，並搭配公開資訊 g 與 p 來計算得到共同金鑰 K。假設小美為金鑰交換的發起端，則金鑰建立流程如下所示： 步驟小美公開通道小明"
       }
     },
@@ -435,6 +447,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q25-28-dh-steps-table.png",
+          "alt": "Diffie-Hellman 金鑰交換步驟與公開通道表",
+          "caption": "題組 2 的 Diffie-Hellman 金鑰建立流程",
+          "source_page": 6
+        },
         "description": "迪菲-赫爾曼密鑰交換（Diffie-Hellman Key Exchange, D -H）是一種金鑰交換方法，其能夠讓通訊雙方在公開通道上建立金鑰，並且使用該金鑰在後續的通訊中作為共同金鑰來加密訊息內容。若小美和小明想要使用這個演算法來建立一個共同金鑰以利後續的訊息交換，則他們所使用的計算過程及參數如下所示： (ga mod p)b mod p = (gb mod p)a mod p ．g：根數（base） ．p：任意質數 ．a、b：分別為通訊兩端所各自選定的私鑰（秘密正整數值） ．mod：取餘數（modulus） 根據此式，小美和小明可以先各自選定私鑰 a 和 b，並搭配公開資訊 g 與 p 來計算得到共同金鑰 K。假設小美為金鑰交換的發起端，則金鑰建立流程如下所示： 步驟小美公開通道小明"
       }
     },
@@ -454,6 +472,12 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q25-28-dh-steps-table.png",
+          "alt": "Diffie-Hellman 金鑰交換步驟與公開通道表",
+          "caption": "題組 2 的 Diffie-Hellman 金鑰建立流程",
+          "source_page": 6
+        },
         "description": "迪菲-赫爾曼密鑰交換（Diffie-Hellman Key Exchange, D -H）是一種金鑰交換方法，其能夠讓通訊雙方在公開通道上建立金鑰，並且使用該金鑰在後續的通訊中作為共同金鑰來加密訊息內容。若小美和小明想要使用這個演算法來建立一個共同金鑰以利後續的訊息交換，則他們所使用的計算過程及參數如下所示： (ga mod p)b mod p = (gb mod p)a mod p ．g：根數（base） ．p：任意質數 ．a、b：分別為通訊兩端所各自選定的私鑰（秘密正整數值） ．mod：取餘數（modulus） 根據此式，小美和小明可以先各自選定私鑰 a 和 b，並搭配公開資訊 g 與 p 來計算得到共同金鑰 K。假設小美為金鑰交換的發起端，則金鑰建立流程如下所示： 步驟小美公開通道小明"
       }
     },
@@ -625,6 +649,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q37-40-hybrid-encryption.png",
+          "alt": "Sender、Public Channel 與 Receiver 的混合式加密流程圖",
+          "caption": "題組 5 的混合式加密與數位簽章流程",
+          "source_page": 10
+        },
         "description": "混合式加密系統（Hybrid Encryption）結合了對稱式加密與非對稱式加密的優點。"
       }
     },
@@ -644,6 +674,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q37-40-hybrid-encryption.png",
+          "alt": "Sender、Public Channel 與 Receiver 的混合式加密流程圖",
+          "caption": "題組 5 的混合式加密與數位簽章流程",
+          "source_page": 10
+        },
         "description": "混合式加密系統（Hybrid Encryption）結合了對稱式加密與非對稱式加密的優點。"
       }
     },
@@ -663,6 +699,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q37-40-hybrid-encryption.png",
+          "alt": "Sender、Public Channel 與 Receiver 的混合式加密流程圖",
+          "caption": "題組 5 的混合式加密與數位簽章流程",
+          "source_page": 10
+        },
         "description": "混合式加密系統（Hybrid Encryption）結合了對稱式加密與非對稱式加密的優點。"
       }
     },
@@ -682,6 +724,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全規劃實務/q37-40-hybrid-encryption.png",
+          "alt": "Sender、Public Channel 與 Receiver 的混合式加密流程圖",
+          "caption": "題組 5 的混合式加密與數位簽章流程",
+          "source_page": 10
+        },
         "description": "混合式加密系統（Hybrid Encryption）結合了對稱式加密與非對稱式加密的優點。"
       }
     }

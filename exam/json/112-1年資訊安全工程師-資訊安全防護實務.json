@@ -554,6 +554,12 @@
     },
     {
       "id": 34,
+      "image": {
+        "src": "exam/images/112-1資訊安全防護實務/q34-osstmm-test-matrix.png",
+        "alt": "OSSTMM 安全測試類型矩陣圖",
+        "caption": "測試雙方資訊掌握程度與安全測試類型的對照矩陣",
+        "source_page": 11
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 4】關於常見的安全測試類型，下列敘述何項錯誤？",

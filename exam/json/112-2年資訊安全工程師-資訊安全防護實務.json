@@ -384,6 +384,12 @@
     },
     {
       "id": 24,
+      "image": {
+        "src": "exam/images/112-2資訊安全防護實務/q24-incident-lifecycle-detection-analysis.png",
+        "alt": "事件回應生命週期圖，偵測與分析階段標示",
+        "caption": "事件回應生命週期與偵測及分析階段",
+        "source_page": 7
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3】偵測與分析（Detection & Analysis）中事故優先序（Incident Prioritization）所需考量的因素，下列哪一項最「不」合適？",
@@ -403,6 +409,12 @@
     },
     {
       "id": 25,
+      "image": {
+        "src": "exam/images/112-2資訊安全防護實務/q25-incident-lifecycle-containment-recovery.png",
+        "alt": "事件回應生命週期圖，遏制、根除與復原階段標示",
+        "caption": "事件回應生命週期與遏制、根除及復原階段",
+        "source_page": 8
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 3】控制、清除與復原（Containment, Eradication & Recovery）中最常被用於識別來源攻擊主機之方法，下列哪一項最「不」正確？",
@@ -422,6 +434,12 @@
     },
     {
       "id": 26,
+      "image": {
+        "src": "exam/images/112-2資訊安全防護實務/q26-incident-lifecycle-post-incident.png",
+        "alt": "事件回應生命週期圖，事件後活動階段標示",
+        "caption": "事件回應生命週期與事件後活動階段",
+        "source_page": 8
+      },
       "type": "題組",
       "answer": "D",
       "question_text": "【題組 3】事故後活動（Post-Incident Activity）的證據留存（Evidence Retention）程序所需考量的因素，下列哪一項最「不」正確？",
@@ -441,6 +459,12 @@
     },
     {
       "id": 27,
+      "image": {
+        "src": "exam/images/112-2資訊安全防護實務/q27-incident-lifecycle-all-phases.png",
+        "alt": "事件回應生命週期各階段圖",
+        "caption": "事件回應生命週期的四個階段",
+        "source_page": 9
+      },
       "type": "題組（複選）",
       "answer": "BCD",
       "question_text": "【題組 3】關於 NIST SP 800-61 資安事故處理指引之敘述，下列何項正確？（複選）",
@@ -520,6 +544,12 @@
     },
     {
       "id": 32,
+      "image": {
+        "src": "exam/images/112-2資訊安全防護實務/q32-code-examples.png",
+        "alt": "四種程式語言的程式碼範例",
+        "caption": "PHP、Java、JavaScript 與 Python 程式碼範例",
+        "source_page": 11
+      },
       "type": "複選題",
       "answer": "BCD",
       "question_text": "關於源碼檢測分析的敘述，下列何者正確？（複選）",

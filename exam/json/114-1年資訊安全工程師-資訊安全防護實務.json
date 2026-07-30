@@ -70,6 +70,12 @@
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 1】在進行例行性的檢查時，發現 WEB 主機上的 log 記錄出現了登入錯誤訊息，但內容包含 '<?php system($_GET[c]); ?>'，這可能遭受到何種攻擊？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q5-auth-log.png",
+        "alt": "終端機顯示 auth.log 中的 SSH 驗證與系統工作紀錄",
+        "caption": "圖一：auth.log 紀錄",
+        "source_page": 3
+      },
       "options": {
         "A": "修改網站的配置文件以獲得管理員權限",
         "B": "利用 SQL 注入漏洞來控制資料庫，進而執行代碼",
@@ -89,6 +95,12 @@
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 1】在資料庫伺服器的工作排程中出現一個名為 windows update 的工作，內容包含 'powershell.exe -ExecutionPolicy bypass -command ...'。請問下列描述何者正確？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q6-powershell-command.png",
+        "alt": "PowerShell 命令列顯示執行政策、腳本輸入與輸出檔案參數",
+        "caption": "圖二：PowerShell 命令",
+        "source_page": 4
+      },
       "options": {
         "A": "這是段 Powershell，它試圖在背景執行，且會產出一個名為 LSASS 的 Script",
         "B": "就說明看來它應該 Windows 更新工作",
@@ -108,6 +120,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 1】當資安小組在 AD 主機上發現大量附檔名為 .kirbi 的檔案，以及 mimikatz 工具。請問遭受了什麼類型的攻擊？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q7-kerberos-tickets.png",
+        "alt": "Windows Downloads 資料夾顯示多個 Kerberos 票證檔案與程式檔",
+        "caption": "圖三：Downloads 資料夾內容",
+        "source_page": 5
+      },
       "options": {
         "A": "你的組織受到了 Denial of Service 攻擊",
         "B": "你的組織受到了 Pass the Ticket 攻擊",
@@ -357,6 +375,12 @@
       "type": "單選題",
       "answer": "A",
       "question_text": "某機關系統維運商更新作業疏失，未發現網頁驗證功能關閉，導致學員無需身分驗證即可登入並有外洩敏感資料之虞。下列何者是「最不」建議之防範措施？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q22-authentication-failure.png",
+        "alt": "系統更新後驗證功能失效並允許多位學員存取資料的示意圖",
+        "caption": "驗證功能失效情境",
+        "source_page": 11
+      },
       "options": {
         "A": "機關建立資通安全緊急應變機制",
         "B": "應完整確認系統相關檢核驗證功能均正常啟用始可對外開放",
@@ -372,6 +396,12 @@
       "type": "單選題",
       "answer": "C",
       "question_text": "關於誘餌環境（Decoys Environment/Honeypot）相關敘述，下列何者「最不正確」？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q23-decoy-environment.png",
+        "alt": "誘餌環境模擬區域網路與內部網路並管理誘餌物件的關係圖",
+        "caption": "誘餌環境關係圖",
+        "source_page": 12
+      },
       "options": {
         "A": "誘餌是一種仿真的數位人造物，旨在欺騙攻擊者的監控設備或誤導其評估",
         "B": "整合式蜜網於生產環境中設置誘餌，但攻擊者有機會利用其位置進行網路流量竊聽",
@@ -538,6 +568,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 4】在網頁目錄中發現檔案 index2.php，內容包含 'GIF89a' 與 '<?php @eval($_REQUEST[\"input\"]); ?>'。請問下列何項描述「錯誤」？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q33-polyglot-webshell.png",
+        "alt": "同一檔案中並列 GIF 檔頭與 PHP 程式碼的片段",
+        "caption": "附圖一：檔案內容",
+        "source_page": 16
+      },
       "options": {
         "A": "GIF89a 是 GIF 圖片的檔頭",
         "B": "這是一張 GIF 圖片，如果在作業系統裡面點擊圖片檔案的話，圖片顯示內容是 'input'",
@@ -625,7 +661,13 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 5",
-        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。"
+        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。",
+        "image": {
+          "src": "exam/images/114-1資訊安全防護實務/q37-http-request.png",
+          "alt": "HTTP POST 登入請求的標頭、Cookie 與表單參數畫面",
+          "caption": "附圖一：HTTP 登入請求",
+          "source_page": 19
+        }
       }
     },
     {
@@ -644,7 +686,13 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 5",
-        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。"
+        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。",
+        "image": {
+          "src": "exam/images/114-1資訊安全防護實務/q37-http-request.png",
+          "alt": "HTTP POST 登入請求的標頭、Cookie 與表單參數畫面",
+          "caption": "附圖一：HTTP 登入請求",
+          "source_page": 19
+        }
       }
     },
     {
@@ -652,6 +700,12 @@
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 5】測試人員發現修改 sid 參數竟然可以成功存取到管理者頁面。這證明了存在下列哪一個 OWASP Top 10 2021 的弱點？",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q39-privilege-url-comparison.png",
+        "alt": "高權限與低權限使用者瀏覽器網址列的對照畫面",
+        "caption": "附圖二：使用者網址列對照",
+        "source_page": 21
+      },
       "options": {
         "A": "A01 Broken Access Control",
         "B": "A05 Security Misconfiguration",
@@ -663,7 +717,13 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 5",
-        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。"
+        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。",
+        "image": {
+          "src": "exam/images/114-1資訊安全防護實務/q37-http-request.png",
+          "alt": "HTTP POST 登入請求的標頭、Cookie 與表單參數畫面",
+          "caption": "附圖一：HTTP 登入請求",
+          "source_page": 19
+        }
       }
     },
     {
@@ -671,6 +731,12 @@
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 5】滲透測試人員建議事項中，下列哪些符合以「最少金錢、管理、技術」對弱點進行有效管理？（複選）",
+      "image": {
+        "src": "exam/images/114-1資訊安全防護實務/q40-wordpress-database-config.png",
+        "alt": "WordPress 設定檔中的 MySQL 資料庫連線參數片段",
+        "caption": "附圖三：資料庫連線設定",
+        "source_page": 23
+      },
       "options": {
         "A": "限縮僅有我國 IP 能連接到這個服務網站",
         "B": "限制能連接到 MySQL 的來源 IP",
@@ -682,7 +748,13 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 5",
-        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。"
+        "description": "某次針對金融網站服務主機的安全測試中，您身為安全測試人員，對網站系統進行詳細檢查。發現輸入處理不當和角色驗證漏洞。",
+        "image": {
+          "src": "exam/images/114-1資訊安全防護實務/q37-http-request.png",
+          "alt": "HTTP POST 登入請求的標頭、Cookie 與表單參數畫面",
+          "caption": "附圖一：HTTP 登入請求",
+          "source_page": 19
+        }
       }
     }
   ]

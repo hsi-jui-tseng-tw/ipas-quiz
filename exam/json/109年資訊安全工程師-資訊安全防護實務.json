@@ -397,6 +397,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/109資訊安全防護實務/q25-28-nmap-results.png",
+          "alt": "Nmap 連接埠、服務、版本與作業系統掃描結果",
+          "caption": "題組 2 的 Nmap 掃描輸出",
+          "source_page": 6
+        },
         "description": "一位資安專家正在對內部網站進行連接埠掃描，使用工具為 Nmap，伺服器 IP 為 10.0.1.1，掃描後看到的結果如下： PORT STA TE SERVICE VERSION 21/tcp open ftp vsftpd 2.2.6 110/tcp open pop3 courier pop3d 123/tcp closed ntp Device type: general purpose Running: Linux 4.1.x OS details: Linux 4.1.18 Uptime: 215 days (since Thu Jan 4 15:30:20 2018) Network Distance: 0 hops Server Info: OS: Unix 根據上列資訊，請回答下列問題："
       }
     },
@@ -416,6 +422,12 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/109資訊安全防護實務/q25-28-nmap-results.png",
+          "alt": "Nmap 連接埠、服務、版本與作業系統掃描結果",
+          "caption": "題組 2 的 Nmap 掃描輸出",
+          "source_page": 6
+        },
         "description": "一位資安專家正在對內部網站進行連接埠掃描，使用工具為 Nmap，伺服器 IP 為 10.0.1.1，掃描後看到的結果如下： PORT STA TE SERVICE VERSION 21/tcp open ftp vsftpd 2.2.6 110/tcp open pop3 courier pop3d 123/tcp closed ntp Device type: general purpose Running: Linux 4.1.x OS details: Linux 4.1.18 Uptime: 215 days (since Thu Jan 4 15:30:20 2018) Network Distance: 0 hops Server Info: OS: Unix 根據上列資訊，請回答下列問題："
       }
     },
@@ -435,6 +447,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/109資訊安全防護實務/q25-28-nmap-results.png",
+          "alt": "Nmap 連接埠、服務、版本與作業系統掃描結果",
+          "caption": "題組 2 的 Nmap 掃描輸出",
+          "source_page": 6
+        },
         "description": "一位資安專家正在對內部網站進行連接埠掃描，使用工具為 Nmap，伺服器 IP 為 10.0.1.1，掃描後看到的結果如下： PORT STA TE SERVICE VERSION 21/tcp open ftp vsftpd 2.2.6 110/tcp open pop3 courier pop3d 123/tcp closed ntp Device type: general purpose Running: Linux 4.1.x OS details: Linux 4.1.18 Uptime: 215 days (since Thu Jan 4 15:30:20 2018) Network Distance: 0 hops Server Info: OS: Unix 根據上列資訊，請回答下列問題："
       }
     },
@@ -454,6 +472,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 2",
+        "image": {
+          "src": "exam/images/109資訊安全防護實務/q25-28-nmap-results.png",
+          "alt": "Nmap 連接埠、服務、版本與作業系統掃描結果",
+          "caption": "題組 2 的 Nmap 掃描輸出",
+          "source_page": 6
+        },
         "description": "一位資安專家正在對內部網站進行連接埠掃描，使用工具為 Nmap，伺服器 IP 為 10.0.1.1，掃描後看到的結果如下： PORT STA TE SERVICE VERSION 21/tcp open ftp vsftpd 2.2.6 110/tcp open pop3 courier pop3d 123/tcp closed ntp Device type: general purpose Running: Linux 4.1.x OS details: Linux 4.1.18 Uptime: 215 days (since Thu Jan 4 15:30:20 2018) Network Distance: 0 hops Server Info: OS: Unix 根據上列資訊，請回答下列問題："
       }
     },
@@ -549,6 +573,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "images": [
+          {
+            "src": "exam/images/109資訊安全防護實務/q33-34-cve-detail.png",
+            "alt": "CVE-2019-19781 說明與 CVSS 3.x 嚴重度資訊畫面",
+            "caption": "題組 4 的 NVD 漏洞通報內容",
+            "source_page": 9
+          },
+          {
+            "src": "exam/images/109資訊安全防護實務/q35-access-log.png",
+            "alt": "VPN 路徑的 HTTP Access Log 紀錄",
+            "caption": "題組 4 的疑似攻擊存取紀錄",
+            "source_page": 9
+          }
+        ],
         "description": "對於公司內部資安維運而言，資安漏洞或弱點的修補常是重要的工作，收到漏洞或弱點通報後，資安人員常依據漏洞或弱點之嚴重性，加上公司本身是否為漏洞或弱點影響範圍等資訊，來決定漏洞或弱點修補的優先性， 以避免公司遭受更大的資安危害，A 公司係屬我國資通安全管理法所規範之“特定非公務機關”，且被主管機關核定資安責任等級為 A 級，對日常資安漏洞的修補投入許多心力。 根據上列資訊，請回答下列問題："
       }
     },
@@ -568,6 +606,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "images": [
+          {
+            "src": "exam/images/109資訊安全防護實務/q33-34-cve-detail.png",
+            "alt": "CVE-2019-19781 說明與 CVSS 3.x 嚴重度資訊畫面",
+            "caption": "題組 4 的 NVD 漏洞通報內容",
+            "source_page": 9
+          },
+          {
+            "src": "exam/images/109資訊安全防護實務/q35-access-log.png",
+            "alt": "VPN 路徑的 HTTP Access Log 紀錄",
+            "caption": "題組 4 的疑似攻擊存取紀錄",
+            "source_page": 9
+          }
+        ],
         "description": "對於公司內部資安維運而言，資安漏洞或弱點的修補常是重要的工作，收到漏洞或弱點通報後，資安人員常依據漏洞或弱點之嚴重性，加上公司本身是否為漏洞或弱點影響範圍等資訊，來決定漏洞或弱點修補的優先性， 以避免公司遭受更大的資安危害，A 公司係屬我國資通安全管理法所規範之“特定非公務機關”，且被主管機關核定資安責任等級為 A 級，對日常資安漏洞的修補投入許多心力。 根據上列資訊，請回答下列問題："
       }
     },
@@ -587,6 +639,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "images": [
+          {
+            "src": "exam/images/109資訊安全防護實務/q33-34-cve-detail.png",
+            "alt": "CVE-2019-19781 說明與 CVSS 3.x 嚴重度資訊畫面",
+            "caption": "題組 4 的 NVD 漏洞通報內容",
+            "source_page": 9
+          },
+          {
+            "src": "exam/images/109資訊安全防護實務/q35-access-log.png",
+            "alt": "VPN 路徑的 HTTP Access Log 紀錄",
+            "caption": "題組 4 的疑似攻擊存取紀錄",
+            "source_page": 9
+          }
+        ],
         "description": "對於公司內部資安維運而言，資安漏洞或弱點的修補常是重要的工作，收到漏洞或弱點通報後，資安人員常依據漏洞或弱點之嚴重性，加上公司本身是否為漏洞或弱點影響範圍等資訊，來決定漏洞或弱點修補的優先性， 以避免公司遭受更大的資安危害，A 公司係屬我國資通安全管理法所規範之“特定非公務機關”，且被主管機關核定資安責任等級為 A 級，對日常資安漏洞的修補投入許多心力。 根據上列資訊，請回答下列問題："
       }
     },
@@ -606,6 +672,20 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 4",
+        "images": [
+          {
+            "src": "exam/images/109資訊安全防護實務/q33-34-cve-detail.png",
+            "alt": "CVE-2019-19781 說明與 CVSS 3.x 嚴重度資訊畫面",
+            "caption": "題組 4 的 NVD 漏洞通報內容",
+            "source_page": 9
+          },
+          {
+            "src": "exam/images/109資訊安全防護實務/q35-access-log.png",
+            "alt": "VPN 路徑的 HTTP Access Log 紀錄",
+            "caption": "題組 4 的疑似攻擊存取紀錄",
+            "source_page": 9
+          }
+        ],
         "description": "對於公司內部資安維運而言，資安漏洞或弱點的修補常是重要的工作，收到漏洞或弱點通報後，資安人員常依據漏洞或弱點之嚴重性，加上公司本身是否為漏洞或弱點影響範圍等資訊，來決定漏洞或弱點修補的優先性， 以避免公司遭受更大的資安危害，A 公司係屬我國資通安全管理法所規範之“特定非公務機關”，且被主管機關核定資安責任等級為 A 級，對日常資安漏洞的修補投入許多心力。 根據上列資訊，請回答下列問題："
       }
     },

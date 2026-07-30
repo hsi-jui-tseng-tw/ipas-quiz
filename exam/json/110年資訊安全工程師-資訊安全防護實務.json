@@ -190,6 +190,12 @@
       "type": "單選題",
       "answer": "A",
       "question_text": "關於一段 Java 程式碼（使用 prepareStatement 與 setString），下列敘述何者「不」正確？",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q13-java-code.png",
+        "alt": "使用 prepareStatement 與 setString 的 Java 程式碼",
+        "caption": "題目提供的 Java 資料庫查詢程式片段",
+        "source_page": 3
+      },
       "options": {
         "A": "Hard-coded Password 為 FIXME",
         "B": "此程式碼語言為 Java",
@@ -321,6 +327,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q21-24-network-topology.png",
+          "alt": "R1、R2、R3、交換器與不同 VLAN 主機網路拓撲",
+          "caption": "題組 1 的路由器與 VLAN 網路架構",
+          "source_page": 5
+        },
         "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
       }
     },
@@ -340,6 +352,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q21-24-network-topology.png",
+          "alt": "R1、R2、R3、交換器與不同 VLAN 主機網路拓撲",
+          "caption": "題組 1 的路由器與 VLAN 網路架構",
+          "source_page": 5
+        },
         "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
       }
     },
@@ -359,6 +377,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q21-24-network-topology.png",
+          "alt": "R1、R2、R3、交換器與不同 VLAN 主機網路拓撲",
+          "caption": "題組 1 的路由器與 VLAN 網路架構",
+          "source_page": 5
+        },
         "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
       }
     },
@@ -367,6 +391,12 @@
       "type": "題組",
       "answer": "D",
       "question_text": "【題組 1-4】R1 進行路由匯總，請問 R1 應如何宣告 SW1 匯總後的路由（包含 192.168.8.0/24, 192.168.9.0/24 等）？",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q24-routing-table.png",
+        "alt": "R1 路由表的 network、interface 與 next-hop 欄位",
+        "caption": "題目提供的 R1 現行路由表",
+        "source_page": 6
+      },
       "options": {
         "A": "192.168.8.0/19",
         "B": "192.168.8.0/20",
@@ -378,6 +408,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q21-24-network-topology.png",
+          "alt": "R1、R2、R3、交換器與不同 VLAN 主機網路拓撲",
+          "caption": "題組 1 的路由器與 VLAN 網路架構",
+          "source_page": 5
+        },
         "description": "//網路身為公司網路管理人員的您，正在為公司的網路架構進行調整，將目前的網路架構進行區隔，在 R1 所屬的區域建立多個 VLAN 以隔離廣播 （Broadcast） ，提升服務存取的效能。調整後之架構如下："
       }
     },
@@ -473,6 +509,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 3",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q29-packet-capture.png",
+          "alt": "來源、目的地、協定與封包資訊列表",
+          "caption": "題組 3 的網路出口封包側錄畫面",
+          "source_page": 8
+        },
         "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
       }
     },
@@ -481,6 +523,12 @@
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3-2】請問附圖（顯示 DNS 查詢訊息）是小明下了什麼 Wireshark 過濾指令？",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q30-dns-packets.png",
+        "alt": "DNS 查詢與回應封包列表",
+        "caption": "題目提供的 DNS 封包過濾結果",
+        "source_page": 8
+      },
       "options": {
         "A": "udp.port == 53",
         "B": "tcp.port eq 80",
@@ -492,6 +540,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 3",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q29-packet-capture.png",
+          "alt": "來源、目的地、協定與封包資訊列表",
+          "caption": "題組 3 的網路出口封包側錄畫面",
+          "source_page": 8
+        },
         "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
       }
     },
@@ -500,6 +554,12 @@
       "type": "題組（複選）",
       "answer": "AB",
       "question_text": "【題組 3-3】小明從附圖中可找出封包中何者是惡意網站，請問同仁電腦連上什麼中繼站，以及下載了什麼可疑檔案？（複選）",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q31-dns-and-exported-objects.png",
+        "alt": "DNS 封包與 HTTP 匯出物件清單",
+        "caption": "題目提供的網域查詢與下載檔案紀錄",
+        "source_page": 9
+      },
       "options": {
         "A": "nrtjo.eu 下載 sdfg.jar",
         "B": "nrtjo.eu 下載 q.jar",
@@ -511,6 +571,12 @@
       "competency": "能選用並部署縱深防護控制",
       "case_group": {
         "id": "題組 3",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q29-packet-capture.png",
+          "alt": "來源、目的地、協定與封包資訊列表",
+          "caption": "題組 3 的網路出口封包側錄畫面",
+          "source_page": 8
+        },
         "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
       }
     },
@@ -519,6 +585,12 @@
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3-4】小明在附圖封包中可以判斷出受害者連線下載惡意程式的網站 IP 位置為下列何者？",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q32-download-packets.png",
+        "alt": "HTTP 連線封包與下載物件清單",
+        "caption": "題目提供的惡意程式下載連線紀錄",
+        "source_page": 9
+      },
       "options": {
         "A": "59.53.91.102",
         "B": "192.168.23.129",
@@ -530,6 +602,12 @@
       "competency": "能辨識惡意程式與勒索軟體行為",
       "case_group": {
         "id": "題組 3",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q29-packet-capture.png",
+          "alt": "來源、目的地、協定與封包資訊列表",
+          "caption": "題組 3 的網路出口封包側錄畫面",
+          "source_page": 8
+        },
         "description": "小明是公司的資安工程師，早上有同仁通知電腦似乎發生異常，防毒軟體好像也失效，因此小明調閱了公司在網路出口的封包側錄檔案，如下圖， 請就上述情境回答下列問題。"
       }
     },
@@ -557,6 +635,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 4-2】當完成滲透測試後於報告中發現 GET http://172.16.112.216:8080/ 資訊，判斷公司可能出現下列何種風險漏洞？",
+      "image": {
+        "src": "exam/images/110資訊安全防護實務/q34-http-response.png",
+        "alt": "HTTP GET 回應狀態與 Response Header 畫面",
+        "caption": "滲透測試報告中的 HTTP 回應資訊",
+        "source_page": 10
+      },
       "options": {
         "A": "敏感目錄暴露",
         "B": "未強制使用 HTTPS",
@@ -625,6 +709,12 @@
       "competency": "能辨識並防護常見應用程式攻擊",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q37-40-netcat-commands.png",
+          "alt": "Netcat 連接埠掃描、監聽與檔案傳送指令列表",
+          "caption": "題組 5 的 Netcat 指令範例",
+          "source_page": 11
+        },
         "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
       }
     },
@@ -644,6 +734,12 @@
       "competency": "能辨識弱點、威脅與攻擊手法",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q37-40-netcat-commands.png",
+          "alt": "Netcat 連接埠掃描、監聽與檔案傳送指令列表",
+          "caption": "題組 5 的 Netcat 指令範例",
+          "source_page": 11
+        },
         "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
       }
     },
@@ -663,6 +759,12 @@
       "competency": "能辨識弱點、威脅與攻擊手法",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q37-40-netcat-commands.png",
+          "alt": "Netcat 連接埠掃描、監聽與檔案傳送指令列表",
+          "caption": "題組 5 的 Netcat 指令範例",
+          "source_page": 11
+        },
         "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
       }
     },
@@ -682,6 +784,12 @@
       "competency": "能辨識弱點、威脅與攻擊手法",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/110資訊安全防護實務/q37-40-netcat-commands.png",
+          "alt": "Netcat 連接埠掃描、監聽與檔案傳送指令列表",
+          "caption": "題組 5 的 Netcat 指令範例",
+          "source_page": 11
+        },
         "description": "小張為某公司資安工程師，其使用某工具並輸入了下列的指令執行： nc -vzw5 192.168.0.1 1-2048（操控端） nc -v -z -w5 192.168.0.1 1-2048（操控端） nc -ltp 80（操控端） nc -l -p 80 < /test.txt（操控端） nc -t -p 80 < /test.txt（操控端） nc -g -p 80 > /test.txt（操控端） nc -g -p 80 < /test.txt（操控端） nc -l -p 80（操控端）"
       }
     }

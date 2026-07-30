@@ -321,6 +321,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q21-24-network-topology.png",
+          "alt": "Internet、Router、Firewall、Office 與 DMZ 伺服器網路架構圖",
+          "caption": "題組 1 的辦公區與 DMZ 網路架構",
+          "source_page": 5
+        },
         "description": "某公司的資安人員依據公司設備狀況規劃網路架構設計圖（OFFICE、Router、Firewall、DMZ、MailServer、IIS+MS-SQL等）。"
       }
     },
@@ -340,6 +346,12 @@
       "competency": "能選用適切的存取控制模型",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q21-24-network-topology.png",
+          "alt": "Internet、Router、Firewall、Office 與 DMZ 伺服器網路架構圖",
+          "caption": "題組 1 的辦公區與 DMZ 網路架構",
+          "source_page": 5
+        },
         "description": "某公司的資安人員依據公司設備狀況規劃網路架構設計圖（OFFICE、Router、Firewall、DMZ、MailServer、IIS+MS-SQL等）。"
       }
     },
@@ -359,6 +371,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q21-24-network-topology.png",
+          "alt": "Internet、Router、Firewall、Office 與 DMZ 伺服器網路架構圖",
+          "caption": "題組 1 的辦公區與 DMZ 網路架構",
+          "source_page": 5
+        },
         "description": "某公司的資安人員依據公司設備狀況規劃網路架構設計圖（OFFICE、Router、Firewall、DMZ、MailServer、IIS+MS-SQL等）。"
       }
     },
@@ -378,6 +396,12 @@
       "competency": "能辨識並治理人工智慧安全風險",
       "case_group": {
         "id": "題組 1",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q21-24-network-topology.png",
+          "alt": "Internet、Router、Firewall、Office 與 DMZ 伺服器網路架構圖",
+          "caption": "題組 1 的辦公區與 DMZ 網路架構",
+          "source_page": 5
+        },
         "description": "某公司的資安人員依據公司設備狀況規劃網路架構設計圖（OFFICE、Router、Firewall、DMZ、MailServer、IIS+MS-SQL等）。"
       }
     },
@@ -625,6 +649,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q37-40-incident-level-table.png",
+          "alt": "資安事件等級、定義、更新時效、處理時效與通報層級表",
+          "caption": "題組 5 的內部資安事件通報與處理規範",
+          "source_page": 10
+        },
         "description": "ABC 公司導入 ISO/IEC 27001 資訊安全管理系統，並透過第三方稽核單位執行部分單位驗證。 內部公告且遵循之資安事件（故）通報與處理規範如下： 等級定義更新時效處理時效通報層級 1 內部系統功能異常 24 小時 72 小時單位主管 2 內部系統無法使用或受駭 12 小時 48 小時部門主管 3 外部服務功能異常 8 小時 36 小時事業體主管 4 外部服務無法使用或受駭 4 小時 24 小時總經理"
       }
     },
@@ -644,6 +674,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q37-40-incident-level-table.png",
+          "alt": "資安事件等級、定義、更新時效、處理時效與通報層級表",
+          "caption": "題組 5 的內部資安事件通報與處理規範",
+          "source_page": 10
+        },
         "description": "ABC 公司導入 ISO/IEC 27001 資訊安全管理系統，並透過第三方稽核單位執行部分單位驗證。 內部公告且遵循之資安事件（故）通報與處理規範如下： 等級定義更新時效處理時效通報層級 1 內部系統功能異常 24 小時 72 小時單位主管 2 內部系統無法使用或受駭 12 小時 48 小時部門主管 3 外部服務功能異常 8 小時 36 小時事業體主管 4 外部服務無法使用或受駭 4 小時 24 小時總經理"
       }
     },
@@ -663,6 +699,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q37-40-incident-level-table.png",
+          "alt": "資安事件等級、定義、更新時效、處理時效與通報層級表",
+          "caption": "題組 5 的內部資安事件通報與處理規範",
+          "source_page": 10
+        },
         "description": "ABC 公司導入 ISO/IEC 27001 資訊安全管理系統，並透過第三方稽核單位執行部分單位驗證。 內部公告且遵循之資安事件（故）通報與處理規範如下： 等級定義更新時效處理時效通報層級 1 內部系統功能異常 24 小時 72 小時單位主管 2 內部系統無法使用或受駭 12 小時 48 小時部門主管 3 外部服務功能異常 8 小時 36 小時事業體主管 4 外部服務無法使用或受駭 4 小時 24 小時總經理"
       }
     },
@@ -682,6 +724,12 @@
       "competency": "能判讀資通安全法規與事件通報要求",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/109資訊安全規劃實務/q37-40-incident-level-table.png",
+          "alt": "資安事件等級、定義、更新時效、處理時效與通報層級表",
+          "caption": "題組 5 的內部資安事件通報與處理規範",
+          "source_page": 10
+        },
         "description": "ABC 公司導入 ISO/IEC 27001 資訊安全管理系統，並透過第三方稽核單位執行部分單位驗證。 內部公告且遵循之資安事件（故）通報與處理規範如下： 等級定義更新時效處理時效通報層級 1 內部系統功能異常 24 小時 72 小時單位主管 2 內部系統無法使用或受駭 12 小時 48 小時部門主管 3 外部服務功能異常 8 小時 36 小時事業體主管 4 外部服務無法使用或受駭 4 小時 24 小時總經理"
       }
     }

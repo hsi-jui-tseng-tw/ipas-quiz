@@ -70,6 +70,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 1】情境如附圖所示。關於信件中出現 Received: from 10.0.1.7 的本地 IP 地址，下列何項敘述最為適切？",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/email-headers.png",
+        "alt": "郵件標頭包含多層 Received 紀錄、內部位址 10.0.1.7、外部寄件來源及郵件驗證結果。",
+        "caption": "圖二：可疑郵件的 Received headers",
+        "source_page": 2
+      },
       "options": {
         "A": "此 IP 為原始發信者 IP",
         "B": "攻擊者可能隱藏其實際來源",
@@ -89,6 +95,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 1】情境如附圖所示。從圖二資訊中，發現郵件來源的網域金鑰識別郵件（DomainKeys Identified Mail，DKIM）簽名為\"No signature\"時，應採取下列何項的對應行動最為適切合理？",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/email-headers.png",
+        "alt": "郵件標頭包含多層 Received 紀錄、內部位址 10.0.1.7、外部寄件來源及郵件驗證結果。",
+        "caption": "圖二：可疑郵件的 Received headers",
+        "source_page": 2
+      },
       "options": {
         "A": "自動信任此郵件，因為 DKIM 簽名不是必要的安全措施",
         "B": "驗證信件來源，並檢查是否有其可疑疑慮",
@@ -108,6 +120,12 @@
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 1】情境如附圖所示。如果通過 VirusTotal 等工具，發現網址被標記為惡意，身為專業資安人員應該採取下列何項處置最為適切？",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/phishing-email.png",
+        "alt": "仿冒三井住友銀行的釣魚郵件，要求收件者點擊外部連結更新 Vpass 資訊。",
+        "caption": "圖一：仿冒銀行通知的釣魚郵件",
+        "source_page": 2
+      },
       "options": {
         "A": "立即在公司網路中封鎖該網址，並通知相關人員不要點擊",
         "B": "忽略不用理會判定結果，因為誤判的可能性很高",
@@ -127,6 +145,12 @@
       "type": "題組（複選）",
       "answer": "AC",
       "question_text": "【題組 1】情境如附圖所示。在驗證網址的安全性時，可以採取下列哪些具安全性的方式進行檢查？（複選）",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/phishing-email.png",
+        "alt": "仿冒三井住友銀行的釣魚郵件，要求收件者點擊外部連結更新 Vpass 資訊。",
+        "caption": "圖一：仿冒銀行通知的釣魚郵件",
+        "source_page": 2
+      },
       "options": {
         "A": "使用 DNS 查詢工具檢查域名的註冊日期和註冊商資訊",
         "B": "點擊連結後檢查網站的內容是否與官方網站一致",
@@ -266,6 +290,12 @@
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 2】情境如附圖所示。因應 AI 技術的成熟和普及，W 公司已安排乙供應商擇一條產線進行新的 AOI（Automated Optical Inspection）自動光學檢測系統評估，用以提升未來產線的 QA 能力，請問在導入 AI 技術時，下列何項為「非」優先考量的 AI 或資安治理合規標準？",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/factory-aoi.png",
+        "alt": "智慧工廠多條產線共用 Office LAN、MES 與 AOI 主機，各產線配置 PLC 工控系統並導入 AOI 檢測。",
+        "caption": "圖一：W 公司產線與 AOI 系統架構",
+        "source_page": 10
+      },
       "options": {
         "A": "行政院數位發展部「公部門人工智慧應用參考手冊（草案）」",
         "B": "EU AI Act 歐盟 AI 法案",
@@ -285,6 +315,12 @@
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 2】情境如附圖所示。圖 2 為 W 公司在工廠內進行的主機弱點偵測掃瞄記錄，請問 W 公司在提升工廠生產線的資安作為，下列何項資安維護作業較「不」合適？",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/vulnerability-scan.png",
+        "alt": "PLC 一、PLC 二、MES 與 AOI 主機的弱點掃描摘要，列出不支援的作業系統、SMBv1、遠端桌面、Web Server、SSL 與 Python 等風險。",
+        "caption": "圖二：工廠主機弱點掃描摘要",
+        "source_page": 10
+      },
       "options": {
         "A": "修補計劃導入的 AOI 系統源碼掃瞄的高風險項目",
         "B": "更新非產線的 Windows 作業系統工作站至最新發布的版本",
@@ -304,6 +340,12 @@
       "type": "題組（複選）",
       "answer": "BCD",
       "question_text": "【題組 2】情境如附圖所示。W 公司將依據 NIST SP 800-207 的微分割（Micro-Segmentation）方法，將在 IEC 62443 的工控場域中重新配置 Zone 與 Conduit 的網路規劃，請問下列何項為分割區域管理的資安目的？（複選）",
+      "image": {
+        "src": "exam/images/115-1資訊安全防護實務/zone-conduit.png",
+        "alt": "維護廠商經 VPN 連入 DMZ，辦公室 IT、OT DMZ 及各產線 PLC 分區，區域之間由 Conduit 防火牆控管。",
+        "caption": "圖三：IEC 62443 Zone 與 Conduit 分區",
+        "source_page": 11
+      },
       "options": {
         "A": "所有協同作業的資產必須規劃在同區域內，預設互相信任確保工控系統最小化調整",
         "B": "降低系統被入侵後，攻擊者在內部網路橫向移動的能力",
@@ -323,6 +365,20 @@
       "type": "題組",
       "answer": "D",
       "question_text": "【題組 2】情境如附圖所示。W 公司計劃將工廠的網路分割為不同區域，分別獨立出個別產線單元，並將主機設備集中到 OT DMZ 網段之中，在不提供工控系統連接外部網路的狀況下，可於必要時啟用 VPN 帳號，使維護廠商得以用 VPN 進行連線作業，圖 3 網路分割區塊規劃，請依圖 4 中的路由管理項目，本場域的 IEC 62443 Conduit 防火牆，下列何者為較佳的防火牆政策設定？",
+      "images": [
+        {
+          "src": "exam/images/115-1資訊安全防護實務/zone-conduit.png",
+          "alt": "維護廠商經 VPN 連入 DMZ，辦公室 IT、OT DMZ 及各產線 PLC 分區，區域之間由 Conduit 防火牆控管。",
+          "caption": "圖三：IEC 62443 Zone 與 Conduit 分區",
+          "source_page": 11
+        },
+        {
+          "src": "exam/images/115-1資訊安全防護實務/firewall-policies.png",
+          "alt": "Conduit Firewall 政策代碼：甲 Deny All、乙 Allow All、丙 Allow IT to DMZ、丁 Deny PLn to IT、戊 Allow VPN to PLn、己 Deny PLn to VPN、庚 Allow IT to PLn、辛 Deny PLn to DMZ、壬 Allow PLm to IT、癸 Deny PLn to PLm、子 Allow DMZ to PLm、丑 Deny DMZ to IT、寅 Allow VPN to DMZ、卯 Deny DMZ to VPN。",
+          "caption": "圖四：Conduit Firewall 政策代碼表",
+          "source_page": 11
+        }
+      ],
       "options": {
         "A": "癸丁己辛丑乙",
         "B": "乙己辛癸丑卯",
@@ -549,7 +605,13 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 4",
-        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。"
+        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。",
+        "image": {
+          "src": "exam/images/115-1資訊安全防護實務/q33-q36-http-request.png",
+          "alt": "HTTP GET 訂單明細請求包含 Host、Authorization Bearer 與 JWT 內容",
+          "caption": "訂單明細 API 請求",
+          "source_page": 22
+        }
       }
     },
     {
@@ -568,7 +630,13 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 4",
-        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。"
+        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。",
+        "image": {
+          "src": "exam/images/115-1資訊安全防護實務/q33-q36-http-request.png",
+          "alt": "HTTP GET 訂單明細請求包含 Host、Authorization Bearer 與 JWT 內容",
+          "caption": "訂單明細 API 請求",
+          "source_page": 22
+        }
       }
     },
     {
@@ -587,7 +655,13 @@
       "competency": "能判讀個人資料保護與隱私要求",
       "case_group": {
         "id": "題組 4",
-        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。"
+        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。",
+        "image": {
+          "src": "exam/images/115-1資訊安全防護實務/q33-q36-http-request.png",
+          "alt": "HTTP GET 訂單明細請求包含 Host、Authorization Bearer 與 JWT 內容",
+          "caption": "訂單明細 API 請求",
+          "source_page": 22
+        }
       }
     },
     {
@@ -606,7 +680,13 @@
       "competency": "能選用適切的存取控制模型",
       "case_group": {
         "id": "題組 4",
-        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。"
+        "description": "某企業進行 Web 應用程式滲透測試，測試人員以一般使用者帳號登入後，發現可透過修改 API 參數存取其他使用者的訂單資料。攔截到的請求如下：GET /api/order/detail?orderId=10025 HTTP/1.1。Header 中包含 Authorization: Bearer <JWT Token>。",
+        "image": {
+          "src": "exam/images/115-1資訊安全防護實務/q33-q36-http-request.png",
+          "alt": "HTTP GET 訂單明細請求包含 Host、Authorization Bearer 與 JWT 內容",
+          "caption": "訂單明細 API 請求",
+          "source_page": 22
+        }
       }
     },
     {

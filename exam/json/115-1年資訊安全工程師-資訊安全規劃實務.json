@@ -161,6 +161,12 @@
       "type": "單選題",
       "answer": "B",
       "question_text": "如附圖所示。某企業為強化組織內部資訊安全，導入了多層次防禦機制。請問附圖中的作法最符合下列何種資訊安全之原則？",
+      "image": {
+        "src": "exam/images/115-1資訊安全規劃實務/q10-defense-in-depth.png",
+        "alt": "五項分層資安措施：外部防火牆過濾、多因素驗證、角色與權限控制、異地加密備份及資安教育訓練。",
+        "caption": "企業導入的多層次防禦措施",
+        "source_page": 6
+      },
       "options": {
         "A": "最小權限原則（Principle of Least Privilege）",
         "B": "縱深防禦原則（Defense in Depth）",
@@ -297,6 +303,12 @@
       "type": "單選題",
       "answer": "B",
       "question_text": "附圖為智慧製造企業組織的網路架構圖，請問下列描述何者較「不」正確？",
+      "image": {
+        "src": "exam/images/115-1資訊安全規劃實務/q18-smart-manufacturing-network.png",
+        "alt": "智慧製造網路架構：網路一至四依序配置網際網路、網站伺服器、ERP 與辦公電腦、OT 資料交換伺服器、PLC 與 HMI，並由防火牆 A 至 E 分區。",
+        "caption": "智慧製造企業 IT／OT 分區與防火牆架構",
+        "source_page": 9
+      },
       "options": {
         "A": "防火牆 A 至防火牆 E 的部署主要為了強化網路的縱深防禦",
         "B": "為特別加強防護，屬於 DMZ 網路的網路(2)及網路(4)，應特別加強保護",

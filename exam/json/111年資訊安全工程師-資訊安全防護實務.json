@@ -100,6 +100,12 @@
       "type": "單選題",
       "answer": "C",
       "question_text": "「許多惡意程式會透過郵件附件方式進行入侵破壞與竊取，造成企業重大損失，而資安工程師會透過 Windows 群組原則物件（Group Policy Object, GPO）進行必要管控。」關於附圖登錄檔（Registry）範例內容，下列敘述何者正確？",
+      "image": {
+        "src": "exam/images/111資訊安全防護實務/q7-registry-example.png",
+        "alt": "Windows Registry 路徑與 DWORD 設定範例",
+        "caption": "題目提供的 Office 2016 Word Security 登錄設定",
+        "source_page": 2
+      },
       "options": {
         "A": "放行 WordPad 開啟附件",
         "B": "支援 Office 2003 GPO 控制",
@@ -321,6 +327,32 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-network-topology.png",
+            "alt": "Internet、資訊機房、工廠 OT 網路與辦公室網路架構圖",
+            "caption": "題組 1 的企業 IT 與工廠 OT 網路架構",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part1.png",
+            "alt": "Nessus 弱點掃描結果表第一部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 1 部分）",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part2.png",
+            "alt": "Nessus 弱點掃描結果表第二部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 2 部分）",
+            "source_page": 7
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-smb-scan.png",
+            "alt": "內部網路主機與共享資料夾掃描畫面",
+            "caption": "題組 1 的 SMB 與共享資源掃描結果",
+            "source_page": 7
+          }
+        ],
         "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
@@ -340,6 +372,32 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-network-topology.png",
+            "alt": "Internet、資訊機房、工廠 OT 網路與辦公室網路架構圖",
+            "caption": "題組 1 的企業 IT 與工廠 OT 網路架構",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part1.png",
+            "alt": "Nessus 弱點掃描結果表第一部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 1 部分）",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part2.png",
+            "alt": "Nessus 弱點掃描結果表第二部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 2 部分）",
+            "source_page": 7
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-smb-scan.png",
+            "alt": "內部網路主機與共享資料夾掃描畫面",
+            "caption": "題組 1 的 SMB 與共享資源掃描結果",
+            "source_page": 7
+          }
+        ],
         "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
@@ -359,6 +417,32 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-network-topology.png",
+            "alt": "Internet、資訊機房、工廠 OT 網路與辦公室網路架構圖",
+            "caption": "題組 1 的企業 IT 與工廠 OT 網路架構",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part1.png",
+            "alt": "Nessus 弱點掃描結果表第一部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 1 部分）",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part2.png",
+            "alt": "Nessus 弱點掃描結果表第二部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 2 部分）",
+            "source_page": 7
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-smb-scan.png",
+            "alt": "內部網路主機與共享資料夾掃描畫面",
+            "caption": "題組 1 的 SMB 與共享資源掃描結果",
+            "source_page": 7
+          }
+        ],
         "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
@@ -378,6 +462,32 @@
       "competency": "能選用密碼技術與金鑰管理控制",
       "case_group": {
         "id": "題組 1",
+        "images": [
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-network-topology.png",
+            "alt": "Internet、資訊機房、工廠 OT 網路與辦公室網路架構圖",
+            "caption": "題組 1 的企業 IT 與工廠 OT 網路架構",
+            "source_page": 5
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part1.png",
+            "alt": "Nessus 弱點掃描結果表第一部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 1 部分）",
+            "source_page": 6
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-nessus-report-part2.png",
+            "alt": "Nessus 弱點掃描結果表第二部分",
+            "caption": "題組 1 的 Nessus 掃描結果（第 2 部分）",
+            "source_page": 7
+          },
+          {
+            "src": "exam/images/111資訊安全防護實務/q21-24-smb-scan.png",
+            "alt": "內部網路主機與共享資料夾掃描畫面",
+            "caption": "題組 1 的 SMB 與共享資源掃描結果",
+            "source_page": 7
+          }
+        ],
         "description": "一家小型加工品代工製造商，應下游終端產品客戶要求必須提升資安防護，達到供應鏈安全的要求，盤點公司目前的連網架構參如下圖，而且各主機與個人電腦建置後也未進行版本更新，檢附本次資安健測結果摘要如下。 擬規劃資安防護事項： A. 增設防火牆與 VPN 連線 G. 更新 ERP 主機 B. 設置資訊機房的 DMZ 區 H. 更新 Mail 主機 C. 設置工廠的 DMZ 區 I. 更新 MES 主機 D. 更新所有 PC J. 更新 SVR3 主機 E. 主機與 PC 安裝防毒軟體 K. 關閉 SVR3 共享目錄 F. 限制 MES 的連接來源位置 L. 共享目錄設定存取權限弱點偵測掃瞄報告摘要如下： 192.168.1.60 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 Microsoft Windows SMB Shares Unprivileged Access HIGH 7.5 Unsupported Web Server Detection MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low LOW 2.6 SSL RC4 Cipher Suites Supported （Bar Mitzvah） INFO N/A FTP Server Detection INFO N/A Microsoft Windows SMB Service Detection 192.168.1.100 Severity CVSS Name CRITICAL 10.0 Microsoft RDP RCE （CVE-2019-0708） （BlueKeep） （uncredentialed check） HIGH 7.5 SSL version 2 Protocol Detection HIGH 7.5 SNMP Agent Default Community Name （public） MEDIUM 6.4 SSL Self-Signed Certificate MEDIUM 5.0 SMB Signing not required LOW 2.6 SSL/TLS Diffie-Hellman Modulus <= 1024 Bits （Logjam） INFO N/A HTTP Server Type and Version 192.168.1.101 Severity CVSS Name MEDIUM 6.4 SSL Certificate Cannot Be Trusted MEDIUM 5.0 HTTP TRACE / TRACK Methods Allowed MEDIUM 5.0 SMB Signing not required LOW 2.6 SSH Server CBC Mode Ciphers Enabled INFO N/A Microsoft Windows SMB Service Detection 192.168.1.102 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness INFO N/A Windows NetBIOS / SMB Remote Host Information Disclosure INFO N/A Windows Terminal Services Enabled 192.168.1.103 Severity CVSS Name MEDIUM 5.1 Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness MEDIUM 4.3 Terminal Services Encryption Level is Medium or Low INFO N/A Traceroute Information INFO N/A HTTP Methods Allowed （per directory） 公司內部網路共享資源掃瞄結果摘要如下："
       }
     },
@@ -625,6 +735,12 @@
       "competency": "能識別並評估資訊安全風險",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全防護實務/q37-40-application-log.png",
+          "alt": "黑底 Spring Boot 應用程式啟動與錯誤日誌畫面",
+          "caption": "題組 5 的應用程式日誌與 LDAP 連線錯誤",
+          "source_page": 13
+        },
         "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
@@ -644,6 +760,12 @@
       "competency": "能識別並評估資訊安全風險",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全防護實務/q37-40-application-log.png",
+          "alt": "黑底 Spring Boot 應用程式啟動與錯誤日誌畫面",
+          "caption": "題組 5 的應用程式日誌與 LDAP 連線錯誤",
+          "source_page": 13
+        },
         "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
@@ -663,6 +785,12 @@
       "competency": "能識別並評估資訊安全風險",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全防護實務/q37-40-application-log.png",
+          "alt": "黑底 Spring Boot 應用程式啟動與錯誤日誌畫面",
+          "caption": "題組 5 的應用程式日誌與 LDAP 連線錯誤",
+          "source_page": 13
+        },
         "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     },
@@ -682,6 +810,12 @@
       "competency": "能規劃身分驗證與帳號生命週期",
       "case_group": {
         "id": "題組 5",
+        "image": {
+          "src": "exam/images/111資訊安全防護實務/q37-40-application-log.png",
+          "alt": "黑底 Spring Boot 應用程式啟動與錯誤日誌畫面",
+          "caption": "題組 5 的應用程式日誌與 LDAP 連線錯誤",
+          "source_page": 13
+        },
         "description": "某網站維護人員發現其網頁應用程式伺服器回應緩慢，因此進行應用程式效能分析與除錯，發現應用程式日誌中有以下的異常錯誤訊息："
       }
     }

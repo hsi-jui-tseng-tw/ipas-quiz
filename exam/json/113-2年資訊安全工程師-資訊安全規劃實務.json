@@ -551,6 +551,12 @@
     },
     {
       "id": 33,
+      "image": {
+        "src": "exam/images/113-2資訊安全規劃實務/q33-risk-response-reasons.png",
+        "alt": "風險回應未完成原因項目",
+        "caption": "風險回應規劃與執行狀態的三項說明",
+        "source_page": 11
+      },
       "type": "單選題",
       "answer": "D",
       "question_text": "公司規定於風險回應後 3 個月，須對該項風險進行風險再評估。當風險再評估時發現該風險並未如預期降至風險胃納（Risk appetite）之內。如附圖所示（1.風險回應規劃不當 2.風險回應尚未執行完成 3.風險回應未落實執行），哪些是可能的原因？",
@@ -611,6 +617,12 @@
     },
     {
       "id": 37,
+      "image": {
+        "src": "exam/images/113-2資訊安全規劃實務/q37-40-risk-management-process.png",
+        "alt": "風險管理流程圖",
+        "caption": "建立背景、風險評鑑、風險處理、溝通協商與監督複核流程",
+        "source_page": 13
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 5】若公司規定超出風險胃納才須進行風險處理，請問依規定須進行處理之風險項目，不可能出現下列何項風險回應方式？",
@@ -630,6 +642,12 @@
     },
     {
       "id": 38,
+      "image": {
+        "src": "exam/images/113-2資訊安全規劃實務/q37-40-risk-management-process.png",
+        "alt": "風險管理流程圖",
+        "caption": "建立背景、風險評鑑、風險處理、溝通協商與監督複核流程",
+        "source_page": 13
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 5】請問公司會發現需要臨時進行此項風險評鑑是基於哪項公司流程所產生的作用？",
@@ -649,6 +667,12 @@
     },
     {
       "id": 39,
+      "image": {
+        "src": "exam/images/113-2資訊安全規劃實務/q37-40-risk-management-process.png",
+        "alt": "風險管理流程圖",
+        "caption": "建立背景、風險評鑑、風險處理、溝通協商與監督複核流程",
+        "source_page": 13
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 5】請問應何時完成風險回應並確認有效？",
@@ -668,6 +692,12 @@
     },
     {
       "id": 40,
+      "image": {
+        "src": "exam/images/113-2資訊安全規劃實務/q37-40-risk-management-process.png",
+        "alt": "風險管理流程圖",
+        "caption": "建立背景、風險評鑑、風險處理、溝通協商與監督複核流程",
+        "source_page": 13
+      },
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 5】下列哪些項目宜列入考量？（複選）",

@@ -233,6 +233,12 @@
     },
     {
       "id": 15,
+      "image": {
+        "src": "exam/images/113-1資訊安全防護實務/q15-18-store-iot-ot-environment.png",
+        "alt": "商店物聯網與伺服器架構圖",
+        "caption": "商店感測設備、無線網路與伺服器連線環境",
+        "source_page": 6
+      },
       "type": "題組",
       "answer": "D",
       "question_text": "【題組 2】請問在 Level 0 終點裝置層和 Level 1 工業控制層之中如何快速提升物聯設施的通訊安全，下列何項是最適合的解決方案？",
@@ -252,6 +258,12 @@
     },
     {
       "id": 16,
+      "image": {
+        "src": "exam/images/113-1資訊安全防護實務/q15-18-store-iot-ot-environment.png",
+        "alt": "商店物聯網與伺服器架構圖",
+        "caption": "商店感測設備、無線網路與伺服器連線環境",
+        "source_page": 6
+      },
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 2】承上題，請問在零信任的原則，建立 Level 2 監控層、Level 3 營運作業及 Level 4 管理層之中 OT 工控設施與 IT 資訊系統的安全防護能力，下列何者「不」是適當的解決方案？",
@@ -271,6 +283,12 @@
     },
     {
       "id": 17,
+      "image": {
+        "src": "exam/images/113-1資訊安全防護實務/q15-18-store-iot-ot-environment.png",
+        "alt": "商店物聯網與伺服器架構圖",
+        "caption": "商店感測設備、無線網路與伺服器連線環境",
+        "source_page": 6
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 2】承上題，本系統在經過弱點掃瞄後將進行相關安全補正措施，請問下列何者「不」符合最小管理成本的立即解決方案？",
@@ -290,6 +308,12 @@
     },
     {
       "id": 18,
+      "image": {
+        "src": "exam/images/113-1資訊安全防護實務/q15-18-store-iot-ot-environment.png",
+        "alt": "商店物聯網與伺服器架構圖",
+        "caption": "商店感測設備、無線網路與伺服器連線環境",
+        "source_page": 6
+      },
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 2】承上題，S 公司當年委外開發本營運系統時並未有任何軟體安全之要求，請問下列哪些措施較為適合迅速補強軟體弱點？（複選）",
@@ -611,6 +635,32 @@
     },
     {
       "id": 37,
+      "images": [
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-39-network-topology.png",
+          "alt": "辦公室與工廠網路拓撲圖",
+          "caption": "辦公室資訊設備與工廠 OT 設備的共用網路架構",
+          "source_page": 17
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-resource-scan.png",
+          "alt": "內部網路資源掃描結果",
+          "caption": "內部主機、印表機與共享目錄掃描摘要",
+          "source_page": 16
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-vulnerability-scan.png",
+          "alt": "主機弱點掃描結果",
+          "caption": "多部主機的弱點等級與項目摘要",
+          "source_page": 16
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-port-scan.png",
+          "alt": "網路連接埠掃描結果",
+          "caption": "內部主機開放連接埠與服務摘要",
+          "source_page": 16
+        }
+      ],
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 5】依據本案資安檢查報告及公司背景條件，請問 XYZ 公司在工廠端的資安維護作業，下列何項較「不」合適？",
@@ -630,6 +680,32 @@
     },
     {
       "id": 38,
+      "images": [
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-39-network-topology.png",
+          "alt": "辦公室與工廠網路拓撲圖",
+          "caption": "辦公室資訊設備與工廠 OT 設備的共用網路架構",
+          "source_page": 17
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-resource-scan.png",
+          "alt": "內部網路資源掃描結果",
+          "caption": "內部主機、印表機與共享目錄掃描摘要",
+          "source_page": 16
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-vulnerability-scan.png",
+          "alt": "主機弱點掃描結果",
+          "caption": "多部主機的弱點等級與項目摘要",
+          "source_page": 16
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-38-port-scan.png",
+          "alt": "網路連接埠掃描結果",
+          "caption": "內部主機開放連接埠與服務摘要",
+          "source_page": 16
+        }
+      ],
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 5】承上題，將著手規劃提升相關資安防禦措施，請問下列何項計劃或執行作業有誤？",
@@ -649,6 +725,20 @@
     },
     {
       "id": 39,
+      "images": [
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q37-39-network-topology.png",
+          "alt": "辦公室與工廠網路拓撲圖",
+          "caption": "辦公室資訊設備與工廠 OT 設備的共用網路架構",
+          "source_page": 17
+        },
+        {
+          "src": "exam/images/113-1資訊安全防護實務/q39-audit-remediation-items.png",
+          "alt": "稽核改善項目清單",
+          "caption": "附圖一所列的稽核改善措施代碼",
+          "source_page": 18
+        }
+      ],
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 5】承上題，XYZ 公司討論規劃可能的資安防護事項。請問 XYZ 公司辦公室區域在不更換及增購設備的情況下，下列何項的資安防護措施較為合適與即時可行？",
@@ -668,6 +758,12 @@
     },
     {
       "id": 40,
+      "image": {
+        "src": "exam/images/113-1資訊安全防護實務/q40-segmented-network-firewall-policies.png",
+        "alt": "分區網路與防火牆政策圖",
+        "caption": "LAN、DMZ、WLAN、OT 與 VPN 分區及防火牆政策代碼",
+        "source_page": 20
+      },
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 5】承上題參如本系統情境架構，XYZ 公司為提升安全防護計劃建置防火牆，防火牆應建立的基本資安政策組合有下列哪些項目？（複選）",

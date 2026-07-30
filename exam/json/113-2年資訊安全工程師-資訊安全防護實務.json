@@ -173,6 +173,12 @@
     },
     {
       "id": 11,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q11-apt-upload-exfiltration-flow.png",
+        "alt": "網頁上傳弱點與資料外洩流程圖",
+        "caption": "APT 程式透過上傳功能進入主機並蒐集資料的流程",
+        "source_page": 5
+      },
       "type": "單選題",
       "answer": "B",
       "question_text": "駭客透過某機關網頁上傳功能漏洞植入 APT 惡意程式，並嘗試取得系統資料，恐有資料外洩之虞。下列建議之防範措施何者最「不」合適？",
@@ -203,6 +209,12 @@
     },
     {
       "id": 13,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q13-sslvpn-webshell-ad-attack-chain.png",
+        "alt": "SSL VPN、Webshell 與 Active Directory 攻擊鏈圖",
+        "caption": "攻擊者建立 Webshell、取得帳密並連線其他主機的流程",
+        "source_page": 6
+      },
       "type": "複選題",
       "answer": "BC",
       "question_text": "某機關防火牆發現大量異常連線，SSL VPN 設備發送大量 SMB 封包，經查 SSL VPN 設備存在安全性漏洞（CVE-2023-3519）。攻擊者利用漏洞上傳 Webshell，亦可透過解密設備中之設定檔來取得 AD 連線帳密，後續透過 ldapsearch 進一部蒐集內網使用者資訊。請問應進行下列哪些措施可最有效避免此一攻擊？（複選）",
@@ -339,6 +351,12 @@
     },
     {
       "id": 21,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q21-stix-json.png",
+        "alt": "STIX 格式 JSON 範例",
+        "caption": "威脅情資物件與關聯的 JSON 結構",
+        "source_page": 11
+      },
       "type": "單選題",
       "answer": "C",
       "question_text": "機關透過威脅情資分享以達到及早預防或應變處理，目前業界針對此等資料交換已發展出多種格式/機制，附圖為惡意程式情資，其所使用格式為下列何項？",
@@ -354,6 +372,12 @@
     },
     {
       "id": 22,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q22-unauthorized-log.png",
+        "alt": "系統安全事件紀錄畫面",
+        "caption": "登入、異常命令、未授權存取與告警紀錄",
+        "source_page": 12
+      },
       "type": "單選題",
       "answer": "B",
       "question_text": "某機關伺服器管理員於系統例行巡檢時，發現應用程式日誌中出現“Unauthorized data access attempt”等告警訊息，下列何者是最優先的應變措施？",
@@ -384,6 +408,12 @@
     },
     {
       "id": 24,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q24-27-incident-evidence.png",
+        "alt": "網站入侵事件調查證據",
+        "caption": "Web shell 存取紀錄、時間校時與帳號事件調查內容",
+        "source_page": 16
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3】下列那一個方案能提供最佳成本效益？",
@@ -403,6 +433,12 @@
     },
     {
       "id": 25,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q24-27-incident-evidence.png",
+        "alt": "網站入侵事件調查證據",
+        "caption": "Web shell 存取紀錄、時間校時與帳號事件調查內容",
+        "source_page": 16
+      },
       "type": "題組",
       "answer": "D",
       "question_text": "【題組 3】此事件編號所指的是下列何種事件？",
@@ -422,6 +458,12 @@
     },
     {
       "id": 26,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q24-27-incident-evidence.png",
+        "alt": "網站入侵事件調查證據",
+        "caption": "Web shell 存取紀錄、時間校時與帳號事件調查內容",
+        "source_page": 16
+      },
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 3】這種類型的記錄應屬於下列何種攻擊手法？",
@@ -441,6 +483,20 @@
     },
     {
       "id": 27,
+      "images": [
+        {
+          "src": "exam/images/113-2資訊安全防護實務/q24-27-incident-evidence.png",
+          "alt": "網站入侵事件調查證據",
+          "caption": "Web shell 存取紀錄、時間校時與帳號事件調查內容",
+          "source_page": 16
+        },
+        {
+          "src": "exam/images/113-2資訊安全防護實務/q27-audit-findings.png",
+          "alt": "事件稽核完整發現項目",
+          "caption": "附圖二所列的時間同步、帳號異常與共用磁碟等五項發現",
+          "source_page": 16
+        }
+      ],
       "type": "題組（複選）",
       "answer": "BD",
       "question_text": "【題組 3】請問下列哪 2 項對於員工個人帳號保護最為有效？（複選）",
@@ -505,6 +561,12 @@
     },
     {
       "id": 31,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q31-ptes-stages.png",
+        "alt": "PTES 七階段項目圖",
+        "caption": "滲透測試執行標準的七個階段項目",
+        "source_page": 18
+      },
       "type": "單選題",
       "answer": "C",
       "question_text": "關於 PTES（ Penetration Testing Execution Standard）流程項目的排序，下列何者正確？",
@@ -535,6 +597,12 @@
     },
     {
       "id": 33,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q33-36-original-javascript-code.png",
+        "alt": "電子商務網站登入 JavaScript 原始碼",
+        "caption": "使用者驗證、登入紀錄與 Token 驗證程式碼",
+        "source_page": 22
+      },
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 4】還有下列何項 OWASP Top 10:2021 風險最可能存在？",
@@ -554,6 +622,12 @@
     },
     {
       "id": 34,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q33-36-original-javascript-code.png",
+        "alt": "電子商務網站登入 JavaScript 原始碼",
+        "caption": "使用者驗證、登入紀錄與 Token 驗證程式碼",
+        "source_page": 22
+      },
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 4】下列何項措施最合適？",
@@ -573,6 +647,12 @@
     },
     {
       "id": 35,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q33-36-original-javascript-code.png",
+        "alt": "電子商務網站登入 JavaScript 原始碼",
+        "caption": "使用者驗證、登入紀錄與 Token 驗證程式碼",
+        "source_page": 22
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 4】下列何項措施何者最合適？",
@@ -592,6 +672,20 @@
     },
     {
       "id": 36,
+      "images": [
+        {
+          "src": "exam/images/113-2資訊安全防護實務/q33-36-original-javascript-code.png",
+          "alt": "電子商務網站登入 JavaScript 原始碼",
+          "caption": "使用者驗證、登入紀錄與 Token 驗證程式碼",
+          "source_page": 22
+        },
+        {
+          "src": "exam/images/113-2資訊安全防護實務/q36-enhanced-login-logging-code.png",
+          "alt": "強化後的登入紀錄程式碼",
+          "caption": "加入時間、帳號、結果與來源 IP 的登入紀錄函式",
+          "source_page": 23
+        }
+      ],
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 4】下列哪些描述正確？（複選）",
@@ -630,6 +724,12 @@
     },
     {
       "id": 38,
+      "image": {
+        "src": "exam/images/113-2資訊安全防護實務/q38-terminal-output.png",
+        "alt": "SMB 憑證與 LSA secrets 輸出畫面",
+        "caption": "終端機顯示 SMB 連線與 LSA secrets 匯出結果",
+        "source_page": 24
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 5】請問此檔案為下列何項？",

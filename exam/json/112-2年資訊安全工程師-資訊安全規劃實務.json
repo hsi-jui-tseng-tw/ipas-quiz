@@ -203,6 +203,12 @@
     },
     {
       "id": 13,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q13-16-virtual-health-card-flow.png",
+        "alt": "虛擬健保卡系統流程圖",
+        "caption": "虛擬健保卡就醫與資料交換流程",
+        "source_page": 4
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 2】請問醫事人員經過讀取虛擬健保卡 QR 碼，再由醫事人員在 HIS 系統透過虛擬健保卡系統至健保署系統查詢資料，主要在強化下列何項程序？",
@@ -222,6 +228,12 @@
     },
     {
       "id": 14,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q13-16-virtual-health-card-flow.png",
+        "alt": "虛擬健保卡系統流程圖",
+        "caption": "虛擬健保卡就醫與資料交換流程",
+        "source_page": 4
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 2】請問下列何者「不」是採用虛擬健康保卡的優點？",
@@ -241,6 +253,12 @@
     },
     {
       "id": 15,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q13-16-virtual-health-card-flow.png",
+        "alt": "虛擬健保卡系統流程圖",
+        "caption": "虛擬健保卡就醫與資料交換流程",
+        "source_page": 4
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 2】請問虛擬健保卡手機端 QR 碼的內容可能包含下列何項？",
@@ -260,6 +278,12 @@
     },
     {
       "id": 16,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q13-16-virtual-health-card-flow.png",
+        "alt": "虛擬健保卡系統流程圖",
+        "caption": "虛擬健保卡就醫與資料交換流程",
+        "source_page": 4
+      },
       "type": "題組（複選）",
       "answer": "AB",
       "question_text": "【題組 2】請問透過虛擬健保卡機制的建置與運用，可能有的風險/問題有下列哪些？（複選）",
@@ -279,6 +303,12 @@
     },
     {
       "id": 17,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q17-zero-trust-access.png",
+        "alt": "零信任存取架構圖",
+        "caption": "零信任存取的政策決策與執行節點",
+        "source_page": 5
+      },
       "type": "單選題",
       "answer": "C",
       "question_text": "關於 NIST SP 800-207 零信任架構（Zero Trust Architecture）的抽象模型敘述，下列何項錯誤？",
@@ -339,6 +369,12 @@
     },
     {
       "id": 21,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q21-24-company-network-topology.png",
+        "alt": "公司網路架構圖",
+        "caption": "總公司、分公司與 DMZ 的網路連線架構",
+        "source_page": 7
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 3】請問避免因 ISP 業者之網路可用性遭受破壞，造成該公司對外業務運作遭受影響，下列改善方式何者正確？",
@@ -358,6 +394,12 @@
     },
     {
       "id": 22,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q21-24-company-network-topology.png",
+        "alt": "公司網路架構圖",
+        "caption": "總公司、分公司與 DMZ 的網路連線架構",
+        "source_page": 7
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3】請問若要避免遭受勒索軟體病毒大規模攻擊的事件發生在公司內部網路的資訊設備上，下列何項控制措施錯誤？",
@@ -377,6 +419,12 @@
     },
     {
       "id": 23,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q21-24-company-network-topology.png",
+        "alt": "公司網路架構圖",
+        "caption": "總公司、分公司與 DMZ 的網路連線架構",
+        "source_page": 7
+      },
       "type": "題組",
       "answer": "B",
       "question_text": "【題組 3】請問資訊人員對於此委外廠商主機攜入總公司內部之風險控管，下列敘述何者較為「不妥」？",
@@ -396,6 +444,12 @@
     },
     {
       "id": 24,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q21-24-company-network-topology.png",
+        "alt": "公司網路架構圖",
+        "caption": "總公司、分公司與 DMZ 的網路連線架構",
+        "source_page": 7
+      },
       "type": "題組（複選）",
       "answer": "ABCD",
       "question_text": "【題組 3】有關存取控制面向之風險，下列敘述哪些正確？（複選）",
@@ -649,6 +703,12 @@
     },
     {
       "id": 39,
+      "image": {
+        "src": "exam/images/112-2資訊安全規劃實務/q39-risk-reasons.png",
+        "alt": "風險再評鑑原因項目",
+        "caption": "風險再評鑑可能原因的四項說明",
+        "source_page": 13
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 5】請問發生此現象最可能的原因（請見附圖二）為下列何項？",

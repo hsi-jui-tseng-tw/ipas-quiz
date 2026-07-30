@@ -260,6 +260,12 @@
     },
     {
       "id": 16,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q16-organization-access-table.png",
+        "alt": "組織帳號與權限配置圖",
+        "caption": "部門、職稱、帳號、資料空間與權限配置",
+        "source_page": 6
+      },
       "type": "題組（複選）",
       "answer": "BCD",
       "question_text": "【題組 2】試問依據新的組織架構，下列哪些規劃措施較「不」符合資安管理要求？（複選）",
@@ -339,6 +345,12 @@
     },
     {
       "id": 21,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q21-24-acsqa-incident-document.png",
+        "alt": "貨車租賃網站攻擊事件說明文件",
+        "caption": "網站攻擊事件經過與後續處置說明",
+        "source_page": 8
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 3】該公司主要是遭受下列何種攻擊？",
@@ -358,6 +370,12 @@
     },
     {
       "id": 22,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q21-24-acsqa-incident-document.png",
+        "alt": "貨車租賃網站攻擊事件說明文件",
+        "caption": "網站攻擊事件經過與後續處置說明",
+        "source_page": 8
+      },
       "type": "題組",
       "answer": "A",
       "question_text": "【題組 3】關於該項攻擊敘述，下列何項錯誤？",
@@ -377,6 +395,12 @@
     },
     {
       "id": 23,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q21-24-acsqa-incident-document.png",
+        "alt": "貨車租賃網站攻擊事件說明文件",
+        "caption": "網站攻擊事件經過與後續處置說明",
+        "source_page": 8
+      },
       "type": "題組",
       "answer": "C",
       "question_text": "【題組 3】該公司最「不」可能會有下列何項法律問題？",
@@ -396,6 +420,12 @@
     },
     {
       "id": 24,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q21-24-acsqa-incident-document.png",
+        "alt": "貨車租賃網站攻擊事件說明文件",
+        "caption": "網站攻擊事件經過與後續處置說明",
+        "source_page": 8
+      },
       "type": "題組（複選）",
       "answer": "ABD",
       "question_text": "【題組 3】下列哪些安全管制措施，能減低此項攻擊成功的機率？（複選）",
@@ -430,6 +460,12 @@
     },
     {
       "id": 26,
+      "image": {
+        "src": "exam/images/113-1資訊安全規劃實務/q26-risk-result-items.png",
+        "alt": "風險評估結果項目清單",
+        "caption": "風險評估與營運持續相關項目",
+        "source_page": 12
+      },
       "type": "單選題",
       "answer": "B",
       "question_text": "依據 ISO/CNS 31010 當資通安全主管決定利用「後果/機率矩陣」模型完成以資通資產（Asset）為基礎的風險評鑑。附圖中的哪些項目比較能夠說明該方式可能會得到的結果？（1.復原時間目標(RTO) 2.受到影響的可能性 3.影響程度 4.營運持續策略 5.營運復原策略 6.風險處置事項）",
