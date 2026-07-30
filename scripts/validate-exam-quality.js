@@ -5,7 +5,8 @@ import { fileURLToPath } from "node:url";
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const examDirectory = path.resolve(scriptDirectory, "..", "exam", "json");
 const errors = [];
-const generatedExpansionPattern = /第(?:22|23|24|25|26|27|28|29|30)回/u;
+const generatedExpansionPattern = /第(?:2[2-9]|3[0-9]|40)回/u;
+const strictExpansionPattern = /第(?:3[1-9]|40)回/u;
 const prohibitedTemplatePatterns = [
   /可驗證且與風險相稱的處置/u,
   /只改變風險名稱而不處理成因/u,
@@ -15,6 +16,32 @@ const prohibitedTemplatePatterns = [
   /該作法缺少必要的驗證、最小權限或治理追蹤/u,
   /建立可驗證的.+控制，保留責任、證據與定期複核/u,
   /缺乏足以降低風險的可驗證控制/u,
+  /並明確界定/u,
+  /整體判斷仍須回到/u,
+  /並以實際技術證據驗證控制成效/u,
+  /並能驗證/u,
+];
+const strictProhibitedTemplatePatterns = [
+  /且保留相應的技術驗證與責任紀錄/u,
+  /判讀時須辨別/u,
+  /技術判準包括/u,
+  /決策證據應支持/u,
+  /能力範圍延伸至/u,
+  /風險比較納入/u,
+  /實作上須掌握/u,
+  /在需查核「/u,
+  /變更審查要重新確認/u,
+  /驗收證據必須對應/u,
+  /責任交接不得遺漏/u,
+  /風險接受應明載/u,
+  /監控門檻需反映/u,
+  /第三方責任亦須涵蓋/u,
+  /決策紀錄需保留/u,
+  /採用前須以紀錄界定/u,
+  /稽核軌跡要串接/u,
+  /處置優先序應依據/u,
+  /控制範圍須完整納入/u,
+  /復原判準應逐項核對/u,
 ];
 
 function readJson(filePath) {
@@ -26,6 +53,98 @@ function normalizeText(value) {
     .normalize("NFKC")
     .toLocaleLowerCase("zh-Hant")
     .replace(/[\p{P}\p{S}\s]+/gu, "");
+}
+
+function getCharacterLength(value) {
+  return Array.from(String(value)).length;
+}
+
+function getRepeatedLongClauses(
+  questions,
+  minimumLength = 10,
+  minimumUses = 5,
+) {
+  const clauseLocations = new Map();
+  for (const question of questions) {
+    const questionClauses = new Set();
+    const contentFields = [
+      question.question_text,
+      question.explanation,
+      question.competency,
+      ...Object.values(question.options),
+    ];
+    for (const content of contentFields) {
+      for (const rawClause of String(content).split(/[，。；！？\r\n]+/u)) {
+        const clause = rawClause
+          .trim()
+          .replace(
+            /^[A-DＡ-Ｄ](?=\s|[：:、.．)）「『])(?:\s|[：:、.．)）-])*/iu,
+            "",
+          );
+        const normalizedClause = normalizeText(clause);
+        if (
+          getCharacterLength(normalizedClause) < minimumLength ||
+          questionClauses.has(normalizedClause)
+        ) {
+          continue;
+        }
+        questionClauses.add(normalizedClause);
+        if (!clauseLocations.has(normalizedClause)) {
+          clauseLocations.set(normalizedClause, {
+            clause,
+            questionIds: new Set(),
+          });
+        }
+        clauseLocations.get(normalizedClause).questionIds.add(question.id);
+      }
+    }
+  }
+  return [...clauseLocations.values()].filter(
+    ({ questionIds }) => questionIds.size >= minimumUses,
+  );
+}
+
+function getRepeatedQuotedSegmentsAcrossFields(
+  question,
+  minimumLength = 10,
+  minimumFields = 3,
+) {
+  const segmentLocations = new Map();
+  const contentFields = new Map([
+    ["question_text", question.question_text],
+    ["explanation", question.explanation],
+    ["competency", question.competency],
+    ...Object.entries(question.options).map(([letter, option]) => [
+      `option.${letter}`,
+      option,
+    ]),
+  ]);
+
+  for (const [field, content] of contentFields) {
+    const fieldSegments = new Set();
+    for (const match of String(content).matchAll(/「([^」]+)」/gu)) {
+      const segment = match[1].trim();
+      const normalizedSegment = normalizeText(segment);
+      if (
+        getCharacterLength(normalizedSegment) < minimumLength ||
+        fieldSegments.has(normalizedSegment)
+      ) {
+        continue;
+      }
+      fieldSegments.add(normalizedSegment);
+      if (!segmentLocations.has(normalizedSegment)) {
+        segmentLocations.set(normalizedSegment, {
+          segment,
+          fields: new Set(),
+        });
+      }
+      segmentLocations.get(normalizedSegment).fields.add(field);
+    }
+  }
+
+  return [...segmentLocations.values()].filter(
+    ({ fields }) => fields.size >= minimumFields,
+  );
 }
 
 function getTrigrams(value) {
@@ -125,21 +244,54 @@ let totalCaseQuestions = 0;
 
 for (const document of documents) {
   if (generatedExpansionPattern.test(document.fileName)) {
+    const usesStrictExpansionRules = strictExpansionPattern.test(
+      document.fileName,
+    );
+    const minimumExplanationLength = usesStrictExpansionRules ? 85 : 50;
     const templateQuestionIds = new Set();
     const shortExplanationIds = [];
     const optionLocations = new Map();
+    let documentExplanationLength = 0;
+    let documentOptionLength = 0;
+    let documentQuestionLength = 0;
+    let documentCompetencyLength = 0;
     for (const question of document.questions) {
       const content = [
         question.question_text,
         question.explanation,
+        question.competency,
         ...Object.values(question.options),
       ].join("\n");
-      if (prohibitedTemplatePatterns.some((pattern) => pattern.test(content))) {
+      if (
+        prohibitedTemplatePatterns.some((pattern) => pattern.test(content)) ||
+        (usesStrictExpansionRules &&
+          strictProhibitedTemplatePatterns.some((pattern) =>
+            pattern.test(content),
+          ))
+      ) {
         templateQuestionIds.add(question.id);
       }
-      if (Array.from(String(question.explanation)).length < 50) {
+      if (usesStrictExpansionRules) {
+        for (const { segment, fields } of getRepeatedQuotedSegmentsAcrossFields(
+          question,
+        )) {
+          addError(
+            `${document.fileName}#${question.id}: repeated long quoted segment across ` +
+              `${fields.size} fields (${[...fields].join(", ")}): 「${segment}」`,
+          );
+        }
+      }
+      const explanationLength = getCharacterLength(question.explanation);
+      if (explanationLength < minimumExplanationLength) {
         shortExplanationIds.push(question.id);
       }
+      documentExplanationLength += explanationLength;
+      documentQuestionLength += getCharacterLength(question.question_text);
+      documentCompetencyLength += getCharacterLength(question.competency);
+      documentOptionLength += Object.values(question.options).reduce(
+        (length, option) => length + getCharacterLength(option),
+        0,
+      );
       for (const [letter, option] of Object.entries(question.options)) {
         const normalizedOption = normalizeText(option);
         if (!optionLocations.has(normalizedOption)) {
@@ -156,9 +308,42 @@ for (const document of documents) {
     }
     if (shortExplanationIds.length > 0) {
       addError(
-        `${document.fileName}: explanation shorter than 50 characters in question(s) ` +
+        `${document.fileName}: explanation shorter than ${minimumExplanationLength} characters in question(s) ` +
           `${shortExplanationIds.join(", ")}`,
       );
+    }
+    if (usesStrictExpansionRules) {
+      const questionCount = document.questions.length;
+      const averageExplanationLength =
+        documentExplanationLength / questionCount;
+      const averageOptionLength =
+        documentOptionLength / (questionCount * 4);
+      const averageQuestionLength = documentQuestionLength / questionCount;
+      const averageCompetencyLength =
+        documentCompetencyLength / questionCount;
+      const minimumAverages = [
+        ["explanation", averageExplanationLength, 95],
+        ["option", averageOptionLength, 15],
+        ["question_text", averageQuestionLength, 28],
+        ["competency", averageCompetencyLength, 15],
+      ];
+      for (const [field, actual, minimum] of minimumAverages) {
+        if (actual < minimum) {
+          addError(
+            `${document.fileName}: average ${field} length must be at least ${minimum}; ` +
+              `found ${actual.toFixed(1)}`,
+          );
+        }
+      }
+      for (const { clause, questionIds } of getRepeatedLongClauses(
+        document.questions,
+      )) {
+        const ids = [...questionIds].sort((left, right) => left - right);
+        addError(
+          `${document.fileName}: repeated long clause across ${ids.length} questions ` +
+            `(${ids.join(", ")}): "${clause}"`,
+        );
+      }
     }
     for (const locations of optionLocations.values()) {
       if (locations.length > 2) {

@@ -64,7 +64,7 @@ $protectionChapters = [ordered]@{
 }
 
 $expectedFiles = [System.Collections.Generic.List[object]]::new()
-foreach ($round in 1..30) {
+foreach ($round in 1..40) {
     foreach ($subject in @($planningSubject, $protectionSubject)) {
         $fileName = $filePrefix + $round.ToString("00") + $fileMiddle + $subject + ".json"
         $expectedFiles.Add([pscustomobject]@{
