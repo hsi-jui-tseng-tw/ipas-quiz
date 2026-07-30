@@ -1,689 +1,689 @@
-{
-  "metadata": {
-    "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 13 回",
-    "subject": "資訊安全防護實務",
-    "date": "115 年 08 月 22 日"
-  },
-  "questions": [
-    {
-      "id": 1,
-      "type": "單選題",
-      "answer": "B",
-      "question_text": "攻擊者取得端點後執行 LSASS credential dumping，最直接對應 MITRE ATT&CK 哪個目的？",
-      "options": {
-        "A": "Discovery",
-        "B": "Credential Access",
-        "C": "Impact",
-        "D": "Collection"
-      },
-      "explanation": "B 旨在取得認證資料；A 是環境探索，C 是破壞，D 是蒐集目標資料。",
-      "chapter": "3.1",
-      "competency": "能辨識 ATT&CK 戰術"
+﻿{
+    "metadata": {
+        "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 13 回",
+        "subject": "資訊安全防護實務",
+        "date": "115 年 08 月 22 日"
     },
-    {
-      "id": 2,
-      "type": "單選題",
-      "answer": "D",
-      "question_text": "攻擊者使用被竊取的 krbtgt hash 偽造可長期使用的 TGT，稱為何種攻擊？",
-      "options": {
-        "A": "Pass-the-Ticket",
-        "B": "Kerberoasting",
-        "C": "Silver Ticket",
-        "D": "Golden Ticket"
-      },
-      "explanation": "D 使用 krbtgt 金鑰偽造 TGT；C 通常偽造服務票證，A 重用既有票證，B 離線破解服務帳號。",
-      "chapter": "3.1",
-      "competency": "能辨識 Kerberos 攻擊"
-    },
-    {
-      "id": 3,
-      "type": "單選題",
-      "answer": "A",
-      "question_text": "攻擊者未破解 NTLM 密碼便以取得的 hash 驗證至其他主機，這是什麼？",
-      "options": {
-        "A": "Pass-the-Hash",
-        "B": "Password Spraying",
-        "C": "Rainbow Table",
-        "D": "Credential Stuffing"
-      },
-      "explanation": "A 直接重用雜湊；B、D 嘗試密碼，C 是反查雜湊的破解技術。",
-      "chapter": "3.1",
-      "competency": "能辨識雜湊濫用"
-    },
-    {
-      "id": 4,
-      "type": "單選題",
-      "answer": "C",
-      "question_text": "Web 服務可被誘使存取雲端 metadata endpoint，首要風險為何？",
-      "options": {
-        "A": "僅取得公開網站可讀內容",
-        "B": "資料庫索引變慢",
-        "C": "工作負載臨時憑證遭竊",
-        "D": "TLS 憑證自動更新"
-      },
-      "explanation": "C 正確，SSRF 存取 metadata endpoint 可能取得工作負載的臨時憑證；A 只讀公開內容、B 索引變慢、D 憑證更新，都不是此攻擊的主要風險。",
-      "chapter": "3.1",
-      "competency": "能分析雲端 SSRF"
-    },
-    {
-      "id": 5,
-      "type": "單選題",
-      "answer": "B",
-      "question_text": "伺服器將未受信任物件反序列化並觸發 gadget chain，最可能造成什麼？",
-      "options": {
-        "A": "只造成應用程式例外而不影響控制流程",
-        "B": "遠端程式碼執行",
-        "C": "增加磁碟容量",
-        "D": "強化輸入驗證"
-      },
-      "explanation": "B 正確，危險反序列化可透過 gadget chain 執行攻擊者選定程式碼；A 低估控制流影響、C 是容量變化、D 是防護措施而非攻擊結果。",
-      "chapter": "3.1",
-      "competency": "能辨識不安全反序列化"
-    },
-    {
-      "id": 6,
-      "type": "單選題",
-      "answer": "D",
-      "question_text": "應用程式把使用者輸入直接串入 shell 指令，主要弱點為何？",
-      "options": {
-        "A": "CSRF",
-        "B": "Open Redirect",
-        "C": "XXE",
-        "D": "OS Command Injection"
-      },
-      "explanation": "D 是未安全處理 shell 參數；A、B、C 分別涉及跨站請求、重新導向與 XML 外部實體。",
-      "chapter": "3.1",
-      "competency": "能辨識 OS Command Injection"
-    },
-    {
-      "id": 7,
-      "type": "單選題",
-      "answer": "A",
-      "question_text": "網站已對輸出做 context-aware encoding，哪項額外控制可降低 XSS 成功後影響？",
-      "options": {
-        "A": "嚴格 Content Security Policy",
-        "B": "允許 unsafe-inline",
-        "C": "關閉 HttpOnly",
-        "D": "把 session token 放入 URL"
-      },
-      "explanation": "A 限制腳本來源與執行；B、C、D 反而擴大腳本及權杖曝露。",
-      "chapter": "3.1",
-      "competency": "能評估 XSS 防護"
-    },
-    {
-      "id": 8,
-      "type": "單選題",
-      "answer": "C",
-      "question_text": "內部主機持續查詢高熵且極長的子網域，最可能代表什麼？",
-      "options": {
-        "A": "正常 NTP",
-        "B": "ARP Spoofing",
-        "C": "DNS Tunneling",
-        "D": "磁碟重組"
-      },
-      "explanation": "C 常以子網域承載命令或資料；A、B、D 不呈現此 DNS 特徵。",
-      "chapter": "3.1",
-      "competency": "能偵測 DNS Tunneling"
-    },
-    {
-      "id": 9,
-      "type": "單選題",
-      "answer": "B",
-      "question_text": "CI runner 下載遭置換的 build dependency 並產出含後門程式，屬何種主要風險？",
-      "options": {
-        "A": "實體入侵",
-        "B": "軟體供應鏈攻擊",
-        "C": "肩窺",
-        "D": "訊號干擾"
-      },
-      "explanation": "B 透過依賴與建置流程污染產物；A、C、D 與 CI dependency 無關。",
-      "chapter": "3.1",
-      "competency": "能辨識建置鏈攻擊"
-    },
-    {
-      "id": 10,
-      "type": "單選題",
-      "answer": "D",
-      "question_text": "容器以 privileged 模式掛載 host socket，攻擊成功後最大風險為何？",
-      "options": {
-        "A": "僅取得容器內應用程式權限",
-        "B": "只影響該容器的網路連線",
-        "C": "僅影響單一 process",
-        "D": "取得宿主機控制並影響其他工作負載"
-      },
-      "explanation": "D 正確，privileged 容器掛載 host socket 可控制宿主機及其他工作負載；A、C 都低估可取得的權限，B 的網路影響既非必要也非最大風險。",
-      "chapter": "3.1",
-      "competency": "能分析容器逃逸"
-    },
-    {
-      "id": 11,
-      "type": "單選題",
-      "answer": "A",
-      "question_text": "依 FIRST CVSS v4.0，Base Metrics 主要描述什麼？",
-      "options": {
-        "A": "漏洞固有且不隨時間及環境改變的嚴重特性",
-        "B": "組織資產價格",
-        "C": "修補專案時程",
-        "D": "攻擊者國籍"
-      },
-      "explanation": "A 是 Base 的用途；B、C 屬環境或治理資訊，D 不屬評分度量。",
-      "chapter": "3.1",
-      "competency": "能解讀 CVSS 4.0"
-    },
-    {
-      "id": 12,
-      "type": "單選題",
-      "answer": "C",
-      "question_text": "使用者被誘導同意惡意 OAuth app 讀取郵件，即使未洩漏密碼仍可能失陷，原因為何？",
-      "options": {
-        "A": "硬碟損壞",
-        "B": "DNSSEC 失效",
-        "C": "攻擊者取得授權 token 與 scope",
-        "D": "密碼雜湊自動破解"
-      },
-      "explanation": "C 是 consent phishing 核心；A、B、D 無法解釋授權後存取。",
-      "chapter": "3.1",
-      "competency": "能辨識 OAuth Phishing"
-    },
-    {
-      "id": 13,
-      "type": "單選題",
-      "answer": "B",
-      "question_text": "攻擊者利用 PowerShell 直接在記憶體載入 payload，主要規避哪種傳統偵測？",
-      "options": {
-        "A": "網路分段",
-        "B": "只掃描落地檔案的特徵比對",
-        "C": "多因素認證",
-        "D": "資料分類"
-      },
-      "explanation": "B 因較少磁碟 artifact 而規避檔案掃描；A、C、D 不是此技巧主要目標。",
-      "chapter": "3.1",
-      "competency": "能分析無檔案惡意程式"
-    },
-    {
-      "id": 14,
-      "type": "單選題",
-      "answer": "D",
-      "question_text": "攻擊者加密檔案前先外傳資料並威脅公開，稱為何種模式？",
-      "options": {
-        "A": "單純阻斷服務",
-        "B": "密碼噴灑",
-        "C": "水坑攻擊",
-        "D": "Double Extortion"
-      },
-      "explanation": "D 同時利用可用性與機密性勒索；A、B、C 不包含此兩階段手法。",
-      "chapter": "3.1",
-      "competency": "能辨識雙重勒索"
-    },
-    {
-      "id": 15,
-      "type": "單選題",
-      "answer": "C",
-      "question_text": "發現單一端點正在大量加密共享檔案，第一個可逆且快速的圍堵動作為何？",
-      "options": {
-        "A": "刪除所有日誌",
-        "B": "立即格式化端點",
-        "C": "從網路隔離端點並保留狀態",
-        "D": "通知攻擊者"
-      },
-      "explanation": "C 可阻止擴散且保留鑑識；A、B 破壞證據，D 無助於圍堵。",
-      "chapter": "3.2",
-      "competency": "能執行事件圍堵"
-    },
-    {
-      "id": 16,
-      "type": "複選題",
-      "answer": "ACD",
-      "question_text": "蒐集疑似入侵主機證據時，哪些作法適切？",
-      "options": {
-        "A": "記錄 chain of custody",
-        "B": "直接修改原始映像",
-        "C": "以雜湊驗證映像完整性",
-        "D": "使用寫入阻擋器取得磁碟映像"
-      },
-      "explanation": "A、C、D 正確，唯讀映像、雜湊及 chain of custody 可維持證據完整與可追溯；B 直接在原始媒體分析會改變內容並污染證據。",
-      "chapter": "3.2",
-      "competency": "能保存數位證據"
-    },
-    {
-      "id": 17,
-      "type": "複選題",
-      "answer": "AB",
-      "question_text": "EDR 面對端點惡意活動可提供哪些能力？",
-      "options": {
-        "A": "程序樹與行為遙測",
-        "B": "隔離主機",
-        "C": "事件發生後先刪除告警與日誌，再決定是否遏制或蒐證",
-        "D": "取代所有網路與身分控制"
-      },
-      "explanation": "答案為 A、B。A「程序樹與行為遙測」能直接運用 EDR 回應，符合題幹的主要控制目標，因此應選；B「隔離主機」能直接運用 EDR 回應，符合題幹的主要控制目標，因此應選；C「事件發生後先刪除告警與日誌，再決定是否遏制或蒐證」會移除必要控制或稽核證據，擴大偵測、追蹤或復原缺口，因此不應選；D「取代所有網路與身分控制」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
-      "chapter": "3.2",
-      "competency": "能運用 EDR 回應"
-    },
-    {
-      "id": 18,
-      "type": "複選題",
-      "answer": "BCD",
-      "question_text": "哪些情境較適合由 NDR 補強可視性？",
-      "options": {
-        "A": "只分析紙本紀錄",
-        "B": "東西向異常流量",
-        "C": "無法安裝代理程式的設備",
-        "D": "加密流量的 metadata 異常"
-      },
-      "explanation": "B、C、D 可由網路行為觀測；A 無網路遙測可供 NDR 分析。",
-      "chapter": "3.2",
-      "competency": "能運用 NDR 偵測"
-    },
-    {
-      "id": 19,
-      "type": "複選題",
-      "answer": "ABD",
-      "question_text": "哪些措施可降低勒索軟體同時破壞備份的風險？",
-      "options": {
-        "A": "不可變備份",
-        "B": "備份管理使用獨立身分",
-        "C": "備份儲存與正式環境共用管理密碼",
-        "D": "定期離線復原演練"
-      },
-      "explanation": "A、B、D 正確，離線或不可變備份、還原測試與權限隔離可提供復原證據；C 讓備份與正式環境共用管理憑證，會形成共同失陷路徑。",
-      "chapter": "3.2",
-      "competency": "能驗證備份韌性"
-    },
-    {
-      "id": 20,
-      "type": "複選題",
-      "answer": "AC",
-      "question_text": "DNS Sinkhole 的合理用途有哪些？",
-      "options": {
-        "A": "阻斷已知惡意網域解析",
-        "B": "解密所有 TLS 內容",
-        "C": "將查詢導向受控位址以觀察感染主機",
-        "D": "自動修補作業系統"
-      },
-      "explanation": "A、C 可限制 C2 並識別來源；B、D 不是 DNS Sinkhole 能力。",
-      "chapter": "3.2",
-      "competency": "能部署 DNS Sinkhole"
-    },
-    {
-      "id": 21,
-      "type": "題組",
-      "answer": "B",
-      "question_text": "【題組 1】多台伺服器同時出現加密與外傳告警，SOC 應先做什麼？",
-      "options": {
-        "A": "逐台當成無關低風險事件",
-        "B": "關聯告警、確認範圍並提升事件等級",
-        "C": "關閉所有監控",
-        "D": "等待贖金通知"
-      },
-      "explanation": "B 正確，集中關聯主機、身分與網路遙測可建立共同事件範圍；A 各自處理、C 等待完整確認、D 關閉日誌，都會延誤或妨礙跨主機應變。",
-      "chapter": "3.2",
-      "competency": "能分級事件嚴重度",
-      "case_group": {
-        "id": "題組 1",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括分級事件嚴重度、決定圍堵策略、保全揮發性證據、執行復原驗證；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 22,
-      "type": "題組",
-      "answer": "D",
-      "question_text": "【題組 1】關鍵資料庫不可立即關機，最適切的短期圍堵為何？",
-      "options": {
-        "A": "允許持續連外",
-        "B": "刪除稽核紀錄",
-        "C": "重設所有資料內容",
-        "D": "封鎖惡意通道、限制帳號與隔離非必要連線"
-      },
-      "explanation": "D 在維持服務下縮小攻擊路徑；A 擴散風險，B、C 破壞證據或業務。",
-      "chapter": "3.2",
-      "competency": "能決定圍堵策略",
-      "case_group": {
-        "id": "題組 1",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括分級事件嚴重度、決定圍堵策略、保全揮發性證據、執行復原驗證；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 23,
-      "type": "題組",
-      "answer": "A",
-      "question_text": "【題組 1】疑似記憶體內存在加密金鑰，關機前應優先做什麼？",
-      "options": {
-        "A": "依程序擷取記憶體與連線狀態",
-        "B": "立即拔除硬碟並覆寫",
-        "C": "執行磁碟清理",
-        "D": "更新所有應用程式"
-      },
-      "explanation": "A 保留斷電即消失的資料；B、C 破壞證據，D 可能改變系統狀態。",
-      "chapter": "3.2",
-      "competency": "能保全揮發性證據",
-      "case_group": {
-        "id": "題組 1",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括分級事件嚴重度、決定圍堵策略、保全揮發性證據、執行復原驗證；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 24,
-      "type": "題組",
-      "answer": "C",
-      "question_text": "【題組 1】從乾淨備份還原後，何者最能支持安全恢復上線？",
-      "options": {
-        "A": "只確認主機可開機",
-        "B": "停用 EDR",
-        "C": "驗證弱點已處理、IOC 無殘留且業務測試通過",
-        "D": "沿用已外洩憑證"
-      },
-      "explanation": "C 同時確認根因、威脅與功能；A 不足，B、D 會再次暴露。",
-      "chapter": "3.2",
-      "competency": "能執行復原驗證",
-      "case_group": {
-        "id": "題組 1",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括分級事件嚴重度、決定圍堵策略、保全揮發性證據、執行復原驗證；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 25,
-      "type": "題組（複選）",
-      "answer": "BCD",
-      "question_text": "【題組 2】事件結束後哪些產出應回饋 SOC？",
-      "options": {
-        "A": "只發布慶祝郵件",
-        "B": "更新偵測規則",
-        "C": "修正 playbook 與聯絡窗口",
-        "D": "追蹤根因改善與 lessons learned"
-      },
-      "explanation": "B、C、D 將經驗轉為持續改善；A 不能提升偵測或應變能力。",
-      "chapter": "4.1",
-      "competency": "能執行事件後改善",
-      "case_group": {
-        "id": "題組 2",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行事件後改善、執行告警分流、設計 SIEM 關聯、使用 SOAR 自動化；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 26,
-      "type": "題組",
-      "answer": "A",
-      "question_text": "【題組 2】SOC 收到大量相同低品質告警，優先改善為何？",
-      "options": {
-        "A": "依資產關鍵性、信心與影響調整 triage 規則",
-        "B": "關閉所有資料來源",
-        "C": "全部升為最高等級",
-        "D": "要求分析師逐筆忽略"
-      },
-      "explanation": "A 能降低雜訊並保留高風險訊號；B、C、D 會造成盲點或疲勞。",
-      "chapter": "4.1",
-      "competency": "能執行告警分流",
-      "case_group": {
-        "id": "題組 2",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行事件後改善、執行告警分流、設計 SIEM 關聯、使用 SOAR 自動化；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 27,
-      "type": "題組",
-      "answer": "C",
-      "question_text": "【題組 2】哪種規則最能偵測帳號接管？",
-      "options": {
-        "A": "單次正常登入",
-        "B": "每日備份成功",
-        "C": "短時間異地登入後新增 MFA 裝置並大量下載",
-        "D": "員工開啟首頁"
-      },
-      "explanation": "C 結合身分變更與資料行為形成高風險序列；A、B、D 缺乏攻擊指標。",
-      "chapter": "4.1",
-      "competency": "能設計 SIEM 關聯",
-      "case_group": {
-        "id": "題組 2",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行事件後改善、執行告警分流、設計 SIEM 關聯、使用 SOAR 自動化；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 28,
-      "type": "題組",
-      "answer": "B",
-      "question_text": "【題組 2】哪項最適合先自動化且保留人工閘門？",
-      "options": {
-        "A": "自動刪除所有資料庫",
-        "B": "自動富化 IOC，人工核准後封鎖高影響帳號",
-        "C": "無條件停用全公司帳號",
-        "D": "自動忽略未知告警"
-      },
-      "explanation": "B 自動化重複工作並控制高影響動作；A、C、D 缺乏風險護欄。",
-      "chapter": "4.1",
-      "competency": "能使用 SOAR 自動化",
-      "case_group": {
-        "id": "題組 2",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行事件後改善、執行告警分流、設計 SIEM 關聯、使用 SOAR 自動化；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 29,
-      "type": "題組",
-      "answer": "D",
-      "question_text": "【題組 3】偵測規則突然無告警，第一個健康檢查應是什麼？",
-      "options": {
-        "A": "假設攻擊已消失",
-        "B": "調低所有事件嚴重度",
-        "C": "刪除規則",
-        "D": "確認資料來源延遲、欄位解析及 ingestion 狀態"
-      },
-      "explanation": "D 正確，監控來源延遲、解析失敗與欄位完整性才能識別資料管線失效；A 未做驗證，B 忽略錯誤、C 刪除原始資料，都會掩蓋根因。",
-      "chapter": "4.1",
-      "competency": "能維護遙測品質",
-      "case_group": {
-        "id": "題組 3",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括維護遙測品質、整合威脅情資、實施 Detection as Code、選擇安全測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 30,
-      "type": "題組（複選）",
-      "answer": "ACD",
-      "question_text": "【題組 3】哪些作法可提升 threat intelligence 可用性？",
-      "options": {
-        "A": "評估來源可靠度",
-        "B": "永久封鎖所有未驗證 IOC",
-        "C": "設定 IOC 有效期限",
-        "D": "將情資對應內部資產與偵測情境"
-      },
-      "explanation": "A、C、D 正確，資產情境、信心與到期機制能降低誤報並提升可行動性；B 永久保留所有情資，會忽略品質衰退與時效性。",
-      "chapter": "4.1",
-      "competency": "能整合威脅情資",
-      "case_group": {
-        "id": "題組 3",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括維護遙測品質、整合威脅情資、實施 Detection as Code、選擇安全測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 31,
-      "type": "題組",
-      "answer": "B",
-      "question_text": "【題組 3】將 SIEM 規則納入版本控制的主要效益為何？",
-      "options": {
-        "A": "讓規則不需測試",
-        "B": "可審查、測試、追溯與回復變更",
-        "C": "保證零誤報",
-        "D": "取代事件應變流程"
-      },
-      "explanation": "B 支援可重現的工程治理；A、C、D 都誇大或取消必要程序。",
-      "chapter": "4.1",
-      "competency": "能實施 Detection as Code",
-      "case_group": {
-        "id": "題組 3",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括維護遙測品質、整合威脅情資、實施 Detection as Code、選擇安全測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 32,
-      "type": "題組",
-      "answer": "D",
-      "question_text": "【題組 3】開發階段要找出未執行程式路徑中的危險 API 使用，優先採何者？",
-      "options": {
-        "A": "DAST",
-        "B": "外部滲透測試",
-        "C": "網路封包擷取",
-        "D": "SAST"
-      },
-      "explanation": "D 分析原始碼或中介碼且不需執行；A、B 是動態觀察，C 不分析程式路徑。",
-      "chapter": "4.2",
-      "competency": "能選擇安全測試",
-      "case_group": {
-        "id": "題組 3",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括維護遙測品質、整合威脅情資、實施 Detection as Code、選擇安全測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 33,
-      "type": "題組",
-      "answer": "A",
-      "question_text": "【題組 4】要識別第三方套件已知 CVE 與授權風險，應使用何者？",
-      "options": {
-        "A": "SCA",
-        "B": "SAST",
-        "C": "DAST",
-        "D": "單元測試"
-      },
-      "explanation": "A 專門盤點相依元件、漏洞與授權；B、C、D 不能完整建立元件清冊。",
-      "chapter": "4.2",
-      "competency": "能執行組成分析",
-      "case_group": {
-        "id": "題組 4",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行組成分析、執行威脅建模、整合 SSDLC 控制、執行 Fuzz Testing；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 34,
-      "type": "題組",
-      "answer": "C",
-      "question_text": "【題組 4】設計 API 前使用 STRIDE，主要目的為何？",
-      "options": {
-        "A": "直接計算已知漏洞數量",
-        "B": "取代所有安全測試",
-        "C": "系統化識別 spoofing、tampering 等威脅並規劃控制",
-        "D": "直接套用通用控制清單而不分析資料流"
-      },
-      "explanation": "C 正確，STRIDE 用於設計期系統化識別 spoofing、tampering 等威脅並規劃控制；A 只數漏洞、B 誤稱可取代測試、D 套用通用清單，都不能完成情境化威脅建模。",
-      "chapter": "4.2",
-      "competency": "能執行威脅建模",
-      "case_group": {
-        "id": "題組 4",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行組成分析、執行威脅建模、整合 SSDLC 控制、執行 Fuzz Testing；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 35,
-      "type": "題組（複選）",
-      "answer": "AB",
-      "question_text": "【題組 4】哪些措施適合設為 CI/CD quality gate？",
-      "options": {
-        "A": "高嚴重度 SAST 發現未核准不得發布",
-        "B": "依賴套件政策與簽章驗證",
-        "C": "所有警告無條件忽略",
-        "D": "上線前通過一次掃描後，所有後續變更均可免除安全測試"
-      },
-      "explanation": "答案為 A、B。A「高嚴重度 SAST 發現未核准不得發布」能直接整合 SSDLC 控制，符合題幹的主要控制目標，因此應選；B「依賴套件政策與簽章驗證」能直接整合 SSDLC 控制，符合題幹的主要控制目標，因此應選；C「所有警告無條件忽略」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選；D「上線前通過一次掃描後，所有後續變更均可免除安全測試」採取絕對化假設，忽略情境限制、例外與縱深控制，因此不應選。",
-      "chapter": "4.2",
-      "competency": "能整合 SSDLC 控制",
-      "case_group": {
-        "id": "題組 4",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行組成分析、執行威脅建模、整合 SSDLC 控制、執行 Fuzz Testing；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 36,
-      "type": "題組",
-      "answer": "C",
-      "question_text": "【題組 4】解析自訂二進位協定時，哪種測試最容易找出未預期輸入造成的崩潰？",
-      "options": {
-        "A": "只做使用者訪談",
-        "B": "僅執行固定格式的單元測試",
-        "C": "Coverage-guided fuzzing",
-        "D": "只閱讀操作手冊"
-      },
-      "explanation": "C 正確，coverage-guided fuzzing 以大量變異輸入探索新程式路徑；A 訪談、B 固定格式單元測試、D 閱讀手冊，都難以觸發未知解析邊界。",
-      "chapter": "4.2",
-      "competency": "能執行 Fuzz Testing",
-      "case_group": {
-        "id": "題組 4",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括執行組成分析、執行威脅建模、整合 SSDLC 控制、執行 Fuzz Testing；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 37,
-      "type": "題組",
-      "answer": "B",
-      "question_text": "【題組 5】API 驗證 JWT 時最重要的原則為何？",
-      "options": {
-        "A": "接受 token 自稱的任意 alg",
-        "B": "固定允許演算法並驗證 issuer、audience、expiry 與簽章",
-        "C": "只 Base64 解碼 payload",
-        "D": "把私鑰放在前端"
-      },
-      "explanation": "B 完整驗證信任邊界；A、C 可繞過簽章，D 直接洩漏簽章金鑰。",
-      "chapter": "4.2",
-      "competency": "能保護 JWT 驗證",
-      "case_group": {
-        "id": "題組 5",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括保護 JWT 驗證、測試物件層授權、驗證修補成效、治理滲透測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 38,
-      "type": "題組",
-      "answer": "D",
-      "question_text": "【題組 5】測試 BOLA/IDOR 最關鍵的案例為何？",
-      "options": {
-        "A": "只測試資源擁有者的正常存取",
-        "B": "輸入超長搜尋詞",
-        "C": "只檢查 object ID 的格式",
-        "D": "低權限使用者替換 object ID 存取他人資源"
-      },
-      "explanation": "D 正確，替換 object ID 並以低權限主體存取可直接驗證物件層授權；A 只測正常 owner、B 測輸入長度、C 只驗格式，都不能證明跨使用者隔離。",
-      "chapter": "4.2",
-      "competency": "能測試物件層授權",
-      "case_group": {
-        "id": "題組 5",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括保護 JWT 驗證、測試物件層授權、驗證修補成效、治理滲透測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 39,
-      "type": "題組（複選）",
-      "answer": "ABC",
-      "question_text": "【題組 5】弱點修補後哪些步驟適切？",
-      "options": {
-        "A": "重測原始攻擊路徑",
-        "B": "檢查相鄰功能回歸",
-        "C": "確認部署版本與修補證據",
-        "D": "看到工單關閉即免測"
-      },
-      "explanation": "A、B、C 正確，重測、回歸及部署證據分別確認修補有效且已落地；D 只把工單標記完成，屬行政狀態，不能證明漏洞風險已降低。",
-      "chapter": "4.2",
-      "competency": "能驗證修補成效",
-      "case_group": {
-        "id": "題組 5",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括保護 JWT 驗證、測試物件層授權、驗證修補成效、治理滲透測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    },
-    {
-      "id": 40,
-      "type": "題組（複選）",
-      "answer": "ABD",
-      "question_text": "【題組 5】正式滲透測試前，rules of engagement 應包含哪些？",
-      "options": {
-        "A": "允許時段與目標範圍",
-        "B": "停止條件及緊急聯絡人",
-        "C": "測試者可任意外傳資料",
-        "D": "資料處理與成果交付要求"
-      },
-      "explanation": "A、B、D 限定操作與資料責任；C 違反測試授權及保密原則。",
-      "chapter": "4.2",
-      "competency": "能治理滲透測試",
-      "case_group": {
-        "id": "題組 5",
-        "description": "數位支付公司針對即時支付與清算平台展開跨部門資安演練，範圍包括保護 JWT 驗證、測試物件層授權、驗證修補成效、治理滲透測試；團隊須在交易異常須即時偵測並保全證據下提出可驗證且可追溯的決策。情境由治理、維運、開發與事件應變角色共同作業；所有例外均須指定風險擁有者、期限、驗證方式與稽核證據。"
-      }
-    }
-  ]
+    "questions": [
+        {
+            "id": 1,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "攻擊者取得端點後執行 LSASS credential dumping，最直接對應 MITRE ATT\u0026CK 哪個目的？",
+            "options": {
+                "A": "Discovery",
+                "B": "Credential Access",
+                "C": "Impact",
+                "D": "Collection"
+            },
+            "explanation": "B 旨在取得認證資料；A 是環境探索，C 是破壞，D 是蒐集目標資料。",
+            "chapter": "3.1",
+            "competency": "辨識 ATT\u0026CK 戰術"
+        },
+        {
+            "id": 2,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "攻擊者使用被竊取的 krbtgt hash 偽造可長期使用的 TGT，稱為何種攻擊？",
+            "options": {
+                "A": "Pass-the-Ticket",
+                "B": "Kerberoasting",
+                "C": "Silver Ticket",
+                "D": "Golden Ticket"
+            },
+            "explanation": "D 使用 krbtgt 金鑰偽造 TGT；C 通常偽造服務票證，A 重用既有票證，B 離線破解服務帳號。",
+            "chapter": "3.1",
+            "competency": "辨識 Kerberos 攻擊"
+        },
+        {
+            "id": 3,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "攻擊者未破解 NTLM 密碼便以取得的 hash 驗證至其他主機，這是什麼？",
+            "options": {
+                "A": "Pass-the-Hash",
+                "B": "Password Spraying",
+                "C": "Rainbow Table",
+                "D": "Credential Stuffing"
+            },
+            "explanation": "A 直接重用雜湊；B、D 嘗試密碼，C 是反查雜湊的破解技術。",
+            "chapter": "3.1",
+            "competency": "辨識雜湊濫用"
+        },
+        {
+            "id": 4,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "Web 服務可被誘使存取雲端 metadata endpoint，首要風險為何？",
+            "options": {
+                "A": "僅取得公開網站可讀內容",
+                "B": "資料庫索引變慢",
+                "C": "工作負載臨時憑證遭竊",
+                "D": "TLS 憑證自動更新"
+            },
+            "explanation": "C 正確，SSRF 存取 metadata endpoint 可能取得工作負載的臨時憑證；A 只讀公開內容、B 索引變慢、D 憑證更新，都不是此攻擊的主要風險。",
+            "chapter": "3.1",
+            "competency": "分析雲端 SSRF"
+        },
+        {
+            "id": 5,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "伺服器將未受信任物件反序列化並觸發 gadget chain，最可能造成什麼？",
+            "options": {
+                "A": "只造成應用程式例外而不影響控制流程",
+                "B": "遠端程式碼執行",
+                "C": "增加磁碟容量",
+                "D": "強化輸入驗證"
+            },
+            "explanation": "B 正確，危險反序列化可透過 gadget chain 執行攻擊者選定程式碼；A 低估控制流影響、C 是容量變化、D 是防護措施而非攻擊結果。",
+            "chapter": "3.1",
+            "competency": "辨識不安全反序列化"
+        },
+        {
+            "id": 6,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "應用程式把使用者輸入直接串入 shell 指令，主要弱點為何？",
+            "options": {
+                "A": "CSRF",
+                "B": "Open Redirect",
+                "C": "XXE",
+                "D": "OS Command Injection"
+            },
+            "explanation": "D 是未安全處理 shell 參數；A、B、C 分別涉及跨站請求、重新導向與 XML 外部實體。",
+            "chapter": "3.1",
+            "competency": "辨識 OS Command Injection"
+        },
+        {
+            "id": 7,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "網站已對輸出做 context-aware encoding，哪項額外控制可降低 XSS 成功後影響？",
+            "options": {
+                "A": "嚴格 Content Security Policy",
+                "B": "允許 unsafe-inline",
+                "C": "關閉 HttpOnly",
+                "D": "把 session token 放入 URL"
+            },
+            "explanation": "A 限制腳本來源與執行；B、C、D 反而擴大腳本及權杖曝露。",
+            "chapter": "3.1",
+            "competency": "評估 XSS 防護"
+        },
+        {
+            "id": 8,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "內部主機持續查詢高熵且極長的子網域，最可能代表什麼？",
+            "options": {
+                "A": "正常 NTP",
+                "B": "ARP Spoofing",
+                "C": "DNS Tunneling",
+                "D": "磁碟重組"
+            },
+            "explanation": "C 常以子網域承載命令或資料；A、B、D 不呈現此 DNS 特徵。",
+            "chapter": "3.1",
+            "competency": "偵測 DNS Tunneling"
+        },
+        {
+            "id": 9,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "CI runner 下載遭置換的 build dependency 並產出含後門程式，屬何種主要風險？",
+            "options": {
+                "A": "實體入侵",
+                "B": "軟體供應鏈攻擊",
+                "C": "肩窺",
+                "D": "訊號干擾"
+            },
+            "explanation": "B 透過依賴與建置流程污染產物；A、C、D 與 CI dependency 無關。",
+            "chapter": "3.1",
+            "competency": "辨識建置鏈攻擊"
+        },
+        {
+            "id": 10,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "容器以 privileged 模式掛載 host socket，攻擊成功後最大風險為何？",
+            "options": {
+                "A": "僅取得容器內應用程式權限",
+                "B": "只影響該容器的網路連線",
+                "C": "僅影響單一 process",
+                "D": "取得宿主機控制並影響其他工作負載"
+            },
+            "explanation": "D 正確，privileged 容器掛載 host socket 可控制宿主機及其他工作負載；A、C 都低估可取得的權限，B 的網路影響既非必要也非最大風險。",
+            "chapter": "3.1",
+            "competency": "分析容器逃逸"
+        },
+        {
+            "id": 11,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "依 FIRST CVSS v4.0，Base Metrics 主要描述什麼？",
+            "options": {
+                "A": "漏洞固有且不隨時間及環境改變的嚴重特性",
+                "B": "組織資產價格",
+                "C": "修補專案時程",
+                "D": "攻擊者國籍"
+            },
+            "explanation": "A 是 Base 的用途；B、C 屬環境或治理資訊，D 不屬評分度量。",
+            "chapter": "3.1",
+            "competency": "解讀 CVSS 4.0"
+        },
+        {
+            "id": 12,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "使用者被誘導同意惡意 OAuth app 讀取郵件，即使未洩漏密碼仍可能失陷，原因為何？",
+            "options": {
+                "A": "硬碟損壞",
+                "B": "DNSSEC 失效",
+                "C": "攻擊者取得授權 token 與 scope",
+                "D": "密碼雜湊自動破解"
+            },
+            "explanation": "C 是 consent phishing 核心；A、B、D 無法解釋授權後存取。",
+            "chapter": "3.1",
+            "competency": "辨識 OAuth Phishing"
+        },
+        {
+            "id": 13,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "攻擊者利用 PowerShell 直接在記憶體載入 payload，主要規避哪種傳統偵測？",
+            "options": {
+                "A": "網路分段",
+                "B": "只掃描落地檔案的特徵比對",
+                "C": "多因素認證",
+                "D": "資料分類"
+            },
+            "explanation": "B 因較少磁碟 artifact 而規避檔案掃描；A、C、D 不是此技巧主要目標。",
+            "chapter": "3.1",
+            "competency": "分析無檔案惡意程式"
+        },
+        {
+            "id": 14,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "攻擊者加密檔案前先外傳資料並威脅公開，稱為何種模式？",
+            "options": {
+                "A": "單純阻斷服務",
+                "B": "密碼噴灑",
+                "C": "水坑攻擊",
+                "D": "Double Extortion"
+            },
+            "explanation": "D 同時利用可用性與機密性勒索；A、B、C 不包含此兩階段手法。",
+            "chapter": "3.1",
+            "competency": "辨識雙重勒索"
+        },
+        {
+            "id": 15,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "發現單一端點正在大量加密共享檔案，第一個可逆且快速的圍堵動作為何？",
+            "options": {
+                "A": "刪除所有日誌",
+                "B": "立即格式化端點",
+                "C": "從網路隔離端點並保留狀態",
+                "D": "通知攻擊者"
+            },
+            "explanation": "C 可阻止擴散且保留鑑識；A、B 破壞證據，D 無助於圍堵。",
+            "chapter": "3.2",
+            "competency": "執行事件圍堵"
+        },
+        {
+            "id": 16,
+            "type": "複選題",
+            "answer": "ACD",
+            "question_text": "蒐集疑似入侵主機證據時，哪些作法適切？",
+            "options": {
+                "A": "記錄 chain of custody",
+                "B": "直接修改原始映像",
+                "C": "以雜湊驗證映像完整性",
+                "D": "使用寫入阻擋器取得磁碟映像"
+            },
+            "explanation": "A、C、D 正確，唯讀映像、雜湊及 chain of custody 可維持證據完整與可追溯；B 直接在原始媒體分析會改變內容並污染證據。",
+            "chapter": "3.2",
+            "competency": "保存數位證據"
+        },
+        {
+            "id": 17,
+            "type": "複選題",
+            "answer": "ABC",
+            "question_text": "EDR 面對端點惡意活動可提供哪些能力？",
+            "options": {
+                "A": "程序樹與行為遙測",
+                "B": "隔離主機",
+                "C": "查詢相同 IOC 的端點",
+                "D": "取代所有網路與身分控制"
+            },
+            "explanation": "A、B、C 正確，集中日誌、規則關聯及事件處置是 SIEM/SOC 的典型能力；D 宣稱單一工具可阻止所有攻擊，超出其偵測與協調範圍。",
+            "chapter": "3.2",
+            "competency": "運用 EDR 回應"
+        },
+        {
+            "id": 18,
+            "type": "複選題",
+            "answer": "BCD",
+            "question_text": "哪些情境較適合由 NDR 補強可視性？",
+            "options": {
+                "A": "只分析紙本紀錄",
+                "B": "東西向異常流量",
+                "C": "無法安裝代理程式的設備",
+                "D": "加密流量的 metadata 異常"
+            },
+            "explanation": "B、C、D 可由網路行為觀測；A 無網路遙測可供 NDR 分析。",
+            "chapter": "3.2",
+            "competency": "運用 NDR 偵測"
+        },
+        {
+            "id": 19,
+            "type": "複選題",
+            "answer": "ABD",
+            "question_text": "哪些措施可降低勒索軟體同時破壞備份的風險？",
+            "options": {
+                "A": "不可變備份",
+                "B": "備份管理使用獨立身分",
+                "C": "備份儲存與正式環境共用管理密碼",
+                "D": "定期離線復原演練"
+            },
+            "explanation": "A、B、D 正確，離線或不可變備份、還原測試與權限隔離可提供復原證據；C 讓備份與正式環境共用管理憑證，會形成共同失陷路徑。",
+            "chapter": "3.2",
+            "competency": "驗證備份韌性"
+        },
+        {
+            "id": 20,
+            "type": "複選題",
+            "answer": "AC",
+            "question_text": "DNS Sinkhole 的合理用途有哪些？",
+            "options": {
+                "A": "阻斷已知惡意網域解析",
+                "B": "解密所有 TLS 內容",
+                "C": "將查詢導向受控位址以觀察感染主機",
+                "D": "自動修補作業系統"
+            },
+            "explanation": "A、C 可限制 C2 並識別來源；B、D 不是 DNS Sinkhole 能力。",
+            "chapter": "3.2",
+            "competency": "部署 DNS Sinkhole"
+        },
+        {
+            "id": 21,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "【題組 1】多台伺服器同時出現加密與外傳告警，SOC 應先做什麼？",
+            "options": {
+                "A": "逐台當成無關低風險事件",
+                "B": "關聯告警、確認範圍並提升事件等級",
+                "C": "關閉所有監控",
+                "D": "等待贖金通知"
+            },
+            "explanation": "B 正確，集中關聯主機、身分與網路遙測可建立共同事件範圍；A 各自處理、C 等待完整確認、D 關閉日誌，都會延誤或妨礙跨主機應變。",
+            "chapter": "3.2",
+            "competency": "分級事件嚴重度",
+            "case_group": {
+                "id": "題組 1",
+                "description": "某企業遭雙重勒索，SOC 需在不中斷關鍵資料庫的限制下完成分級、圍堵、鑑識與復原。"
+            }
+        },
+        {
+            "id": 22,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "【題組 1】關鍵資料庫不可立即關機，最適切的短期圍堵為何？",
+            "options": {
+                "A": "允許持續連外",
+                "B": "刪除稽核紀錄",
+                "C": "重設所有資料內容",
+                "D": "封鎖惡意通道、限制帳號與隔離非必要連線"
+            },
+            "explanation": "D 在維持服務下縮小攻擊路徑；A 擴散風險，B、C 破壞證據或業務。",
+            "chapter": "3.2",
+            "competency": "決定圍堵策略",
+            "case_group": {
+                "id": "題組 1",
+                "description": "某企業遭雙重勒索，SOC 需在不中斷關鍵資料庫的限制下完成分級、圍堵、鑑識與復原。"
+            }
+        },
+        {
+            "id": 23,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "【題組 1】疑似記憶體內存在加密金鑰，關機前應優先做什麼？",
+            "options": {
+                "A": "依程序擷取記憶體與連線狀態",
+                "B": "立即拔除硬碟並覆寫",
+                "C": "執行磁碟清理",
+                "D": "更新所有應用程式"
+            },
+            "explanation": "A 保留斷電即消失的資料；B、C 破壞證據，D 可能改變系統狀態。",
+            "chapter": "3.2",
+            "competency": "保全揮發性證據",
+            "case_group": {
+                "id": "題組 1",
+                "description": "某企業遭雙重勒索，SOC 需在不中斷關鍵資料庫的限制下完成分級、圍堵、鑑識與復原。"
+            }
+        },
+        {
+            "id": 24,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "【題組 1】從乾淨備份還原後，何者最能支持安全恢復上線？",
+            "options": {
+                "A": "只確認主機可開機",
+                "B": "停用 EDR",
+                "C": "驗證弱點已處理、IOC 無殘留且業務測試通過",
+                "D": "沿用已外洩憑證"
+            },
+            "explanation": "C 同時確認根因、威脅與功能；A 不足，B、D 會再次暴露。",
+            "chapter": "3.2",
+            "competency": "執行復原驗證",
+            "case_group": {
+                "id": "題組 1",
+                "description": "某企業遭雙重勒索，SOC 需在不中斷關鍵資料庫的限制下完成分級、圍堵、鑑識與復原。"
+            }
+        },
+        {
+            "id": 25,
+            "type": "題組（複選）",
+            "answer": "BCD",
+            "question_text": "【題組 1】事件結束後哪些產出應回饋 SOC？",
+            "options": {
+                "A": "只發布慶祝郵件",
+                "B": "更新偵測規則",
+                "C": "修正 playbook 與聯絡窗口",
+                "D": "追蹤根因改善與 lessons learned"
+            },
+            "explanation": "B、C、D 將經驗轉為持續改善；A 不能提升偵測或應變能力。",
+            "chapter": "4.1",
+            "competency": "執行事件後改善",
+            "case_group": {
+                "id": "題組 1",
+                "description": "某企業遭雙重勒索，SOC 需在不中斷關鍵資料庫的限制下完成分級、圍堵、鑑識與復原。"
+            }
+        },
+        {
+            "id": 26,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "【題組 2】SOC 收到大量相同低品質告警，優先改善為何？",
+            "options": {
+                "A": "依資產關鍵性、信心與影響調整 triage 規則",
+                "B": "關閉所有資料來源",
+                "C": "全部升為最高等級",
+                "D": "要求分析師逐筆忽略"
+            },
+            "explanation": "A 能降低雜訊並保留高風險訊號；B、C、D 會造成盲點或疲勞。",
+            "chapter": "4.1",
+            "competency": "執行告警分流",
+            "case_group": {
+                "id": "題組 2",
+                "description": "某 SOC 正改善告警分流、SIEM 關聯、SOAR、自動化資料管線與威脅情資品質。"
+            }
+        },
+        {
+            "id": 27,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "【題組 2】哪種規則最能偵測帳號接管？",
+            "options": {
+                "A": "單次正常登入",
+                "B": "每日備份成功",
+                "C": "短時間異地登入後新增 MFA 裝置並大量下載",
+                "D": "員工開啟首頁"
+            },
+            "explanation": "C 結合身分變更與資料行為形成高風險序列；A、B、D 缺乏攻擊指標。",
+            "chapter": "4.1",
+            "competency": "設計 SIEM 關聯",
+            "case_group": {
+                "id": "題組 2",
+                "description": "某 SOC 正改善告警分流、SIEM 關聯、SOAR、自動化資料管線與威脅情資品質。"
+            }
+        },
+        {
+            "id": 28,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "【題組 2】哪項最適合先自動化且保留人工閘門？",
+            "options": {
+                "A": "自動刪除所有資料庫",
+                "B": "自動富化 IOC，人工核准後封鎖高影響帳號",
+                "C": "無條件停用全公司帳號",
+                "D": "自動忽略未知告警"
+            },
+            "explanation": "B 自動化重複工作並控制高影響動作；A、C、D 缺乏風險護欄。",
+            "chapter": "4.1",
+            "competency": "使用 SOAR 自動化",
+            "case_group": {
+                "id": "題組 2",
+                "description": "某 SOC 正改善告警分流、SIEM 關聯、SOAR、自動化資料管線與威脅情資品質。"
+            }
+        },
+        {
+            "id": 29,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "【題組 2】偵測規則突然無告警，第一個健康檢查應是什麼？",
+            "options": {
+                "A": "假設攻擊已消失",
+                "B": "調低所有事件嚴重度",
+                "C": "刪除規則",
+                "D": "確認資料來源延遲、欄位解析及 ingestion 狀態"
+            },
+            "explanation": "D 正確，監控來源延遲、解析失敗與欄位完整性才能識別資料管線失效；A 未做驗證，B 忽略錯誤、C 刪除原始資料，都會掩蓋根因。",
+            "chapter": "4.1",
+            "competency": "維護遙測品質",
+            "case_group": {
+                "id": "題組 2",
+                "description": "某 SOC 正改善告警分流、SIEM 關聯、SOAR、自動化資料管線與威脅情資品質。"
+            }
+        },
+        {
+            "id": 30,
+            "type": "題組（複選）",
+            "answer": "ACD",
+            "question_text": "【題組 2】哪些作法可提升 threat intelligence 可用性？",
+            "options": {
+                "A": "評估來源可靠度",
+                "B": "永久封鎖所有未驗證 IOC",
+                "C": "設定 IOC 有效期限",
+                "D": "將情資對應內部資產與偵測情境"
+            },
+            "explanation": "A、C、D 正確，資產情境、信心與到期機制能降低誤報並提升可行動性；B 永久保留所有情資，會忽略品質衰退與時效性。",
+            "chapter": "4.1",
+            "competency": "整合威脅情資",
+            "case_group": {
+                "id": "題組 2",
+                "description": "某 SOC 正改善告警分流、SIEM 關聯、SOAR、自動化資料管線與威脅情資品質。"
+            }
+        },
+        {
+            "id": 31,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "【題組 3】將 SIEM 規則納入版本控制的主要效益為何？",
+            "options": {
+                "A": "讓規則不需測試",
+                "B": "可審查、測試、追溯與回復變更",
+                "C": "保證零誤報",
+                "D": "取代事件應變流程"
+            },
+            "explanation": "B 支援可重現的工程治理；A、C、D 都誇大或取消必要程序。",
+            "chapter": "4.1",
+            "competency": "實施 Detection as Code",
+            "case_group": {
+                "id": "題組 3",
+                "description": "某開發團隊把 Detection as Code、SAST、SCA、威脅建模與 CI/CD quality gate 納入 SSDLC。"
+            }
+        },
+        {
+            "id": 32,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "【題組 3】開發階段要找出未執行程式路徑中的危險 API 使用，優先採何者？",
+            "options": {
+                "A": "DAST",
+                "B": "外部滲透測試",
+                "C": "網路封包擷取",
+                "D": "SAST"
+            },
+            "explanation": "D 分析原始碼或中介碼且不需執行；A、B 是動態觀察，C 不分析程式路徑。",
+            "chapter": "4.2",
+            "competency": "選擇安全測試",
+            "case_group": {
+                "id": "題組 3",
+                "description": "某開發團隊把 Detection as Code、SAST、SCA、威脅建模與 CI/CD quality gate 納入 SSDLC。"
+            }
+        },
+        {
+            "id": 33,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "【題組 3】要識別第三方套件已知 CVE 與授權風險，應使用何者？",
+            "options": {
+                "A": "SCA",
+                "B": "SAST",
+                "C": "DAST",
+                "D": "單元測試"
+            },
+            "explanation": "A 專門盤點相依元件、漏洞與授權；B、C、D 不能完整建立元件清冊。",
+            "chapter": "4.2",
+            "competency": "執行組成分析",
+            "case_group": {
+                "id": "題組 3",
+                "description": "某開發團隊把 Detection as Code、SAST、SCA、威脅建模與 CI/CD quality gate 納入 SSDLC。"
+            }
+        },
+        {
+            "id": 34,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "【題組 3】設計 API 前使用 STRIDE，主要目的為何？",
+            "options": {
+                "A": "直接計算已知漏洞數量",
+                "B": "取代所有安全測試",
+                "C": "系統化識別 spoofing、tampering 等威脅並規劃控制",
+                "D": "直接套用通用控制清單而不分析資料流"
+            },
+            "explanation": "C 正確，STRIDE 用於設計期系統化識別 spoofing、tampering 等威脅並規劃控制；A 只數漏洞、B 誤稱可取代測試、D 套用通用清單，都不能完成情境化威脅建模。",
+            "chapter": "4.2",
+            "competency": "執行威脅建模",
+            "case_group": {
+                "id": "題組 3",
+                "description": "某開發團隊把 Detection as Code、SAST、SCA、威脅建模與 CI/CD quality gate 納入 SSDLC。"
+            }
+        },
+        {
+            "id": 35,
+            "type": "題組（複選）",
+            "answer": "ABD",
+            "question_text": "【題組 3】哪些措施適合設為 CI/CD quality gate？",
+            "options": {
+                "A": "高嚴重度 SAST 發現未核准不得發布",
+                "B": "依賴套件政策與簽章驗證",
+                "C": "所有警告無條件忽略",
+                "D": "機密掃描發現有效金鑰即阻擋"
+            },
+            "explanation": "A、B、D 可阻止明確高風險產物；C 會使 pipeline 帶病發布。",
+            "chapter": "4.2",
+            "competency": "整合 SSDLC 控制",
+            "case_group": {
+                "id": "題組 3",
+                "description": "某開發團隊把 Detection as Code、SAST、SCA、威脅建模與 CI/CD quality gate 納入 SSDLC。"
+            }
+        },
+        {
+            "id": 36,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "【題組 4】解析自訂二進位協定時，哪種測試最容易找出未預期輸入造成的崩潰？",
+            "options": {
+                "A": "只做使用者訪談",
+                "B": "僅執行固定格式的單元測試",
+                "C": "Coverage-guided fuzzing",
+                "D": "只閱讀操作手冊"
+            },
+            "explanation": "C 正確，coverage-guided fuzzing 以大量變異輸入探索新程式路徑；A 訪談、B 固定格式單元測試、D 閱讀手冊，都難以觸發未知解析邊界。",
+            "chapter": "4.2",
+            "competency": "執行 Fuzz Testing",
+            "case_group": {
+                "id": "題組 4",
+                "description": "某 API 團隊針對自訂協定、JWT、BOLA、弱點重測與滲透測試授權建立安全驗證流程。"
+            }
+        },
+        {
+            "id": 37,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "【題組 4】API 驗證 JWT 時最重要的原則為何？",
+            "options": {
+                "A": "接受 token 自稱的任意 alg",
+                "B": "固定允許演算法並驗證 issuer、audience、expiry 與簽章",
+                "C": "只 Base64 解碼 payload",
+                "D": "把私鑰放在前端"
+            },
+            "explanation": "B 完整驗證信任邊界；A、C 可繞過簽章，D 直接洩漏簽章金鑰。",
+            "chapter": "4.2",
+            "competency": "保護 JWT 驗證",
+            "case_group": {
+                "id": "題組 4",
+                "description": "某 API 團隊針對自訂協定、JWT、BOLA、弱點重測與滲透測試授權建立安全驗證流程。"
+            }
+        },
+        {
+            "id": 38,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "【題組 4】測試 BOLA/IDOR 最關鍵的案例為何？",
+            "options": {
+                "A": "只測試資源擁有者的正常存取",
+                "B": "輸入超長搜尋詞",
+                "C": "只檢查 object ID 的格式",
+                "D": "低權限使用者替換 object ID 存取他人資源"
+            },
+            "explanation": "D 正確，替換 object ID 並以低權限主體存取可直接驗證物件層授權；A 只測正常 owner、B 測輸入長度、C 只驗格式，都不能證明跨使用者隔離。",
+            "chapter": "4.2",
+            "competency": "測試物件層授權",
+            "case_group": {
+                "id": "題組 4",
+                "description": "某 API 團隊針對自訂協定、JWT、BOLA、弱點重測與滲透測試授權建立安全驗證流程。"
+            }
+        },
+        {
+            "id": 39,
+            "type": "題組（複選）",
+            "answer": "ABC",
+            "question_text": "【題組 4】弱點修補後哪些步驟適切？",
+            "options": {
+                "A": "重測原始攻擊路徑",
+                "B": "檢查相鄰功能回歸",
+                "C": "確認部署版本與修補證據",
+                "D": "看到工單關閉即免測"
+            },
+            "explanation": "A、B、C 正確，重測、回歸及部署證據分別確認修補有效且已落地；D 只把工單標記完成，屬行政狀態，不能證明漏洞風險已降低。",
+            "chapter": "4.2",
+            "competency": "驗證修補成效",
+            "case_group": {
+                "id": "題組 4",
+                "description": "某 API 團隊針對自訂協定、JWT、BOLA、弱點重測與滲透測試授權建立安全驗證流程。"
+            }
+        },
+        {
+            "id": 40,
+            "type": "題組（複選）",
+            "answer": "ABD",
+            "question_text": "【題組 4】正式滲透測試前，rules of engagement 應包含哪些？",
+            "options": {
+                "A": "允許時段與目標範圍",
+                "B": "停止條件及緊急聯絡人",
+                "C": "測試者可任意外傳資料",
+                "D": "資料處理與成果交付要求"
+            },
+            "explanation": "A、B、D 限定操作與資料責任；C 違反測試授權及保密原則。",
+            "chapter": "4.2",
+            "competency": "治理滲透測試",
+            "case_group": {
+                "id": "題組 4",
+                "description": "某 API 團隊針對自訂協定、JWT、BOLA、弱點重測與滲透測試授權建立安全驗證流程。"
+            }
+        }
+    ]
 }

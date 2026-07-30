@@ -1,0 +1,689 @@
+{
+    "metadata": {
+        "exam_name": "115 年第二次資訊安全工程師-中級能力鑑定預測模擬第 36 回",
+        "subject": "資訊安全防護實務",
+        "date": "115 年 08 月 22 日"
+    },
+    "questions": [
+        {
+            "id": 1,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "對外 appliance 的 pre-auth RCE 已列 KEV，但端點遙測有限，最適合先建立哪種 hunt 假設？",
+            "options": {
+                "A": "只搜尋已登入管理員的互動操作，忽略未驗證請求與子程序",
+                "B": "只比較設備 CPU 是否高於全年平均，不查詢設定與網路變更",
+                "C": "關聯異常 URI/協定、設備外連、設定帳號變更與下游登入活動",
+                "D": "等待廠商提供唯一 IoC 後才開始調查，不保存現有短期日誌"
+            },
+            "explanation": "A：pre-auth 利用不需合法登入，只看管理員會漏掉初始攻擊。；B：資源異常不是必要條件，也缺乏攻擊及持久化脈絡。；C：網路、控制平面與下游證據可補足 appliance 缺乏 EDR 的可見性。；D：IoC 不完整且日誌可能輪替，應先依行為假設保存與搜尋。",
+            "chapter": "3.1",
+            "competency": "能在 appliance 遙測受限時以請求、外連、設定與下游身分建立 KEV hunt"
+        },
+        {
+            "id": 2,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "漏洞同時具 KEV、對外暴露與 pre-auth RCE，修補優先序應如何判斷？",
+            "options": {
+                "A": "視為立即風險，安排緊急變更並在窗口前採暴露限制與偵測",
+                "B": "只因 CVSS 與另一內部漏洞相同，就排在一般月度修補最後",
+                "C": "因設備沒有 EDR 而從弱點清冊移除，避免無法驗證造成逾期",
+                "D": "只看 EPSS percentile，忽略已知利用、可達性與核心業務影響"
+            },
+            "explanation": "A：已知利用、公開可達與低門檻形成高急迫性，且等待期間仍需補償控制。；B：相同嚴重度不代表相同威脅與暴露，應依在地攻擊路徑排序。；C：缺乏遙測使風險更難管理，不會消除漏洞或責任。；D：EPSS 是機率訊號，KEV 已提供實際利用證據，仍須納入資產脈絡。",
+            "chapter": "3.1",
+            "competency": "能依 KEV、外部暴露、pre-auth 利用與業務衝擊排序緊急修補"
+        },
+        {
+            "id": 3,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "沒有立即 patch 的 appliance，哪項 virtual patch 驗證最具可信度？",
+            "options": {
+                "A": "WAF 規則已啟用便視為有效，不測試編碼、協定與路徑變體",
+                "B": "只更改公開連接埠與 banner，不限制實際管理介面可達性",
+                "C": "封鎖目前掃描來源 IP，其他來源及下游橫向路徑維持原狀",
+                "D": "重播安全利用樣本與變體，驗證阻擋、告警、繞過及正常流量"
+            },
+            "explanation": "A：設定存在不等於涵蓋所有利用路徑，必須實證測試。；B：隱藏資訊不改變漏洞根因及授權邊界。；C：攻擊來源可快速更換，且單一 IP 封鎖無法限制內部影響。；D：正負向測試能量測補償控制的有效性與營運副作用。",
+            "chapter": "3.1",
+            "competency": "能以利用變體、阻擋、告警、繞過與正常流量驗證 appliance virtual patch"
+        },
+        {
+            "id": 4,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "MQTT 訊息具有合法 MAC 但重複舊序號，接收端應如何處理？",
+            "options": {
+                "A": "因 MAC 正確即再次執行，完整性驗證同時保證訊息新鮮度",
+                "B": "依裝置狀態拒絕過期或重複序號，記錄並告警可能重放",
+                "C": "自動重設所有裝置憑證，且不保存重放訊息與 session 證據",
+                "D": "只比較 payload 長度，相同長度便視為合法週期性量測"
+            },
+            "explanation": "A：MAC 證明內容與金鑰，但舊合法訊息仍可被重放。；B：單調序號或 nonce 狀態能強制新鮮度並提供事件證據。；C：是否需輪替要依金鑰失陷證據，先刪證據會妨礙範圍判斷。；D：長度與新鮮度及來源無可靠關係。",
+            "chapter": "3.1",
+            "competency": "能區分 MQTT 完整性與新鮮度並以序號狀態拒絕重放"
+        },
+        {
+            "id": 5,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "digital twin 收到物理上不可能的量測組合時，最適合的偵測方式為何？",
+            "options": {
+                "A": "只檢查每個欄位格式正確，不分析跨感測器與製程約束",
+                "B": "把所有異常視為設備故障，不關聯身分、網路與訊息序號",
+                "C": "結合製程 invariants、時間序列、裝置身分、校正與網路行為",
+                "D": "調高模型容忍度直到不再告警，避免維修人員收到誤報"
+            },
+            "explanation": "A：格式正確的偽造值仍可違反實體關係，需要語意驗證。；B：攻擊與故障需以多來源證據區分，不能預先排除惡意。；C：製程、資料與安全脈絡能發現單點看似合理的協同偽造。；D：無依據放寬會掩蓋危險資料並破壞安全監控。",
+            "chapter": "3.1",
+            "competency": "能以製程 invariants、時序、身分、校正與網路脈絡偵測 twin 資料偽造"
+        },
+        {
+            "id": 6,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "refresh token 被竊後持續取得新 access token，哪項遏止最直接？",
+            "options": {
+                "A": "撤銷 token family、相關 session 與應用 grant，輪替秘密並重新驗證",
+                "B": "只等待目前 access token 到期，不處理仍可輪替的 refresh token",
+                "C": "更改使用者顯示名稱，但保留應用授權與所有 token 有效",
+                "D": "只封鎖當前 ASN，允許相同 token 從其他網路繼續交換"
+            },
+            "explanation": "A：family 與 grant 撤銷切斷持續換發來源，輪替與重驗重建信任。；B：攻擊者可在到期前繼續換新，等待不會停止持久化。；C：顯示名稱不影響 token、client 或 session 驗證。；D：來源可改變，網路封鎖不能取代憑證撤銷。",
+            "chapter": "3.1",
+            "competency": "能撤銷 OAuth token family、session、grant 並輪替秘密以遏止持續濫用"
+        },
+        {
+            "id": 7,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "要界定雲端資料外傳範圍，哪組稽核欄位最重要？",
+            "options": {
+                "A": "只統計 API 總請求數，不保留身分、物件與回應資料量",
+                "B": "只記錄來源國家，不追蹤 token、角色與實際資料集",
+                "C": "只看外部儲存帳戶名稱，不確認是否成功寫入與內容版本",
+                "D": "token/client、主體、角色、查詢、物件、筆數/位元組、目的地與結果"
+            },
+            "explanation": "A：總量無法對應特定身分與資料影響。；B：地理位置容易變更，也不能說明授權及存取內容。；C：目的地線索不足以證明哪些資料及操作成功。；D：端到端欄位能把身分、資料與外傳結果連成可量化範圍。",
+            "chapter": "3.1",
+            "competency": "能以 token、主體、角色、物件、資料量、目的地與結果量化雲端外傳"
+        },
+        {
+            "id": 8,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "依 SP 800-61 Rev.3，雲端 token 事件復原前應驗證何種成果？",
+            "options": {
+                "A": "只確認登入頁可開啟，不測試 grant、角色、session 與日誌",
+                "B": "重建身分信任、移除持久化、驗證最小權限、偵測與合法業務",
+                "C": "沿用全部舊 token 以降低使用者重新登入造成的不便",
+                "D": "刪除事件日誌後恢復服務，避免個資持續存在調查系統"
+            },
+            "explanation": "A：基礎可用不代表攻擊者權限與持久化已清除。；B：安全、監控及業務共同驗收才能支持受控恢復。；C：舊 token 可能已外洩，沿用會帶回攻擊能力。；D：證據應受控保存與最小化，不應在調查未完成前刪除。",
+            "chapter": "3.2",
+            "competency": "能依 SP 800-61 Rev.3 驗證雲端身分、持久化、最小權限、偵測與業務復原"
+        },
+        {
+            "id": 9,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "serverless URL 擷取功能要防 SSRF，哪項輸入與連線策略最完整？",
+            "options": {
+                "A": "只在前端阻擋 localhost 字串，後端跟隨所有重新導向",
+                "B": "解析初始網域一次後，後續連線信任 DNS 與 redirect 目的",
+                "C": "allowlist 目的，逐跳解析並驗證 IP/協定，經受控 egress 連線",
+                "D": "讓函式直接存取所有內網與 metadata，再依回應內容判斷安全"
+            },
+            "explanation": "A：前端可繞過，字串黑名單也漏掉編碼與替代位址。；B：DNS rebinding 與重新導向可在初驗後改變實際目的。；C：逐跳驗證及網路執行點能同時處理 URL、解析與實際連線。；D：先連線再判斷已經可能洩漏 token 與內部資料。",
+            "chapter": "3.2",
+            "competency": "能以目的 allowlist、逐跳解析驗證、協定限制與受控 egress 防止 SSRF"
+        },
+        {
+            "id": 10,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "即使 SSRF 可達 metadata，哪項雲端控制可降低取得高權限憑證的後果？",
+            "options": {
+                "A": "強制較安全 metadata 模式、限制 hop/來源，並給函式最小短效角色",
+                "B": "啟用安全 metadata 模式與 hop 限制，但沿用函式共用的廣泛角色",
+                "C": "縮短 metadata token 效期，但角色仍可操作帳戶內的萬用資源",
+                "D": "以 egress proxy 限制外傳目的，但不收斂 token 可呼叫的雲端 API"
+            },
+            "explanation": "A：服務端防護降低 token 被取得的機會，最小短效角色則限制成功利用後可操作的範圍與時間。；B：metadata 防護有助降低 SSRF 利用，但廣泛共用角色仍會放大任何成功取得憑證的後果。；C：短效可縮短暴露窗，若資源與動作仍是萬用，攻擊者在有效期內仍有過大權限。；D：egress proxy 可限制部分資料外傳，卻不能阻止 token 在控制平面建立資源、變更政策或取得資料。",
+            "chapter": "3.2",
+            "competency": "能以 metadata 防護、hop 限制與最小短效工作負載角色降低 SSRF 後果"
+        },
+        {
+            "id": 11,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "併購後發現創辦人舊 session 仍能存取買方資源，根因最可能是什麼？",
+            "options": {
+                "A": "買方網路採用 IPv6，因此任何 session 都無法被伺服器撤銷",
+                "B": "使用者顯示名稱不同，使雲端自動授予最高權限作為相容模式",
+                "C": "端點未安裝相同防毒廠牌，導致 IdP 強制建立管理 session",
+                "D": "聯邦與生命週期整合未同步撤銷、群組、token 及信任關係"
+            },
+            "explanation": "A：IP 版本與 session 撤銷能力沒有此種必然關係。；B：正常身分系統不應因顯示名稱差異自動提升權限。；C：裝置控制可影響條件存取，但不會合法產生最高權限。；D：過渡整合常遺漏既有 token、群組與 federation trust，形成殘留存取。",
+            "chapter": "3.2",
+            "competency": "能由 session、群組、token 與 federation 撤銷缺口辨識併購身分殘留"
+        },
+        {
+            "id": 12,
+            "type": "單選題",
+            "answer": "B",
+            "question_text": "若標的網域可能遭 Golden Ticket 持久化，信任重建的重點為何？",
+            "options": {
+                "A": "只更改一般使用者密碼，不處理 KRBTGT、網域控制站與票證",
+                "B": "隔離並檢查 DC，依程序輪替 KRBTGT、特權與信任並使舊票證失效",
+                "C": "延長所有 Kerberos ticket 有效期，避免交割期間重新登入",
+                "D": "只刪除事件檢視器日誌，讓新網域不受舊事件資料影響"
+            },
+            "explanation": "A：Golden Ticket 依賴 KRBTGT，普通密碼變更不能切斷偽造能力。；B：乾淨 DC 與關鍵信任輪替才能使攻擊者持有的票證材料失效。；C：延長票證會擴大持久化時間窗。；D：刪除日誌破壞證據且不改變網域密碼信任。",
+            "chapter": "3.2",
+            "competency": "能以 DC 隔離、KRBTGT、特權與信任輪替根除 Golden Ticket 持久化"
+        },
+        {
+            "id": 13,
+            "type": "單選題",
+            "answer": "C",
+            "question_text": "SIEM 要偵測併購過渡期異常身分活動，最需要哪種資料正規化？",
+            "options": {
+                "A": "只保留來源原始帳號字串，不建立買方與標的身分對應",
+                "B": "把所有登入歸為同一共同帳號，簡化跨公司報表",
+                "C": "建立穩定人員/服務實體，保留來源、舊新 ID、群組、session 與信賴度",
+                "D": "只按 IP 分組，忽略代理、VPN、裝置與 token 的關係"
+            },
+            "explanation": "A：不同系統識別會讓同一身分被拆成多案，難以發現殘留存取。；B：合併為共同帳號破壞歸責及細粒度風險。；C：entity resolution 與來源保留能串接過渡活動並管理不確定性。；D：IP 不是穩定身分，且容易因網路架構變化。",
+            "chapter": "4.1",
+            "competency": "能建立保留來源、舊新識別、群組、session 與信賴度的併購身分實體"
+        },
+        {
+            "id": 14,
+            "type": "單選題",
+            "answer": "A",
+            "question_text": "NDR 發現併購後標的管理站大量連向買方內部資產，如何判斷是否橫向移動？",
+            "options": {
+                "A": "結合資產角色、核准整合路徑、身分、協定、時序與端點程序",
+                "B": "只要流量位於內網就視為合法整合，不建立行為基線",
+                "C": "只看位元組總量，低流量便排除遠端管理與掃描",
+                "D": "只比對已知惡意 IP，忽略東西向連線與有效帳號濫用"
+            },
+            "explanation": "A：業務授權與跨域行為脈絡可區分正常遷移、掃描及橫向操作。；B：併購內網仍是不可信過渡區，位置不能代表合法目的。；C：橫向管理可低量且離散，總量不足以判斷。；D：有效身分攻擊不需已知外部 IP，東西向正是主要路徑。",
+            "chapter": "4.1",
+            "competency": "能以資產、核准路徑、身分、協定、時序與程序判斷併購橫向移動"
+        },
+        {
+            "id": 15,
+            "type": "單選題",
+            "answer": "D",
+            "question_text": "XDR 應如何串接異常發布與創辦人身分事件？",
+            "options": {
+                "A": "只因程式有合法簽章便排除 CI/CD 與身分事件關聯",
+                "B": "將雲端登入、repo、runner 與端點分成互不引用的獨立案件",
+                "C": "只依檔名相同關聯，不保留 signer、commit、digest 與 session",
+                "D": "關聯 IdP session、裝置、repo 變更、runner、簽章、制品與部署"
+            },
+            "explanation": "A：簽章環境可能遭舊高權限身分濫用，不能排除供應鏈事件。；B：跨來源斷裂會隱藏從身分到發布的完整攻擊鏈。；C：檔名可變且缺乏來源證明，不足以建立可信關聯。；D：端到端實體與制品證據能界定誰以何種路徑發布何內容。",
+            "chapter": "4.1",
+            "competency": "能關聯 IdP、裝置、repo、runner、簽章、制品與部署調查併購供應鏈事件"
+        },
+        {
+            "id": 16,
+            "type": "複選題",
+            "answer": "AD",
+            "question_text": "public appliance KEV 暫無修補時，哪些補償控制最直接降低利用風險？（複選）",
+            "options": {
+                "A": "移除直接 Internet 管理面，限制來源並經強驗證跳板存取",
+                "B": "只更改服務 banner 與 port，不改變實際可達性與授權",
+                "C": "停止記錄設備與下游日誌，避免高流量影響 appliance 效能",
+                "D": "部署利用行為阻擋/偵測、設定完整性監控並規劃緊急汰換"
+            },
+            "explanation": "A：縮小可達路徑與強身分可直接降低攻擊面。；B：隱藏服務不會修補 pre-auth 漏洞或阻止掃描。；C：缺少遙測會使利用及持久化更難發現。；D：多層控制與退場計畫可管理窗口前及 EOL 風險。",
+            "chapter": "4.1",
+            "competency": "能以管理面收斂、強驗證、利用偵測、完整性與退場補償 appliance KEV"
+        },
+        {
+            "id": 17,
+            "type": "複選題",
+            "answer": "ABC",
+            "question_text": "保護 MQTT/digital twin 資料流，哪些控制可共同防止偽造與重放？（複選）",
+            "options": {
+                "A": "每裝置唯一憑證與最小 topic publish/subscribe ACL",
+                "B": "訊息序號/nonce、時間窗及簽章或 MAC，接收端保存狀態",
+                "C": "校正、製程 invariants、lineage 與異常跨感測器關聯",
+                "D": "只依 payload 裝置名稱授權，允許共用密鑰與重複序號"
+            },
+            "explanation": "A：個別身分與 ACL 限制冒用範圍及操作資源。；B：完整性加上新鮮度狀態可拒絕舊合法訊息。；C：資料品質與物理脈絡能發現持有合法金鑰的異常來源。；D：payload 可偽造，共用秘密與無序號會擴大重放風險。",
+            "chapter": "4.2",
+            "competency": "能以裝置身分、topic ACL、新鮮度、完整性、lineage 與製程脈絡保護 twin"
+        },
+        {
+            "id": 18,
+            "type": "複選題",
+            "answer": "ACD",
+            "question_text": "雲端 token 外傳事件中，哪些證據可支持資料影響與持久化判斷？（複選）",
+            "options": {
+                "A": "token family、client/grant、session、角色與控制平面變更",
+                "B": "只記錄登入頁瀏覽次數，不保留 API、物件與匯出結果",
+                "C": "查詢、物件、筆數/位元組、匯出工作、目的地與成功回應",
+                "D": "新憑證、應用同意、排程、信任政策與跨帳戶授權"
+            },
+            "explanation": "A：身分鏈可界定攻擊者如何維持與擴大存取。；B：瀏覽統計無法證明實際授權與資料操作。；C：資料與結果欄位能量化真正外傳範圍。；D：控制平面持久化可能在原 token 撤銷後繼續存在。",
+            "chapter": "4.2",
+            "competency": "能以 token、grant、session、資料操作、目的地與控制平面證據調查雲端外傳"
+        },
+        {
+            "id": 19,
+            "type": "複選題",
+            "answer": "BD",
+            "question_text": "修正 serverless SSRF 根因時，哪些措施可抵抗 redirect 與 DNS rebinding？（複選）",
+            "options": {
+                "A": "只檢查原始 URL 不含 localhost，後續 redirect 與解析結果不再驗證",
+                "B": "每次解析及 redirect 驗證 scheme、host、最終 IP 與禁止網段",
+                "C": "允許函式直接對任意目的連線，再依回應 status 判定安全",
+                "D": "由 egress proxy 強制 allowlist，關閉不必要 metadata 並最小化角色"
+            },
+            "explanation": "A：初始字串可在後續解析或轉向改變實際目的。；B：逐跳驗證可處理 DNS 與 redirect 的 time-of-check 差異。；C：連線後判斷已可能外洩 token 或存取內部服務。；D：網路與身分縱深能限制繞過及利用後衝擊。",
+            "chapter": "4.2",
+            "competency": "能以逐跳 URL/IP 驗證、egress allowlist、metadata 與最小角色修正 SSRF"
+        },
+        {
+            "id": 20,
+            "type": "複選題",
+            "answer": "BCD",
+            "question_text": "併購身分妥協的安全復原，哪些能力必須同時驗證？（複選）",
+            "options": {
+                "A": "只修改創辦人帳號名稱，沿用舊 session、金鑰與簽章信任",
+                "B": "撤銷 session/token、輪替特權/服務/簽章金鑰與 federation trust",
+                "C": "重建權威生命週期、PAM、裝置與 workload identity 及負向授權",
+                "D": "驗證 repo、runner、artifact、部署、偵測與代表性業務交易"
+            },
+            "explanation": "A：顯示名稱不改變有效憑證及攻擊者控制。；B：全面信任輪替切斷已知與未知持久化材料。；C：身分治理與拒絕測試可防止殘留及過度授權。；D：供應鏈、安全監控及業務驗收共同證明復原可信。",
+            "chapter": "4.2",
+            "competency": "能以憑證輪替、生命週期、供應鏈、偵測與業務驗收恢復併購身分信任"
+        },
+        {
+            "id": 21,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "等待 appliance 修補窗口期間，哪項暴露面處置最符合營運與安全比例？",
+            "options": {
+                "A": "維持全球可達並只要求使用者提高密碼長度",
+                "B": "完全關閉所有業務 VPN，不提供替代存取或安全評估",
+                "C": "收斂管理與服務來源、前置過濾、強驗證並監控必要連線",
+                "D": "只把 DNS 名稱改為不易猜測字串，IP 與服務仍直接公開"
+            },
+            "explanation": "A：pre-auth RCE 可能不需密碼，全球暴露維持高風險。；B：全面停用可能不符業務，應優先做可達性及功能細分。；C：精準收斂能保留必要服務並降低攻擊面及提高可見性。；D：隱藏名稱不會阻止 IP 掃描與漏洞利用。",
+            "chapter": "3.2",
+            "competency": "能在維持必要 VPN 下收斂 appliance 來源、前置過濾、強驗證與監控",
+            "case_group": {
+                "id": "D36-1",
+                "description": "【情境】企業邊界 VPN appliance 的 pre-auth RCE 被列入 CISA KEV，設備直接對外且無 EDR，廠商修補需等待維護窗口。SOC 僅有流量、設定匯出、認證與下游日誌，需立即 hunt、限制暴露並驗證最終修補。"
+            }
+        },
+        {
+            "id": 22,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "設備無 EDR 時，哪項證據保存最能支援 pre-auth RCE 調查？",
+            "options": {
+                "A": "封包/flow、反向代理、認證、設定匯出、程序診斷與下游登入",
+                "B": "只保存設備採購發票，不保存事件期間的技術資料",
+                "C": "先恢復原廠設定並清除日誌，再開始收集新基線",
+                "D": "只截取管理頁面畫面，不保存原始時間與設定差異"
+            },
+            "explanation": "A：封包、flow、代理、認證、設定、程序與下游登入可在缺少 EDR 時重建利用、外連、持久化及橫向活動；以一致時間軸保存原始資料，才能判斷攻擊前後的關聯。；B：採購文件只能說明設備來源，不能回答事件期間的攻擊路徑與系統變更。；C：先恢復原廠設定會破壞揮發狀態、日誌與持久化證據，妨礙範圍界定。；D：管理頁截圖缺乏完整原始時間、設定差異與可搜尋事件，不能支撐可靠調查。",
+            "chapter": "3.2",
+            "competency": "能保存 appliance 網路、代理、認證、設定、診斷與下游證據調查 RCE",
+            "case_group": {
+                "id": "D36-1",
+                "description": "【情境】企業邊界 VPN appliance 的 pre-auth RCE 被列入 CISA KEV，設備直接對外且無 EDR，廠商修補需等待維護窗口。SOC 僅有流量、設定匯出、認證與下游日誌，需立即 hunt、限制暴露並驗證最終修補。"
+            }
+        },
+        {
+            "id": 23,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "修補 appliance 後，哪項驗證不能被單純版本號取代？",
+            "options": {
+                "A": "只確認 UI 顯示新版本，不測試實際受害介面與設定",
+                "B": "只重新開機設備，不比較帳號、憑證、排程及網路行為",
+                "C": "只詢問廠商是否完成更新，不取得部署與掃描證據",
+                "D": "重測漏洞、查核設定/身分/持久化、監控告警並驗證業務"
+            },
+            "explanation": "A：UI 可能誤報或版本已改但控制未生效。；B：修補不會自動清除入侵前建立的持久化。；C：供應商聲明需以在地實際狀態驗證。；D：安全與功能端到端測試才可證明漏洞及事件均受處理。",
+            "chapter": "4.1",
+            "competency": "能以漏洞重測、設定身分持久化檢查、告警與業務驗證 appliance 修補",
+            "case_group": {
+                "id": "D36-1",
+                "description": "【情境】企業邊界 VPN appliance 的 pre-auth RCE 被列入 CISA KEV，設備直接對外且無 EDR，廠商修補需等待維護窗口。SOC 僅有流量、設定匯出、認證與下游日誌，需立即 hunt、限制暴露並驗證最終修補。"
+            }
+        },
+        {
+            "id": 24,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "若 appliance 已遭利用且無法可信清除，最佳恢復策略為何？",
+            "options": {
+                "A": "只刪除一個可疑帳號後繼續沿用設備與全部憑證",
+                "B": "由可信映像重建或更換設備，重建設定、輪替憑證並分階段接回",
+                "C": "把設備移到另一機櫃，保留原磁碟、設定與管理 session",
+                "D": "停止監控外連，避免新設備因正常更新產生告警"
+            },
+            "explanation": "A：未知主機持久化與設定竄改不能由單一帳號處理。；B：可信重建與身分輪替能清除未知變更，漸進接回限制風險。；C：實體搬移不改變軟體、信任與攻擊者控制。；D：復原後需加強監控以發現殘留及再利用。",
+            "chapter": "4.2",
+            "competency": "能以可信映像、設備更換、設定重建、憑證輪替與分階段接回恢復 appliance",
+            "case_group": {
+                "id": "D36-1",
+                "description": "【情境】企業邊界 VPN appliance 的 pre-auth RCE 被列入 CISA KEV，設備直接對外且無 EDR，廠商修補需等待維護窗口。SOC 僅有流量、設定匯出、認證與下游日誌，需立即 hunt、限制暴露並驗證最終修補。"
+            }
+        },
+        {
+            "id": 25,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "如何確認 MQTT 重放已影響 digital twin 的維護建議？",
+            "options": {
+                "A": "只看 broker 是否在線，不比較訊息、模型與建議時間",
+                "B": "只檢查 twin 介面能否開啟，不保存使用的資料版本",
+                "C": "串接裝置序號、訊息時間、twin 輸入版本、模型與建議及核准",
+                "D": "假設合法 MAC 的訊息一定是最新資料，不追蹤接收狀態"
+            },
+            "explanation": "A：服務健康不能證明資料新鮮與決策影響。；B：介面功能與建議 lineage 是不同證據。；C：端到端追溯能定位舊資料何時影響何種輸出。；D：MAC 不提供新鮮度，需序號或 nonce 狀態。",
+            "chapter": "3.1",
+            "competency": "能以 MQTT 序號、訊息、twin 資料版本、模型、建議與核准界定重放影響",
+            "case_group": {
+                "id": "D36-2",
+                "description": "【情境】製造 digital twin 使用 MQTT 接收感測資料，裝置共用憑證且未驗證訊息序號。攻擊者重放舊資料使 twin 產生錯誤維護建議，並嘗試發布控制 topic；團隊須保留本地安全聯鎖並重建可信資料流。"
+            }
+        },
+        {
+            "id": 26,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "攻擊者嘗試發布控制 topic 時，最精準的遏止方式為何？",
+            "options": {
+                "A": "撤銷受害裝置憑證與 publish 權，封鎖異常 session 並保留安全聯鎖",
+                "B": "關閉工廠全部保護電驛，避免 broker 收到更多告警",
+                "C": "只刪除已發布訊息，不限制後續憑證與 topic 操作",
+                "D": "放寬所有 topic ACL，確保正常裝置不受事件影響"
+            },
+            "explanation": "A：身分與權限遏止能阻止特定來源並維持獨立製程安全。；B：關閉聯鎖可能造成實體危害，與安全目標相反。；C：歷史刪除不能切斷持續發布能力。；D：放寬會擴大冒用與橫向控制範圍。",
+            "chapter": "3.1",
+            "competency": "能撤銷 MQTT 裝置憑證、topic 發布與 session 並維持 digital twin 安全聯鎖",
+            "case_group": {
+                "id": "D36-2",
+                "description": "【情境】製造 digital twin 使用 MQTT 接收感測資料，裝置共用憑證且未驗證訊息序號。攻擊者重放舊資料使 twin 產生錯誤維護建議，並嘗試發布控制 topic；團隊須保留本地安全聯鎖並重建可信資料流。"
+            }
+        },
+        {
+            "id": 27,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "SOC 應如何偵測持有合法裝置金鑰但發布異常資料的攻擊？",
+            "options": {
+                "A": "合法簽章一律放行，不分析裝置行為與物理值",
+                "B": "只看來源 IP 是否位於工廠，不比對裝置與網路基線",
+                "C": "只設格式 schema，任何格式正確的值都自動可信",
+                "D": "關聯裝置角色、topic、時段、序號、製程 invariant 與同儕感測器"
+            },
+            "explanation": "A：合法身分可能失陷，仍需持續行為驗證。；B：內部位置不是信任保證，且裝置可被冒用。；C：語法正確不代表物理合理或獲授權。；D：多維脈絡能發現身分合法但行為與製程不一致。",
+            "chapter": "4.1",
+            "competency": "能以角色、topic、時序、序號、製程與同儕脈絡偵測 MQTT 合法身分濫用",
+            "case_group": {
+                "id": "D36-2",
+                "description": "【情境】製造 digital twin 使用 MQTT 接收感測資料，裝置共用憑證且未驗證訊息序號。攻擊者重放舊資料使 twin 產生錯誤維護建議，並嘗試發布控制 topic；團隊須保留本地安全聯鎖並重建可信資料流。"
+            }
+        },
+        {
+            "id": 28,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "重建可信 MQTT/twin 資料流後，如何驗證可安全恢復自動建議？",
+            "options": {
+                "A": "只確認訊息開始流入，不測試來源、順序、模型與安全邊界",
+                "B": "輪替裝置身分、重設序號狀態，回放可信資料並驗證建議與聯鎖",
+                "C": "沿用所有舊 retained message，避免重建後缺少歷史資料",
+                "D": "直接開啟控制寫入，再依實體結果判斷是否仍有問題"
+            },
+            "explanation": "A：流量存在不等於來源可信、新鮮及決策正確。；B：信任、新鮮度與端到端回放能證明資料及模型控制恢復。；C：retained 訊息可能是污染來源，需先驗證及分離。；D：未驗證直接控制會把殘餘錯誤轉成實體風險。",
+            "chapter": "4.2",
+            "competency": "能以身分輪替、序號重設、可信回放、建議與聯鎖驗證 twin 資料復原",
+            "case_group": {
+                "id": "D36-2",
+                "description": "【情境】製造 digital twin 使用 MQTT 接收感測資料，裝置共用憑證且未驗證訊息序號。攻擊者重放舊資料使 twin 產生錯誤維護建議，並嘗試發布控制 topic；團隊須保留本地安全聯鎖並重建可信資料流。"
+            }
+        },
+        {
+            "id": 29,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "refresh token 事件中，如何判斷攻擊者是否建立其他持久化？",
+            "options": {
+                "A": "只看原 access token 是否到期，不查任何控制平面變更",
+                "B": "搜尋新 client secret、應用同意、角色、信任政策、排程與存取金鑰",
+                "C": "只封鎖一個來源 ASN，其他登入視為新的合法使用者",
+                "D": "只重設使用者密碼，假設 OAuth grant 與雲端角色自動消失"
+            },
+            "explanation": "A：攻擊者可能利用 token 建立長期控制，原 token 狀態不足。；B：這些控制平面物件可在憑證撤銷後繼續提供存取。；C：來源可更換，網路封鎖不能回答持久化範圍。；D：密碼重設未必撤銷 refresh token、應用 grant 或雲端金鑰。",
+            "chapter": "3.1",
+            "competency": "能搜尋 client、grant、角色、信任、排程與金鑰界定雲端 token 持久化",
+            "case_group": {
+                "id": "D36-3",
+                "description": "【情境】雲端資料分析帳號因 OAuth refresh token 外洩，攻擊者從新 ASN 建立大量匯出工作並把結果送到外部物件儲存。原 access token 持續輪替，SOC 需界定 token family、資料範圍、持久化與安全復原。"
+            }
+        },
+        {
+            "id": 30,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "如何量化攻擊者建立的大量匯出工作實際成功外傳多少資料？",
+            "options": {
+                "A": "只計算建立工作數，每項都假設匯出全資料且成功",
+                "B": "只依攻擊者宣稱數字，不對照雲端服務與目的端證據",
+                "C": "只看資料庫查詢時間，不確認結果、壓縮與物件上傳",
+                "D": "對帳工作狀態、查詢結果、位元組、上傳回條、目的物件與重試"
+            },
+            "explanation": "A：工作可能失敗、取消或部分完成，數量不是資料量。；B：攻擊者聲明可作線索但需獨立驗證。；C：查詢執行不代表結果已離開組織。；D：端到端狀態及目的端證據能區分準備、傳輸與成功。",
+            "chapter": "3.1",
+            "competency": "能以匯出狀態、查詢結果、資料量、上傳回條、目的物件與重試量化外傳",
+            "case_group": {
+                "id": "D36-3",
+                "description": "【情境】雲端資料分析帳號因 OAuth refresh token 外洩，攻擊者從新 ASN 建立大量匯出工作並把結果送到外部物件儲存。原 access token 持續輪替，SOC 需界定 token family、資料範圍、持久化與安全復原。"
+            }
+        },
+        {
+            "id": 31,
+            "type": "題組",
+            "answer": "A",
+            "question_text": "外傳遏止後，合法分析工作要安全復原應先滿足什麼？",
+            "options": {
+                "A": "重建最小角色與受管工作負載身分，驗證資料目的、監控與代表性工作",
+                "B": "恢復原長效 token 與全部角色，確保使用者不需重新核准",
+                "C": "停用所有資料存取日誌，避免復原期間產生大量告警",
+                "D": "只允許同一外部目的地，因先前外傳證明網路路徑可用"
+            },
+            "explanation": "A：可信身分、最小權限、目的與監控共同支援受控業務恢復。；B：原憑證可能失陷且權限過大，會帶回事件風險。；C：復原期間更需要可見性驗證正常與異常行為。；D：外傳目的地應封鎖及調查，不應作合法路徑依據。",
+            "chapter": "3.2",
+            "competency": "能以可信工作負載、最小角色、目的驗證、監控與代表性工作恢復雲端分析",
+            "case_group": {
+                "id": "D36-3",
+                "description": "【情境】雲端資料分析帳號因 OAuth refresh token 外洩，攻擊者從新 ASN 建立大量匯出工作並把結果送到外部物件儲存。原 access token 持續輪替，SOC 需界定 token family、資料範圍、持久化與安全復原。"
+            }
+        },
+        {
+            "id": 32,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "如何驗證 token 防重播與撤銷在復原後確實有效？",
+            "options": {
+                "A": "只用新 token 正向登入，不測舊 token、其他裝置與 sender constraint",
+                "B": "查看設定頁顯示已啟用，便略過 API 實際行為",
+                "C": "重放舊 access/refresh token、跨裝置使用並驗證 family 撤銷與告警",
+                "D": "延長 token 有效期以增加測試窗口，且不限制來源金鑰"
+            },
+            "explanation": "A：新 token 正向登入只證明正常流程可用，無法證明遭竊或已撤銷憑證會被拒絕。；B：設定頁顯示已啟用不代表每個 API 執行點與快取節點都已套用政策。；C：重放舊 access/refresh token、跨裝置測試及 family 撤銷，可驗證拒絕、傳播延遲與告警是否端到端生效。；D：延長有效期且不做 sender constraint 會擴大重放時間與可使用來源，與復原目標相反。",
+            "chapter": "4.2",
+            "competency": "能以舊 token、跨裝置、family 撤銷與告警負向測試驗證 OAuth 復原",
+            "case_group": {
+                "id": "D36-3",
+                "description": "【情境】雲端資料分析帳號因 OAuth refresh token 外洩，攻擊者從新 ASN 建立大量匯出工作並把結果送到外部物件儲存。原 access token 持續輪替，SOC 需界定 token family、資料範圍、持久化與安全復原。"
+            }
+        },
+        {
+            "id": 33,
+            "type": "題組",
+            "answer": "C",
+            "question_text": "serverless SSRF 事件中，如何界定 metadata token 被用於哪些資源？",
+            "options": {
+                "A": "只保存函式 HTTP 500，不查 metadata、STS 與控制平面稽核",
+                "B": "只看函式程式碼，假設沒有明文金鑰就不可能存取雲端",
+                "C": "關聯 metadata/STS、角色 session、API、物件、網路與 CloudTrail 類日誌",
+                "D": "因 token 短效便排除任何資料存取與持久化可能"
+            },
+            "explanation": "A：應用錯誤不能說明 token 取得及後續 API 行為。；B：SSRF 可取得動態憑證，不需原始碼存在明文秘密。；C：身分與資源稽核能重建 token 從簽發到使用的完整鏈。；D：短效仍可在有效期內外傳資料或建立長期資源。",
+            "chapter": "3.1",
+            "competency": "能關聯 metadata、STS、角色 session、API、物件與網路日誌界定 SSRF 影響",
+            "case_group": {
+                "id": "D36-4",
+                "description": "【情境】serverless 圖片擷取函式接受使用者 URL，攻擊者透過重新導向與 DNS rebinding 存取雲端 metadata，再用取得的角色讀取內部儲存。團隊需封鎖外傳、撤銷工作負載身分並修正 URL 與 egress 驗證。"
+            }
+        },
+        {
+            "id": 34,
+            "type": "題組",
+            "answer": "B",
+            "question_text": "發現 SSRF 取得的角色正在讀取內部儲存，初始遏止應如何進行？",
+            "options": {
+                "A": "只刪除一個惡意 URL，不撤銷角色 session 或限制 egress",
+                "B": "停用受害函式版本、撤銷 session/角色權限、封鎖 egress 並保存證據",
+                "C": "提高角色權限以便函式自行刪除攻擊者建立的物件",
+                "D": "關閉全部雲端日誌，避免攻擊者從告警判斷已被發現"
+            },
+            "explanation": "A：攻擊者可改 URL 且有效 token 仍可繼續操作。；B：同步切斷執行、身分與網路能力可限制外傳並保留調查。；C：擴權會放大被利用工作負載的影響。；D：關閉日誌破壞偵測與範圍界定。",
+            "chapter": "3.1",
+            "competency": "能停用 serverless 版本、撤銷 session/角色、封鎖 egress 並保存 SSRF 證據",
+            "case_group": {
+                "id": "D36-4",
+                "description": "【情境】serverless 圖片擷取函式接受使用者 URL，攻擊者透過重新導向與 DNS rebinding 存取雲端 metadata，再用取得的角色讀取內部儲存。團隊需封鎖外傳、撤銷工作負載身分並修正 URL 與 egress 驗證。"
+            }
+        },
+        {
+            "id": 35,
+            "type": "題組",
+            "answer": "D",
+            "question_text": "如何修正 URL 驗證而不誤擋必要外部圖片服務？",
+            "options": {
+                "A": "允許任意 HTTP/HTTPS，再以回應 Content-Type 作唯一安全判斷",
+                "B": "只封鎖已知 metadata IP，其他私有、IPv6 與 redirect 都允許",
+                "C": "要求使用者把 URL Base64 編碼，避免驗證器看到特殊字元",
+                "D": "核准目的域與協定，逐跳解析 IP，限制大小/時間並經 egress proxy"
+            },
+            "explanation": "A：連線後才看內容已可能存取內部與外洩 token。；B：單一黑名單無法涵蓋替代位址及 DNS rebinding。；C：編碼可逆且常用於繞過字串檢查。；D：正向目的政策與資源限制兼顧合法功能及多種 SSRF 風險。",
+            "chapter": "4.1",
+            "competency": "能以目的域、協定、逐跳解析、資源限制與 egress proxy 安全擷取外部 URL",
+            "case_group": {
+                "id": "D36-4",
+                "description": "【情境】serverless 圖片擷取函式接受使用者 URL，攻擊者透過重新導向與 DNS rebinding 存取雲端 metadata，再用取得的角色讀取內部儲存。團隊需封鎖外傳、撤銷工作負載身分並修正 URL 與 egress 驗證。"
+            }
+        },
+        {
+            "id": 36,
+            "type": "題組（複選）",
+            "answer": "ACD",
+            "question_text": "SSRF 修正後，哪些負向測試能涵蓋常見繞過與雲端後果？（複選）",
+            "options": {
+                "A": "redirect chain、DNS rebinding、IPv6/整數位址及不同編碼",
+                "B": "只測核准圖片 URL 成功，不測任何禁止目的與失敗行為",
+                "C": "metadata、內部服務、不同協定、逾時、大回應與壓縮炸彈",
+                "D": "最小角色、egress 命中、告警、session 撤銷及正常回歸"
+            },
+            "explanation": "A：多種表示與解析時序是 SSRF 常見繞過來源。；B：正向功能不能證明惡意目的被拒絕。；C：目的及資源耗盡測試涵蓋機密性與可用性風險。；D：縱深及回歸驗證可證明控制有效且不破壞業務。",
+            "chapter": "4.2",
+            "competency": "能以 redirect、DNS、位址編碼、metadata、資源與縱深負向測試驗證 SSRF",
+            "case_group": {
+                "id": "D36-4",
+                "description": "【情境】serverless 圖片擷取函式接受使用者 URL，攻擊者透過重新導向與 DNS rebinding 存取雲端 metadata，再用取得的角色讀取內部儲存。團隊需封鎖外傳、撤銷工作負載身分並修正 URL 與 egress 驗證。"
+            }
+        },
+        {
+            "id": 37,
+            "type": "題組（複選）",
+            "answer": "BD",
+            "question_text": "併購身分事件初期，哪些動作能限制創辦人舊權限而維持產品服務？（複選）",
+            "options": {
+                "A": "全面關閉所有客戶服務且不建立替代管理身分與安全評估",
+                "B": "撤銷舊 session/token/key，停用簽章能力並建立受控緊急角色",
+                "C": "只更改創辦人帳號顯示名稱，保留原 federation 與 CI/CD 權限",
+                "D": "隔離未受管端點與管理路徑，保存 IdP、雲端、repo、runner 證據"
+            },
+            "explanation": "A：無替代的全面停機可能不符比例，應精準處理身分與發布能力。；B：切斷舊信任並提供受控替代可兼顧遏止與必要維運。；C：名稱變更不會使憑證與信任失效。；D：端點及證據控制可阻止持續操作並支援範圍界定。",
+            "chapter": "3.1",
+            "competency": "能撤銷併購舊身分與簽章、建立緊急角色、隔離端點並保存跨域證據",
+            "case_group": {
+                "id": "D36-5",
+                "description": "【情境】併購交割後，標的公司創辦人帳號仍保有舊 IdP session、雲端金鑰與 CI/CD 簽章能力，並從未受管裝置登入。買方發現異常發布與跨租戶存取，需在不中斷產品服務下重建身分及供應鏈信任。"
+            }
+        },
+        {
+            "id": 38,
+            "type": "題組（複選）",
+            "answer": "ABC",
+            "question_text": "如何界定異常發布是否已進入客戶環境？（複選）",
+            "options": {
+                "A": "比對 commit、建置、provenance、簽章、digest、registry 與部署批次",
+                "B": "關聯客戶更新回條、端點執行、程序、檔案及網路行為",
+                "C": "區分已建置、已發布、已下載、已安裝與已執行的資產狀態",
+                "D": "只搜尋檔名相同即認定全部客戶已執行，不比較版本及行為"
+            },
+            "explanation": "A：供應鏈證據能追蹤制品從來源到分發。；B：客戶與端點遙測證明實際部署及執行後影響。；C：分階段狀態可精準遏止並避免範圍過度或不足。；D：檔名不具唯一性，也不能證明內容與執行。",
+            "chapter": "3.2",
+            "competency": "能以 commit、provenance、簽章、digest、部署與端點行為界定異常發布範圍",
+            "case_group": {
+                "id": "D36-5",
+                "description": "【情境】併購交割後，標的公司創辦人帳號仍保有舊 IdP session、雲端金鑰與 CI/CD 簽章能力，並從未受管裝置登入。買方發現異常發布與跨租戶存取，需在不中斷產品服務下重建身分及供應鏈信任。"
+            }
+        },
+        {
+            "id": 39,
+            "type": "題組（複選）",
+            "answer": "ACD",
+            "question_text": "重建併購後身分與簽章信任，哪些步驟不可缺少？（複選）",
+            "options": {
+                "A": "由可信根重建 IdP、PAM、CI/CD，輪替人員、服務與簽章金鑰",
+                "B": "直接匯入舊 IdP 所有 session 與最高權限，避免使用者重新驗證",
+                "C": "驗證權威生命週期、裝置、workload federation 與負向撤銷",
+                "D": "以新 provenance/簽章重建制品，分批部署並監控異常"
+            },
+            "explanation": "A：乾淨控制面與全面輪替切斷舊攻擊者信任材料。；B：匯入舊 session 會帶回已知身分妥協。；C：端到端身分測試證明新信任及撤銷生效。；D：供應鏈重建及漸進恢復限制污染與回歸風險。",
+            "chapter": "3.2",
+            "competency": "能以可信 IdP/PAM/CI/CD、全面輪替、負向撤銷與新簽章重建併購信任",
+            "case_group": {
+                "id": "D36-5",
+                "description": "【情境】併購交割後，標的公司創辦人帳號仍保有舊 IdP session、雲端金鑰與 CI/CD 簽章能力，並從未受管裝置登入。買方發現異常發布與跨租戶存取，需在不中斷產品服務下重建身分及供應鏈信任。"
+            }
+        },
+        {
+            "id": 40,
+            "type": "題組（複選）",
+            "answer": "BCD",
+            "question_text": "併購身分事件復原後，哪些驗收可支持關閉過渡應變？（複選）",
+            "options": {
+                "A": "只確認創辦人不再登入，忽略其他帳號、服務與供應鏈路徑",
+                "B": "對帳人員/服務/裝置/角色/session/grant 與外部信任清冊",
+                "C": "重播越權、舊 token、未受管裝置與未核准發布的負向測試",
+                "D": "驗證偵測、事件、代表性業務及未解缺口的責任、期限與重測"
+            },
+            "explanation": "A：只確認創辦人帳號無法登入，不能排除事件期間建立的服務帳號、grant 或供應鏈持久化。；B：對帳人員、服務、裝置、角色、session、grant 與外部信任，可找出殘留及未知授權。；C：重播越權、舊 token、未受管裝置與未核准發布，可證明舊攻擊路徑已被實際拒絕。；D：偵測、代表性業務與改善項目都須驗收；未結缺口還要保留風險接受人、完成期限與再次驗證日期。",
+            "chapter": "4.2",
+            "competency": "能以身分清冊、越權負向測試、偵測、業務與期限重測驗收併購復原",
+            "case_group": {
+                "id": "D36-5",
+                "description": "【情境】併購交割後，標的公司創辦人帳號仍保有舊 IdP session、雲端金鑰與 CI/CD 簽章能力，並從未受管裝置登入。買方發現異常發布與跨租戶存取，需在不中斷產品服務下重建身分及供應鏈信任。"
+            }
+        }
+    ]
+}
