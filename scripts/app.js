@@ -37,7 +37,9 @@ const els = {
   caseBox: document.getElementById("caseBox"),
   caseTitle: document.getElementById("caseTitle"),
   caseDescription: document.getElementById("caseDescription"),
+  caseMedia: document.getElementById("caseMedia"),
   questionText: document.getElementById("questionText"),
+  questionMedia: document.getElementById("questionMedia"),
   optionsList: document.getElementById("optionsList"),
   checkButton: document.getElementById("checkButton"),
   nextButton: document.getElementById("nextButton"),
@@ -217,6 +219,7 @@ function renderQuestion() {
   els.progressText.textContent = `第 ${state.currentIndex + 1} / ${state.activeQuestions.length} 題`;
   els.progressFill.style.width = `${(state.currentIndex / state.activeQuestions.length) * 100}%`;
   els.questionText.textContent = question.question;
+  renderImages(els.questionMedia, question.images, "題目附圖");
 
   renderCaseGroup(question.caseGroup);
   renderOptions(question);
@@ -229,14 +232,97 @@ function renderQuestion() {
 }
 
 function renderCaseGroup(caseGroup) {
-  if (!caseGroup || !caseGroup.description) {
+  if (!caseGroup) {
+    els.caseTitle.textContent = "";
+    els.caseDescription.textContent = "";
+    renderImages(els.caseMedia, [], "題組附圖");
     els.caseBox.classList.add("hidden");
     return;
   }
 
   els.caseTitle.textContent = caseGroup.id || "題組";
-  els.caseDescription.textContent = caseGroup.description;
+  els.caseDescription.textContent = caseGroup.description || "";
+  renderImages(els.caseMedia, caseGroup.images, "題組附圖");
   els.caseBox.classList.remove("hidden");
+}
+
+function renderImages(container, images, fallbackAlt, compact = false) {
+  container.replaceChildren();
+  if (!Array.isArray(images) || !images.length) {
+    container.classList.add("hidden");
+    return;
+  }
+
+  const gallery = document.createElement("div");
+  gallery.className = `image-gallery${compact ? " compact" : ""}`;
+  images.forEach((image, index) => {
+    gallery.append(createImageFigure(image, `${fallbackAlt} ${index + 1}`));
+  });
+
+  container.append(gallery);
+  container.classList.remove("hidden");
+}
+
+function createImageFigure(image, fallbackAlt) {
+  const figure = document.createElement("figure");
+  figure.className = "exam-figure";
+
+  const alt = image.alt || fallbackAlt;
+  const imageLink = createOriginalImageLink(image.src, `開啟原圖：${alt}`);
+  imageLink.className = "exam-image-link";
+
+  const imageElement = document.createElement("img");
+  imageElement.className = "exam-image";
+  imageElement.alt = alt;
+  imageElement.loading = "lazy";
+  imageElement.decoding = "async";
+  imageElement.referrerPolicy = "same-origin";
+
+  const fallback = document.createElement("p");
+  fallback.className = "image-fallback hidden";
+  fallback.textContent = "圖片載入失敗。";
+  const fallbackLink = createOriginalImageLink(image.src, `開啟原圖：${alt}`);
+  fallbackLink.textContent = "開啟原圖";
+  fallback.append(" ", fallbackLink);
+
+  imageElement.addEventListener("error", () => {
+    imageLink.classList.add("hidden");
+    fallback.classList.remove("hidden");
+  }, { once: true });
+  imageElement.src = image.src;
+
+  imageLink.append(imageElement);
+  figure.append(imageLink, fallback);
+
+  const caption = formatImageCaption(image);
+  if (caption) {
+    const captionElement = document.createElement("figcaption");
+    captionElement.textContent = caption;
+    figure.append(captionElement);
+  }
+
+  return figure;
+}
+
+function createOriginalImageLink(src, ariaLabel) {
+  const link = document.createElement("a");
+  link.href = src;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.title = "開啟原圖";
+  link.setAttribute("aria-label", ariaLabel);
+  return link;
+}
+
+function formatImageCaption(image) {
+  const details = [];
+  if (image.caption) {
+    details.push(image.caption);
+  }
+  if (image.source_page) {
+    details.push(`來源頁：${image.source_page}`);
+  }
+  return details.join("｜");
 }
 
 function renderOptions(question) {
@@ -414,9 +500,27 @@ function renderReviewList() {
     const explanation = document.createElement("p");
     explanation.textContent = result.question.explanation;
 
-    item.append(title, selected, correct, explanation);
+    item.append(title);
+    appendReviewImages(item, result.question.caseGroup?.images, "題組附圖");
+    appendReviewImages(item, result.question.images, "題目附圖");
+    item.append(selected, correct, explanation);
     els.reviewList.append(item);
   }
+}
+
+function appendReviewImages(item, images, label) {
+  if (!Array.isArray(images) || !images.length) {
+    return;
+  }
+
+  const mediaLabel = document.createElement("p");
+  mediaLabel.className = "review-media-label";
+  mediaLabel.textContent = label;
+
+  const media = document.createElement("div");
+  media.className = "question-media review-media";
+  renderImages(media, images, label, true);
+  item.append(mediaLabel, media);
 }
 
 function showView(viewName) {

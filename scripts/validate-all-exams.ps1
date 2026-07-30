@@ -206,6 +206,24 @@ if (-not $SkipPredictionValidation) {
     }
 }
 
+$imageValidator = Join-Path $PSScriptRoot "validate-exam-images.js"
+$previousErrorActionPreference = $ErrorActionPreference
+try {
+    $ErrorActionPreference = "Continue"
+    $imageValidationOutput = & node $imageValidator 2>&1
+    $imageValidationExitCode = $LASTEXITCODE
+} finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+}
+if ($imageValidationExitCode -ne 0) {
+    Add-ValidationError "image validator exited with code $imageValidationExitCode"
+    foreach ($line in $imageValidationOutput) {
+        Add-ValidationError "image validator: $line"
+    }
+} else {
+    $imageValidationOutput | Write-Output
+}
+
 if ($validationErrors.Count -gt 0) {
     foreach ($validationError in $validationErrors) {
         Write-Output "[ERROR] $validationError"

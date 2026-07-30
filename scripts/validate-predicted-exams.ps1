@@ -248,9 +248,21 @@ foreach ($expected in $expectedFiles) {
                 $question.case_group -isnot [pscustomobject]) {
                 Add-ValidationError "$reference`: case_group must be an object"
             } else {
-                $caseKeys = @($question.case_group.PSObject.Properties.Name | Sort-Object)
-                if (($caseKeys -join ",") -ne "description,id") {
-                    Add-ValidationError "$reference`: case_group must contain exactly id and description"
+                $caseKeys = @($question.case_group.PSObject.Properties.Name)
+                $unsupportedCaseKeys = @($caseKeys | Where-Object {
+                    $_ -notin @("id", "description", "image", "images")
+                })
+                if ($unsupportedCaseKeys.Count -gt 0) {
+                    Add-ValidationError (
+                        "$reference`: case_group contains unsupported field(s): " +
+                        ($unsupportedCaseKeys -join ", ")
+                    )
+                }
+                if (
+                    $caseKeys -contains "image" -and
+                    $caseKeys -contains "images"
+                ) {
+                    Add-ValidationError "$reference`: case_group must not define both image and images"
                 }
                 foreach ($field in @("id", "description")) {
                     if (-not (Has-Property $question.case_group $field) -or
